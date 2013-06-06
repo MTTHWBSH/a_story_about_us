@@ -13,7 +13,7 @@
 
 	<!-- CSS
   ==============================================================================-->
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="main.css">
 	<!-- Fonts
   ==============================================================================-->
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900|Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -29,8 +29,10 @@
 	<link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
 </head>
 <body>
-  <div class="container">
-    
+  <div class="story_book">
+    <?php include('covers/_front-cover.phtml'); ?>
+    <?php include('pages/_page-factory.phtml'); ?>
+    <?php include('covers/_colophon.phtml'); ?>
   </div><!-- .container -->
 	<!-- SCRIPTS
   ==============================================================================-->
