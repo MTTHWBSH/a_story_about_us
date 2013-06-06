@@ -1,0 +1,178 @@
+//MIXINS
+
+//*-*----------------------------------------------------------------------------
+//  grayscale()
+//  --
+//  Takes a color value, and an opacity and returns an rgba value for grayscale colors
+//  Defaults to rgba(78,78,78,0.999);
+//  
+//  @param int $color
+//  @param int $opacity
+//  @returns rgba object
+//
+@function grayscale($color: 78, $opacity: 0.999){
+  @return rgba($color, $color, $color, $opacity);
+}
+
+//*-*----------------------------------------------------------------------------
+//  highlight()
+//  --
+//  Creates a highlight declaration. If this is a nested rule (eg, something 
+//     that needs a different highlight color), it returns with the pseudo 
+//     selector with the & shortcut. Assumes false.
+//  
+//  @param color object, $selection_color
+//  @param bool, $is_nested, assumes false
+//
+@mixin highlight($selection_color, $is_nested: false){
+  $amp: @if($is_nested == true, '&', '');
+  #{$amp}::selection{
+    background-color: $selection_color;
+    color: white;
+    text-shadow: none;
+  }//selection
+  
+  #{$amp}::-moz-selection{
+    background-color: $selection_color;
+    color: white;
+    text-shadow: none;
+  }//selection
+}//highlight
+
+//*-*----------------------------------------------------------------------------
+//  background_gradient()
+//  --
+//  Creates a prefixed background gradient.
+//  
+//  @param color object, $from
+//  @param color object,, $to
+//
+@mixin background_gradient ($from, $to) {
+  background-color: $from;
+  background-image: -moz-linear-gradient($from, $to);
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from($from), to($to));
+  background-image: -webkit-linear-gradient($from, $to);
+  background-image: -o-linear-gradient($from, $to);
+}//bg gradient
+
+
+//*-*----------------------------------------------------------------------------
+//  box_shadow()
+//  --
+//  Creates a prefixed box shadow.
+//  
+//  @param px, $top
+//  @param px, $left
+//  @param px, $blur
+//  @param px, $spread
+//  @param color object, $color
+//
+@mixin box_shadow ($top, $left, $blur, $spread, $color) {
+  -webkit-box-shadow: $top $left $blur $spread $color;
+  -moz-box-shadow: $top $left $blur $spread $color;
+  box-shadow: $top $left $blur $spread $color;
+}
+
+
+//*-*----------------------------------------------------------------------------
+//  prefixed()
+//  --
+//  Returns any value you see fit as a prefixed ruleset
+//  
+//  @param string, $attr
+//  @param string, $value
+//
+@mixin prefixed($attr, $value) {
+  -webkit-#{$attr}: $value;
+     -moz-#{$attr}: $value;
+      -ms-#{$attr}: $value;
+       -o-#{$attr}: $value;
+          #{$attr}: $value;
+}//prefixed
+
+//*-*----------------------------------------------------------------------------
+//  calc()
+//  --
+//  Returns a prefixed rule for calc with the necessary attributes
+//  
+//  @param string, $attr
+//  @param string, $default
+//  @param string, $value
+//
+@mixin calc($attr, $default, $expression) {
+  #{$attr}: $default;
+  #{$attr}: -moz-calc(#{$expression});
+  #{$attr}: -webkit-calc(#{$expression});
+  #{$attr}: calc(#{$expression});
+}
+
+//*-*----------------------------------------------------------------------------
+//  rounded()
+//  --
+//  Returns with rounded corners
+//  
+//  @param px, $radius
+//
+@mixin rounded($radius) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}//rounded
+
+//*-*----------------------------------------------------------------------------
+//  rotate()
+//  --
+//  Returns elements to be rotated
+//  
+//  @param px, $degrees
+//
+@mixin rotate($degrees){
+    -webkit-transform: rotate($degrees);
+       -moz-transform: rotate($degrees);
+        -ms-transform: rotate($degrees);
+         -o-transform: rotate($degrees);
+            transform: rotate($degrees);
+}//rotate()
+
+//*-*----------------------------------------------------------------------------
+//  scaleY()
+//  --
+//  Returns a prefixed rule for scaleY
+//  
+//  @param px, $scale
+//
+@mixin scaleY($scale){
+    -webkit-transform: scaleY($scale);
+       -moz-transform: scaleY($scale);
+        -ms-transform: scaleY($scale);
+         -o-transform: scaleY($scale);
+            transform: scaleY($scale);
+}//rotate()
+
+//*-*----------------------------------------------------------------------------
+//  user_select()
+//  --
+//  Returns rules to stop user selection from happening
+//  
+//  @param px, $scale
+//
+@mixin user_select(){
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}//user_select
+
+//*-*----------------------------------------------------------------------------
+//  ease_out()
+//  --
+//  Returns a prefixed transition
+//  
+//  @param seconds, $duration
+//
+@mixin ease_out ($duration: .3s) {
+  -webkit-transition: all $duration;
+     -moz-transition: all $duration;
+      -ms-transition: all $duration;
+       -o-transition: all $duration;
+          transition: all $duration;
+}//ease_out

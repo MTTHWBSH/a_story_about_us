@@ -1,0 +1,4 @@
+Dependencies
+============
+ * SASS
+ * jQuery

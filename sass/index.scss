@@ -1,0 +1,22 @@
+/*
+  Made with love by @joshDComp & @mttwbsh
+*/
+//CONFIG/RESET
+  @import "global/variables";
+  @import "global/mixins";
+  @import "global/modules";//this is its own index
+  @import "global/reset";
+//GENERAL STYLING
+  @import "global/gen-styles";
+//COVERS
+  @import "slides/cover";
+  @import "slides/coliphon";
+//SLIDES
+  @import "slides/1-classmates";
+  @import "slides/2-party-pals"
+  @import "slides/3-travel-buddies";
+  @import "slides/4-the-talk";
+  @import "slides/5-defying-odds";
+  @import "slides/6-dog-whisperers";
+  @import "slides/7-gut-check";
+  @improt "slides/8-roommates";
