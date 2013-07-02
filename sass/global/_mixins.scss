@@ -10,7 +10,7 @@
 //  @param int $opacity
 //  @returns rgba object
 //
-@function grayscale($color: 78, $opacity: 0.999){
+@function grayscale($color, $opacity: 1){
   @return rgba($color, $color, $color, $opacity);
 }
 
@@ -25,7 +25,12 @@
 //  @param bool, $is_nested, assumes false
 //
 @mixin highlight($selection_color, $is_nested: false){
-  $amp: @if($is_nested == true, '&', '');
+  @if($is_nested == true){
+    $amp: '&';
+  } @else {
+    $amp: '';
+  }
+  
   #{$amp}::selection{
     background-color: $selection_color;
     color: white;
