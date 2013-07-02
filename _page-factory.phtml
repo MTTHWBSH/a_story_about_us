@@ -392,18 +392,19 @@ $slides = array(
 );//slides
 
 foreach( $slides as $slide ){
-
-
+  $slideBem = $slide['slide_bem'];
+  $slideTitle = $slide['slide_title'];
+  $slidePs = $slide['slide_content'];
+  $slideImgs = $slide['slide_images']
 ?>
-  <section class="slide <?php echo $slide['slide_bem']; ?>">
-    <h1 class="slide__title"><?php echo $slide['slide_title']; ?></h1>
-    <?php foreach( $slide['slide_content'] as $p ){ ?>
-      <p class="<?php echo $slide['slide_bem'] . '__' . $p['identifier']; ?>"><?php echo $p['content']; ?></p>
+  <section class="slide <?php echo $slideBem; ?>">
+    <h1 class="slide__title"><?php echo $slideTitle; ?></h1>
+    <?php foreach( $slidePs as $p ){ ?>
+      <p class="<?php echo $slideBem . '__' . $p['identifier']; ?>"><?php echo $p['content']; ?></p>
     <?php } ?>
   
-    <?php foreach( $slide['slide_images'] as $image ){ ?>
-      <img class="<?php echo $slide['slide_bem'] . '__' . $img['identifier']; ?>" src="<?php echo $img['path']; ?>" alt="<?php echo $img['alt']; ?>" />
+    <?php foreach( $slideImgs as $img ){ ?>
+      <img class="<?php echo $slide['slide_bem'] . '__' . $img['identifier']; ?>" src="<?php echo $img['path']; ?>" alt="<?php echo $img['identifier']; ?>" />
     <?php } ?>
-  
   </section>
 <?php }//enforeach ?>

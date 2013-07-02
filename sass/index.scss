@@ -1,6 +1,7 @@
 /*
   Made with love by @joshDComp & @mtthwbsh
 */
+//each file below should have a block comment at the top of the document which acts as a debugging flag.
 //CONFIG/RESET
   @import "global/variables";
   @import "global/mixins";
@@ -8,10 +9,36 @@
   @import "global/reset";
 //GENERAL STYLING
   @import "global/gen-styles";
+//CONTAINER
+.story_book{
+  display: block;
+    height: 975px;
+    width: 1485px;
+    margin: 10px auto;
+  //overflow: hidden;
+}//.story_book
 //COVERS
   @import "slides/cover";
   @import "slides/coliphon";
-//SLIDES
+/*  SLIDES */
+
+.slide{
+  position: relative;
+  display: block;
+    height: 2000px;
+    margin: 0px 0px 100px;
+    
+  img{
+    position: absolute;
+    
+  }
+}//.slide
+
+  .slide__title{  
+    text-align: right;
+    font-size: 214px;
+  }//.slide__title
+
   @import "slides/1-classmates";
   @import "slides/2-partiers";
   @import "slides/3-roadies";
