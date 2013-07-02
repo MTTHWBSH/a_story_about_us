@@ -10,7 +10,7 @@
 //  @param int $opacity
 //  @returns rgba object
 //
-@function grayscale($color, $opacity: 1){
+@function _grayscale($color: 20, $opacity: 1){
   @return rgba($color, $color, $color, $opacity);
 }
 

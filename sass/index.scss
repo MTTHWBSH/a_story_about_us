@@ -15,7 +15,8 @@
     height: 975px;
     width: 1485px;
     margin: 10px auto;
-  //overflow: hidden;
+  overflow: auto;
+  border: solid thin $slate;
 }//.story_book
 //COVERS
   @import "slides/cover";
@@ -32,12 +33,20 @@
     position: absolute;
     
   }
+  
+  p{
+    color: $slideBodyColor;
+  }
 }//.slide
 
   .slide__title{  
     text-align: right;
     font-size: 214px;
+    line-height: 1.2;
+    color: $slideTitleColor;
   }//.slide__title
+  
+  
 
   @import "slides/1-classmates";
   @import "slides/2-partiers";

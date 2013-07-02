@@ -27,6 +27,12 @@
     border-collapse: collapse;
     border-spacing: 0; }
 
+::selection{
+  background-color: $selectionColor;
+  color: white;
+  text-shadow: none;
+}
+
 //------------------------------------------------------------------------------
 // #Basic Styles
 //------------------------------------------------------------------------------
@@ -59,6 +65,9 @@
   
   p { 
     font-family: $captionFFamily;
+    font-style: italic;
+    font-size: 20px;
+    line-height: 1.2;
     margin: 0 0 20px 0; 
   }
   p img { margin: 0; }
