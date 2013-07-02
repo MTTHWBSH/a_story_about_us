@@ -1,0 +1,100 @@
+/* Cover */
+//------------------------------------------------------------------------------
+// Landing Styles
+//------------------------------------------------------------------------------
+.story_book__intro{
+  display: block;
+  padding: 20px;
+  margin: 0 auto;
+  width: 450px;
+  height: 975px;
+
+  a{
+    color:#AF5F50;
+    opacity: .7;
+    text-decoration: none;
+  
+    &:hover  {
+      color: #AF5F50;
+      opacity: 1.0;
+      text-decoration: none;
+  
+      @include prefixed(text-shadow, 2px 4px #999);
+      @include prefixed(transform, translateY(-2px));
+  
+      font-size: 38px;
+    }
+  }//a
+  
+  a.button{
+    opacity: .9;
+    text-align: center;
+    padding: 10px 25px;
+    font-size: 22px;
+    //font-weight: 500;
+    color: white;
+    //font-weight: bold;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    background-color: #AF5F50;
+    background-image: -moz-linear-gradient(top, #AF5F50, #D17665);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AF5F50), to(#D17665));
+    background-image: -webkit-linear-gradient(top, #AF5F50, #D17665);
+    background-image: -o-linear-gradient(top, #AF5F50, #D17665);
+    background-image: linear-gradient(to bottom, #AF5F50, #D17665);
+    background-repeat: repeat-x;
+    border: 1px solid #AC5D4E;
+    border-radius: 4px;
+    -moz-box-shadow: 2px 2px 20px 1px #2B2B2B;
+    -webkit-box-shadow: 2px 2px 20px 1px #2B2B2B;
+    box-shadow: 2px 2px 20px 1px #2B2B2B;
+    &:hover  {
+      text-decoration: none;
+      background-position: 0 -25px;
+      -webkit-transition: background-position 0.25s linear;
+      -moz-transition: background-position 0.25s linear;
+      -o-transition: background-position 025s linear;
+      transition: background-position 0.25s linear;
+      opacity: 1.0;
+    }
+    &:active  {
+      @include prefixed(transform, translateY(-2px))
+    }
+  }//.button
+  
+  span  {
+    color: #AF5F50;
+    font-weight: bold;
+    font-size: 50px;
+  }
+  
+  .text  {
+    width: 600px;
+    padding: 40px 20px;
+    margin: auto;
+    text-align: center;
+    color: white;
+  }
+  
+  h1  {
+    opacity: .9;
+    font-size: 36px;
+    line-height: 42px;
+  }
+  
+  h2  {
+    font-size: 28px;
+    padding: 100px 0 150px 0;
+  }
+  
+  h3  {
+    font-size: 24px;
+    margin: 0;
+    span  {
+      font-size: 24px;
+      font-weight: bold;
+      @include prefixed(text-shadow, 1px 1px #9C9C9C)
+    }
+  }
+
+
+}//.story_book__intro

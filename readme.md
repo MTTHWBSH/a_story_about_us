@@ -10,4 +10,4 @@ Dependencies
  
 Compiling sass
 --------------
-Right now I'm just configging codekit to export styles for me, but you can also use the cli for this. It's all on the site.
+I've set up a codekit config file that should handle the output of our files, but in the case that you're using the CLI for sass, /sass/Index.scss should compile to /main.css.
