@@ -6,16 +6,16 @@
   display: block;
   padding: 20px;
   margin: 0 auto;
-  width: 450px;
-  height: 975px;
-
+  text-align: center;
+  color: $slate;
+  
   a{
-    color:#AF5F50;
+    color:$pink;
     opacity: .7;
     text-decoration: none;
   
     &:hover  {
-      color: #AF5F50;
+      color: $pink;
       opacity: 1.0;
       text-decoration: none;
   
@@ -44,9 +44,9 @@
     background-repeat: repeat-x;
     border: 1px solid #AC5D4E;
     border-radius: 4px;
-    -moz-box-shadow: 2px 2px 20px 1px #2B2B2B;
-    -webkit-box-shadow: 2px 2px 20px 1px #2B2B2B;
-    box-shadow: 2px 2px 20px 1px #2B2B2B;
+    -moz-box-shadow: 1px 1px 15px 1px $slate;
+    -webkit-box-shadow: 1px 1px 15px 1px $slate;
+    box-shadow: 1px 1px 15px 1px $slate;
     &:hover  {
       text-decoration: none;
       background-position: 0 -25px;
@@ -62,38 +62,34 @@
   }//.button
   
   span  {
-    color: #AF5F50;
+    color: $pink;
     font-weight: bold;
     font-size: 50px;
-  }
-  
-  .text  {
-    width: 600px;
-    padding: 40px 20px;
-    margin: auto;
-    text-align: center;
-    color: white;
+    font-family: $sans;
   }
   
   h1  {
     opacity: .9;
     font-size: 36px;
     line-height: 42px;
-  }
-  
-  h2  {
     font-size: 28px;
     padding: 100px 0 150px 0;
+    font-weight: 300;
+    font-family: $bodyFont;
   }
   
   h3  {
     font-size: 24px;
     margin: 0;
+    font-weight: 300;
     span  {
       font-size: 24px;
       font-weight: bold;
-      @include prefixed(text-shadow, 1px 1px #9C9C9C)
     }
+  }
+  
+  h4	{
+	  margin-top: 40px;
   }
 
 
