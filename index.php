@@ -31,9 +31,9 @@
 </head>
 <body>
   <div class="story_book">
-    <?php include('covers/_front-cover.phtml'); ?>
+    <?php include( dirname(__FILE__) .'/covers/_front-cover.phtml'); ?>
     <?php include( dirname(__FILE__) . '/_page-factory.phtml'); ?>
-    <?php include('covers/_colophon.phtml'); ?>
+    <?php include( dirname(__FILE__) . '/covers/_colophon.phtml'); ?>
   </div><!-- .story_book -->
   <!-- SCRIPTS
   ==============================================================================-->

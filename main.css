@@ -376,7 +376,7 @@ li p {
   height: 975px;
   width: 1485px;
   margin: 10px auto;
-  overflow: auto;
+  overflow: hidden;
   border: solid thin #4e4e4e; }
 
 /* Cover */
