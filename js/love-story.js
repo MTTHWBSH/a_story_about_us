@@ -112,20 +112,16 @@ var loveStory = {
         var slideP1 = slideOne.find('.classmates__it-all-started');
         
         //hide everything, position the title, and show stuff
-        slideOne.children().hide(0)
-        slideTitle.css({
-          display: 'block',
-          right: -10000
-        }, 0);
-        
+        slideOne.children().hide(0);
         slideOne.show(0);
         
         //animate the title
-        slideTitle.css({
-          right: -20
+        slideTitle.show(0).css({
+          display : 'block',
+          right: '-20px'
         }, 400);
         
-        slideP1.fadeIn(300);
+        slideP1.fadeIn(400);
         
         break;
     }//switch

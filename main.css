@@ -480,12 +480,24 @@ li p {
     color: rgba(123, 152, 140, 0.999); }
 
 .slide__title {
+  position: absolute;
   text-align: right;
   font-size: 214px;
   line-height: 1.2;
   color: #4e4e4e; }
 
 /* Slide 1 */
+.slide.classmates .slide__title {
+  top: -110px;
+  right: -100%; }
+
+.classmates__it-all-started {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  display: block;
+  width: 300px; }
+
 /* Slide 2 */
 /* Slide 3 */
 /* Slide 4 */

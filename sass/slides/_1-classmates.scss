@@ -1,1 +1,16 @@
 /* Slide 1 */
+.slide.classmates{
+
+  .slide__title{
+    top: -110px;
+    right: -100%;
+  }//.slide__title
+}//.slide.classmates
+
+.classmates__it-all-started{
+  position: absolute;
+    top: 100px;
+    left: 30px;
+  display: block;
+    width: 300px;
+}
