@@ -10,22 +10,25 @@
 //GENERAL STYLING
   @import "global/gen-styles";
 //CONTAINER
+
 .story_book{
   display: block;
-    height: 975px;
-    width: 1485px;
-    margin: 10px auto;
+    height: 760px;
+    width: 1160px;
+    margin: 80px auto;
   overflow: hidden;
   border: solid thin $slate;
 }//.story_book
 //COVERS
   @import "slides/cover";
   @import "slides/coliphon";
+  
+  
 /*  SLIDES */
 
 .slide{
   position: relative;
-  display: block;
+  display: none;
     height: 2000px;
     margin: 0px 0px 100px;
     
@@ -36,14 +39,18 @@
   
   p{
     color: $slideBodyColor;
-  }
+  }//p
+  
+  &.visible{
+    display: block;
+  }//.visible
 }//.slide
 
   .slide__title{  
     position: absolute;
     text-align: right;
-    font-size: 214px;
-    line-height: 1.2;
+    font-size: 175px;
+    line-height: 1;
     color: $slideTitleColor;
   }//.slide__title
   

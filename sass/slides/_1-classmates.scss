@@ -2,15 +2,50 @@
 .slide.classmates{
 
   .slide__title{
-    top: -110px;
+    top: -62px;
     right: -100%;
   }//.slide__title
 }//.slide.classmates
 
-.classmates__it-all-started{
-  position: absolute;
-    top: 100px;
-    left: 30px;
-  display: block;
-    width: 300px;
-}
+  .classmates__it-all-started{
+    position: absolute;
+      top: 100px;
+      left: 30px;
+    display: block;
+      width: 300px;
+  }//.classmates__it-all-started
+  
+  .classmates__class-scene{
+    position: absolute;
+      top: 130px;
+      right: 20px;
+    width: 850px;
+    
+  }//.classmates__class-scene
+  
+  .classmates__matt-head{
+    display: block;
+      width: 240px;
+    top: -330px;
+    right: 566px;
+    z-index: 10;
+  }//.classmates_matt-head
+  
+  .classmates__kate-head{
+    display: block;
+      width: 240px;
+    top: -285px;
+    right: 58px;
+    z-index: 10;
+  }//.classmates__kate-head
+  
+  
+  .classmates__final-day{
+    display: block;
+      width: 200px;
+    font-size: 20px;
+    line-height: 1.2;
+    bottom: 30px;
+    right: 30px;
+    text-align: right;
+  }//.classmates__final-day

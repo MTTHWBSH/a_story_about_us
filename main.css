@@ -204,7 +204,7 @@ table {
   border-spacing: 0; }
 
 ::selection {
-  background-color: rgba(100, 100, 100, 0.4);
+  background-color: rgba(200, 200, 200, 0.3);
   color: white;
   text-shadow: none; }
 
@@ -373,15 +373,15 @@ li p {
 
 .story_book {
   display: block;
-  height: 975px;
-  width: 1485px;
-  margin: 10px auto;
+  height: 760px;
+  width: 1160px;
+  margin: 80px auto;
   overflow: hidden;
   border: solid thin #4e4e4e; }
 
 /* Cover */
 .story_book__intro {
-  display: block;
+  display: none;
   padding: 20px;
   margin: 0 auto;
   width: 450px;
@@ -468,27 +468,32 @@ li p {
       text-shadow: 1px 1px #9c9c9c; }
 
 /* Coliphon */
+.story_book__colophon {
+  display: none; }
+
 /*  SLIDES */
 .slide {
   position: relative;
-  display: block;
+  display: none;
   height: 2000px;
   margin: 0px 0px 100px; }
   .slide img {
     position: absolute; }
   .slide p {
     color: rgba(123, 152, 140, 0.999); }
+  .slide.visible {
+    display: block; }
 
 .slide__title {
   position: absolute;
   text-align: right;
-  font-size: 214px;
-  line-height: 1.2;
+  font-size: 175px;
+  line-height: 1;
   color: #4e4e4e; }
 
 /* Slide 1 */
 .slide.classmates .slide__title {
-  top: -110px;
+  top: -62px;
   right: -100%; }
 
 .classmates__it-all-started {
@@ -497,6 +502,35 @@ li p {
   left: 30px;
   display: block;
   width: 300px; }
+
+.classmates__class-scene {
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  width: 850px; }
+
+.classmates__matt-head {
+  display: block;
+  width: 240px;
+  top: -330px;
+  right: 566px;
+  z-index: 10; }
+
+.classmates__kate-head {
+  display: block;
+  width: 240px;
+  top: -285px;
+  right: 58px;
+  z-index: 10; }
+
+.classmates__final-day {
+  display: block;
+  width: 200px;
+  font-size: 20px;
+  line-height: 1.2;
+  bottom: 30px;
+  right: 30px;
+  text-align: right; }
 
 /* Slide 2 */
 /* Slide 3 */
