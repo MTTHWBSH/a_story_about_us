@@ -525,12 +525,13 @@ li p {
 
 .classmates__final-day {
   display: block;
-  width: 200px;
+  width: 550px;
   font-size: 20px;
   line-height: 1.2;
-  bottom: 30px;
-  right: 30px;
-  text-align: right; }
+  top: 680px;
+  right: -540px;
+  text-align: right;
+  position: absolute; }
 
 /* Slide 2 */
 /* Slide 3 */

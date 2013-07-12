@@ -155,7 +155,9 @@ var loveStory = {
           kate.show().animate({
             top: 167
           },900, function(){
-              lastP.fadeIn(700);
+              lastP.show(0).animate({
+                right: 50
+              },700);
             });
         });
         break;
@@ -165,6 +167,13 @@ var loveStory = {
         
         self.limbo(self.pointer);
         slideTwo.show(0);
+
+        //animate the title
+        slideTitle.show(0).animate({
+          right: '-2%'
+        }, 1000, function(){
+          slideP1.fadeIn(400);
+        });
         
         break;
     }//switch
