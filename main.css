@@ -477,6 +477,8 @@ li p {
   display: none;
   height: 2000px;
   margin: 0px 0px 100px; }
+  .slide * {
+    display: none; }
   .slide img {
     position: absolute; }
   .slide p {
@@ -493,12 +495,12 @@ li p {
 
 /* Slide 1 */
 .slide.classmates .slide__title {
-  top: -62px;
+  top: -64px;
   right: -100%; }
 
 .classmates__it-all-started {
   position: absolute;
-  top: 100px;
+  top: 170px;
   left: 30px;
   display: block;
   width: 300px; }
@@ -534,7 +536,74 @@ li p {
   position: absolute; }
 
 /* Slide 2 */
+.slide.partiers .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.partiers__drunkenly-biked {
+  width: 240px;
+  font-size: 20px;
+  position: absolute;
+  top: 300px;
+  left: 20px; }
+
+.partiers__cant-slip-away {
+  width: 240px;
+  font-size: 20px;
+  position: absolute;
+  top: 390px;
+  left: 20px; }
+
+.partiers__foreshadowing {
+  width: 290px;
+  position: absolute;
+  top: 680px;
+  right: 20px;
+  font-size: 30px;
+  font-weight: 600; }
+
+.partiers__little-flags {
+  width: 395px;
+  top: 85px;
+  left: 341px;
+  z-index: 20; }
+
+.partiers__drunk-matt {
+  width: 220px;
+  top: 130px;
+  left: -120px;
+  z-index: 15; }
+
+.partiers__kate-couch {
+  width: 325px;
+  top: 250px;
+  right: 240px;
+  z-index: 10; }
+
+.partiers__bar-bg {
+  width: 295px;
+  top: 185px;
+  right: 100px; }
+
 /* Slide 3 */
+.slide.roadies .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.roadies__moved-home {
+  width: 240px;
+  font-size: 20px;
+  position: absolute;
+  top: 250px;
+  right: 20px; }
+
+.roadies__foreshadowing {
+  width: 240px;
+  font-size: 20px;
+  position: absolute;
+  top: 390px;
+  left: 20px; }
+
 /* Slide 4 */
 /* Slide 5 */
 /* Slide 6 */

@@ -7,7 +7,7 @@ $slides = array(
     'slide_content' => array(
       array(
         'identifier' => 'it-all-started',
-        'content' => 'For Matt and Kate, it all started in a large lecture hall at MSU. Though told by a mutual acquaintance they were perfect for each other, they somehow managed to avoid eye contact even once for the entire semester.',
+        'content' => 'For Matt and Kate, it all started in a large lecture hall at MSU. Though told by a mutual acquaintance they were perfect for each other, they somehow managed to avoid eye contact for the entire semester.',
       ),
       array(
         'identifier' => 'final-day',
@@ -40,7 +40,11 @@ $slides = array(
     'slide_content' => array(
       array(
         'identifier' => 'drunkenly-biked',
-        'content' => 'On the chance of starting something special, <span class="tooltip" data-tooltip-title="Matt does not condone operation of bicycles while intoxicated">Matt drunkenly biked</span> across campus to attend the party. It was here that he realized he must not let this girl slip away.',
+        'content' => 'On the chance of starting something special, <span class="tooltip" data-tooltip-title="Matt does not condone operation of bicycles while intoxicated">Matt drunkenly biked</span> across campus to attend the party.',
+      ),
+      array(
+        'identifier' => 'cant-slip-away',
+        'content' => 'It was here that he realized he must not let this girl slip away.',
       ),
       array(
         'identifier' => 'foreshadowing',

@@ -31,6 +31,10 @@
   display: none;
     height: 2000px;
     margin: 0px 0px 100px;
+  
+  * {
+    display: none;
+  }
     
   img{
     position: absolute;

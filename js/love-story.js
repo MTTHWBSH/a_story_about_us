@@ -4,6 +4,7 @@
 
 var loveStory = {
   pointer : 0,
+  isBusy: false,
   //TODO MAKE SHIFT + ARROW ADVANCE BETWEEN CHAPTERS
   /**
     init()
@@ -20,31 +21,36 @@ var loveStory = {
     
     //set our event listeners for the keys
     $(document).keydown(function(e){
-      var keycode = e.keyCode || e.keycode || e.which;
+      var keycode = e.keyCode;// || e.keycode || e.which;
       var keyLeft = 37;
       var keyRight = 39;
       var spaceBar = 32;
       
-      switch(keycode){
-        case keyLeft:
+      if(keycode == keyLeft){
           e.preventDefault();
 
+/*
           //if the pointer is at 1 or 0, just stop
           if(self.pointer <= 1){
             self.pointer = 0;
             return;
           }
-          
+*/
+          console.log('oh hai left key');
           //every animation ends with incrementing the pointer, so to go back we need to minus by 2
-          self.pointer - 2;
+          self.pointer = self.pointer - 2;
           self.index(self.pointer);
-
-          break;
-        case keyRight || spaceBar:
+          
+          return;
+      }
+      
+      if(keycode == keyRight || keycode == spaceBar){
           e.preventDefault();
+          console.log('oh hai right key');
           self.index(self.pointer);
-          break;
-      }//switch
+          
+          return;
+      }
 
     });
     
@@ -83,6 +89,7 @@ var loveStory = {
     }
     
     self.index(pointer);
+
   },//limbo
   
   
@@ -97,6 +104,13 @@ var loveStory = {
   */
   index : function(pos){
     var self = this;
+    
+    if( self.isBusy === true ){
+      return;
+    }
+    
+    self.isBusy = true;
+    
     var frame = $('.story_book');
     //chapter selectors
       var intro = frame.find('.story_book__intro'),
@@ -108,7 +122,11 @@ var loveStory = {
           slideSix = frame.find('.slide.family-plus-plus'),
           slideSeven = frame.find('.slide.city-bound'),
           colophon = frame.find('.story_book__colophon');
-      
+          
+    // The nice thing a bout a switch is that the js actually doesn't load that much of the script at once. It 
+    //   rifles through each possible case until it finds a match, then it stops. The bad thing about a switch 
+    //   is that if you need variables pan-cases, you pretty much have to either name them all above the switch, 
+    //   or you have to name them multiple times.
     switch(pos){
 
       case 0 :
@@ -122,62 +140,106 @@ var loveStory = {
         
         break;
       
-      //CHAPTER 1
-      
-      //bring in the title and the first paragraph
-      case 1 : 
-        var slideTitle = slideOne.find('.slide__title');
-        var slideP1 = slideOne.find('.classmates__it-all-started');
-        
-        //hide everything, position the title, and show stuff
-        slideOne.children().hide(0);
-        slideOne.show(0);
-        
-        //animate the title
-        slideTitle.show(0).animate({
-          right: '-2%'
-        }, 1000, function(){
-          slideP1.fadeIn(400);
-        });
-        
-        break;
-      case 2:
-        var classScene = slideOne.find('.classmates__class-scene');
-        var matt = slideOne.find('.classmates__matt-head');
-        var kate = slideOne.find('.classmates__kate-head');
-        var lastP = slideOne.find('.classmates__final-day');
-        
-        classScene.fadeIn(800, function(){
-          matt.show(0).animate({
-            top: 130
-          }, 900);
-
-          kate.show().animate({
-            top: 167
-          },900, function(){
-              lastP.show(0).animate({
-                right: 50
-              },700);
+      //CHAPTER 1: CLASSMATES
+        //bring in the title and the first paragraph
+        case 1 : 
+          var slideTitle = slideOne.find('.slide__title');
+          var slideP1 = slideOne.find('.classmates__it-all-started');
+          
+          self.limbo(self.pointer);
+          //hide everything, position the title, and show stuff
+          slideOne.children().hide(0);
+          slideOne.show(0);
+          
+          //animate the title
+          slideTitle.delay(100).show(0).animate({
+            right: '-2%'
+            }, 1000, function(){
+              slideP1.fadeIn(400);
             });
-        });
-        break;
-      case 3:
-        var slideTitle = slideTwo.find('.slide__title');
-        var slideP1 = slideTwo.find('.partiers__foreshadowing');
+          
+          break;
+        case 2:
+          var classScene = slideOne.find('.classmates__class-scene');
+          var matt = slideOne.find('.classmates__matt-head');
+          var kate = slideOne.find('.classmates__kate-head');
+          var lastP = slideOne.find('.classmates__final-day');
+          
+          classScene.fadeIn(800, function(){
+            matt.show(0).animate({
+              top: 130
+            }, 900, 'easeOutBounce');
+  
+            kate.show().animate({
+              top: 167
+            }, 900, 'easeOutBounce');
+  
+            lastP.show(0).animate({
+              right: 50
+            },700);
+          });
+          break;
         
-        self.limbo(self.pointer);
-        slideTwo.show(0);
-
-        //animate the title
-        slideTitle.show(0).animate({
-          right: '-2%'
-        }, 1000, function(){
-          slideP1.fadeIn(400);
-        });
-        
-        break;
+      //CHAPTER 2: PARTIERS
+        case 3:
+          var slideTitle = slideTwo.find('.slide__title');
+          var slideP1 = slideTwo.find('.partiers__drunkenly-biked');
+          
+          self.limbo(self.pointer);
+          
+          slideTwo.show(0);
+  
+          //animate the title
+          slideTitle.delay(400).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              slideP1.fadeIn(400);
+            });
+          
+          break;
+        case 4:
+          
+          var flags = slideTwo.find('.partiers__little-flags');
+          var bar = slideTwo.find('.partiers__bar-bg');
+          var couch = slideTwo.find('.partiers__kate-couch');
+          var cantSlip = slideTwo.find('.partiers__cant-slip-away');
+          var matt = slideTwo.find('.partiers__drunk-matt');
+          
+          var duration = 200;
+          bar.fadeIn(duration);
+          flags.fadeIn(duration);
+          couch.fadeIn(duration, function(){
+              cantSlip.delay(duration).slideDown(duration, function(){
+                  matt.delay(400).fadeIn(20).animate({
+                    left: 447
+                  }, 1200, 'easeInOutElastic');
+                });
+            });
+          
+          break;
+        case 5:
+          var foreshadowing = slideTwo.find('.partiers__foreshadowing');
+          foreshadowing.slideDown(200);
+          break;
+          
+      //CHAPTER 3: ROADIES
+        case 6: 
+          var slideTitle = slideThree.find('.slide__title');
+          var slideP1 = slideTwo.find('.roadies__moved-home');
+          
+          self.limbo(self.pointer);
+          
+          slideThree.show(0);
+  
+          //animate the title
+          slideTitle.delay(400).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              slideP1.fadeIn(400);
+            });
+          break;
     }//switch
-    //increment our pointer
+    self.isBusy = false;
     self.pointer++;
   }//index()
   
