@@ -546,15 +546,16 @@ var loveStory = {
             var clockFace = slideFive.find('.happiness-graph__clock-face');
             var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
             var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
+            var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
             var graphPrefix = '.happiness-graph__dash-';
             
             clockHour.animate({
-                transform: "rotate(1500deg)"
-            }, 500);
+                animateTo: 1500
+            }, 1500);
             
             clockMin.animate({
-                transform: "rotate(1500deg)"
-            }, 500);
+                animateTo: 6000
+            }, 1500);
             
             
               //There's definitely a better way to do this, but we'll figure that out later
@@ -572,7 +573,9 @@ var loveStory = {
                                                         $(graphPrefix + '11').delay(dashDuration).fadeIn(dashDuration, function(){
                                                             $(graphPrefix + '12').delay(dashDuration).fadeIn(dashDuration, function(){
                                                                 $(graphPrefix + '13').delay(dashDuration).fadeIn(dashDuration, function(){
-                                                                    $(graphPrefix + '14').delay(dashDuration).fadeIn(dashDuration);
+                                                                    $(graphPrefix + '14').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                                        foreshadowing.fadeIn(600);
+                                                                    });
                                                                 });
                                                             });
                                                         });
@@ -585,7 +588,7 @@ var loveStory = {
                             });
                         });
                     });
-                });//roadies
+                });//graph
             
             
             break;

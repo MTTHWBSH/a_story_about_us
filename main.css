@@ -801,11 +801,12 @@ li p {
 
 .happiness-graph__foreshadowing {
   display: none;
-  width: 345px;
+  width: 350px;
   position: absolute;
-  top: 265px;
-  left: 55px;
-  font-size: 22px; }
+  top: 600px;
+  right: 20px;
+  text-align: right;
+  font-size: 32px; }
 
 .happiness-graph__background {
   display: none;
@@ -851,8 +852,8 @@ li p {
 
 [class^='happiness-graph__dash'] {
   display: none;
-  width: 410px;
-  top: 179px;
+  width: 420px;
+  top: 171px;
   left: 209px; }
 
 /* Slide 6 */

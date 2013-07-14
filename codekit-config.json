@@ -110,17 +110,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/img\/slide-6\/margot-paw-right.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
-      "initialSize" : 13492,
-      "fileType" : 8192
-    },
     "\/img\/apple-touch-icon.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -130,6 +119,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
       "initialSize" : 17714,
+      "fileType" : 8192
+    },
+    "\/img\/slide-6\/margot-paw-right.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
+      "initialSize" : 13492,
       "fileType" : 8192
     },
     "\/img\/slide-5\/dash-14.png" : {
