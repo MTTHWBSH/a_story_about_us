@@ -36,17 +36,6 @@
       "initialSize" : 7244,
       "fileType" : 8192
     },
-    "\/img\/slide-2\/bar.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
-      "initialSize" : 119639,
-      "fileType" : 8192
-    },
     "\/img\/slide-5\/dash-2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -56,6 +45,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-2.png",
       "initialSize" : 7206,
+      "fileType" : 8192
+    },
+    "\/img\/slide-2\/bar.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
+      "initialSize" : 119639,
       "fileType" : 8192
     },
     "\/img\/contributor-thumbs\/matt.jpg" : {
@@ -101,17 +101,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/slide-3\/path1.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
-      "initialSize" : 4247,
-      "fileType" : 8192
-    },
     "\/img\/apple-touch-icon.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -132,6 +121,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
       "initialSize" : 13492,
+      "fileType" : 8192
+    },
+    "\/img\/slide-3\/path1.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
+      "initialSize" : 4247,
       "fileType" : 8192
     },
     "\/img\/slide-5\/dash-14.png" : {
@@ -250,17 +250,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/slide-5\/clock-hand-minute.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
-      "initialSize" : 7518,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/skyscraper.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -305,6 +294,17 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_modules.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/img\/slide-5\/clock-hand-minute.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "initialSize" : 7518,
+      "fileType" : 8192
     },
     "\/sass\/slides\/_3-roadies.scss" : {
       "ignoreWasSetByUser" : 0,
