@@ -207,7 +207,7 @@ var loveStory = {
           slideTwo = frame.find('.slide.partiers')
           slideThree = frame.find('.slide.roadies'),
           slideFour = frame.find('.slide.the-talk'),
-          sldeFive = frame.find('.slide.happiness-graph'),
+          slideFive = frame.find('.slide.happiness-graph'),
           slideSix = frame.find('.slide.family-plus-plus'),
           slideSeven = frame.find('.slide.city-bound'),
           colophon = frame.find('.story_book__colophon');
@@ -490,6 +490,104 @@ var loveStory = {
             var foreshadowing = slideFour.find('.the-talk__foreshadowing');
             foreshadowing.css('');
             foreshadowing.slideDown(450);
+            break;
+        //CHAPTER 5: HAPPINESS GRAPH
+        case 12:
+            var slideTitle = slideFive.find('.slide__title');
+            var plusPlus = slideFive.find('.happiness-graph__happiness-plus-plus');
+            var axes = slideFive.find('.happiness-graph__background');
+            var clockBG = slideFive.find('.happiness-graph__clock-bg');
+            var clockFace = slideFive.find('.happiness-graph__clock-face');
+            var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
+            var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
+            var happyFace = slideFive.find('.happiness-graph__happy-face');
+            
+            slideFive.children().css('');
+            
+            self.limbo(self.pointer);
+            
+            slideFive.show(0);
+            
+            //animate the title
+            slideTitle.delay(400).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              plusPlus.fadeIn(400);
+            });
+            
+            axes.delay(400).fadeIn(400, function(){
+                    
+                    clockBG.show(0).animate({
+                        left: 12
+                    }, 300, 'easeOutBounce');
+                    
+                    clockFace.show(0).animate({
+                        left: 12
+                    }, 300, 'easeOutBounce');
+                    
+                    clockHour.show(0).animate({
+                        left: 12
+                    }, 300, 'easeOutBounce');
+                    
+                    clockMin.show(0).animate({
+                        left: 12
+                    }, 300, 'easeOutBounce');
+                    
+                    happyFace.show(0).animate({
+                        top: 490
+                    }, 300, 'easeOutBounce');
+                    
+                });//axes
+            
+            break;
+            
+        case 13:
+            var clockBG = slideFive.find('.happiness-graph__clock-bg');
+            var clockFace = slideFive.find('.happiness-graph__clock-face');
+            var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
+            var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
+            var graphPrefix = '.happiness-graph__dash-';
+            
+            clockHour.animate({
+                transform: "rotate(1500deg)"
+            }, 500);
+            
+            clockMin.animate({
+                transform: "rotate(1500deg)"
+            }, 500);
+            
+            
+              //There's definitely a better way to do this, but we'll figure that out later
+              var dashDuration = 150;
+              $(graphPrefix + '1').delay( (dashDuration * 2) ).fadeIn(dashDuration, function(){
+                  $(graphPrefix + '2').delay(dashDuration).fadeIn(dashDuration, function(){
+                      $(graphPrefix + '3').delay(dashDuration).fadeIn(dashDuration, function(){
+                          $(graphPrefix + '4').delay(dashDuration).fadeIn(dashDuration, function(){
+                                $(graphPrefix + '5').delay(dashDuration).fadeIn(dashDuration, function(){
+                                    $(graphPrefix + '6').delay(dashDuration).fadeIn(dashDuration, function(){
+                                        $(graphPrefix + '7').delay(dashDuration).fadeIn(dashDuration, function(){
+                                            $(graphPrefix + '8').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                $(graphPrefix + '9').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                    $(graphPrefix + '10').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                        $(graphPrefix + '11').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                            $(graphPrefix + '12').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                                $(graphPrefix + '13').delay(dashDuration).fadeIn(dashDuration, function(){
+                                                                    $(graphPrefix + '14').delay(dashDuration).fadeIn(dashDuration);
+                                                                });
+                                                            });
+                                                        });
+                                                    });
+                                                });
+                                            });
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });//roadies
+            
+            
             break;
     }//switch
     self.isBusy = false;

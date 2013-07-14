@@ -250,17 +250,6 @@
       "initialSize" : 7518,
       "fileType" : 8192
     },
-    "\/img\/slide-7\/skyscraper.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
-      "initialSize" : 72269,
-      "fileType" : 8192
-    },
     "\/img\/slide-5\/dash-5.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -270,6 +259,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
       "initialSize" : 7324,
+      "fileType" : 8192
+    },
+    "\/img\/slide-7\/skyscraper.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
+      "initialSize" : 72269,
       "fileType" : 8192
     },
     "\/img\/slide-6\/kate-head.png" : {
@@ -787,17 +787,6 @@
       "initialSize" : 13743,
       "fileType" : 8192
     },
-    "\/img\/slide-7\/road.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-7\/road.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-7\/road.png",
-      "initialSize" : 476072,
-      "fileType" : 8192
-    },
     "\/img\/slide-5\/dash-13.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -807,6 +796,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
       "initialSize" : 7361,
+      "fileType" : 8192
+    },
+    "\/img\/slide-7\/road.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-7\/road.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-7\/road.png",
+      "initialSize" : 476072,
       "fileType" : 8192
     },
     "\/sass\/slides\/_2-partiers.scss" : {
@@ -854,17 +854,6 @@
       "initialSize" : 7270,
       "fileType" : 8192
     },
-    "\/img\/slide-4\/background.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-4\/background.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-4\/background.png",
-      "initialSize" : 415172,
-      "fileType" : 8192
-    },
     "\/img\/slide-5\/clock-hand-hour.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -874,6 +863,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
       "initialSize" : 7393,
+      "fileType" : 8192
+    },
+    "\/img\/slide-4\/background.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-4\/background.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-4\/background.png",
+      "initialSize" : 415172,
       "fileType" : 8192
     },
     "\/img\/apple-touch-icon-72x72.png" : {

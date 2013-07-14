@@ -734,7 +734,7 @@ li p {
 
 /* Slide 4 */
 .slide.the-talk .slide__title {
-  top: -64px;
+  top: -54px;
   right: -100%; }
 
 .the-talk__stolen-thunder1 {
@@ -786,6 +786,74 @@ li p {
   right: 1245px; }
 
 /* Slide 5 */
+.slide.happiness-graph .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.happiness-graph__happiness-plus-plus {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 25px;
+  font-size: 22px;
+  text-align: right; }
+
+.happiness-graph__foreshadowing {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 265px;
+  left: 55px;
+  font-size: 22px; }
+
+.happiness-graph__background {
+  display: none;
+  width: 645px;
+  position: absolute;
+  top: 55px;
+  left: 55px;
+  font-size: 35px; }
+
+.happiness-graph__clock-bg {
+  display: none;
+  width: 150px;
+  top: 242px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-face {
+  display: none;
+  width: 150px;
+  top: 242px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-hand-hour {
+  display: none;
+  width: 150px;
+  top: 242px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-hand-minute {
+  display: none;
+  width: 150px;
+  top: 242px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__happy-face {
+  display: none;
+  width: 145px;
+  top: 810px;
+  left: 340px; }
+
+[class^='happiness-graph__dash'] {
+  display: none;
+  top: 79px;
+  left: 209px; }
+
 /* Slide 6 */
 /* Slide 7 */
 @improt "slides/8-roommates";

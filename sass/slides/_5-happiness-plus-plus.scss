@@ -1,1 +1,88 @@
 /* Slide 5 */
+
+.slide.happiness-graph{
+  
+  .slide__title{
+    top: -54px;
+    right: -100%;
+  }//.slide__title
+  
+}//.slide.the-talk
+
+    .happiness-graph__happiness-plus-plus{
+        display: none;
+        width: 335px;
+        position: absolute;
+        top: 125px;
+        right: 25px;
+        font-size: 22px;
+        text-align: right;
+    }//.the-talk__stolen-thunder
+
+    .happiness-graph__foreshadowing{
+        display: none;
+            width: 345px;
+        position: absolute;
+            top: 265px;
+            left: 55px;
+        font-size: 22px;
+    }//.the-talk__stolen-thunder
+    
+    .happiness-graph__background{
+        display: none;
+            width: 645px;
+        position: absolute;
+            top: 55px;
+            left: 55px;
+        font-size: 35px;
+    }//.the-talk__foreshadowing
+    
+    .happiness-graph__clock-bg{
+        display: none;
+            width: 150px;
+        top: 242px;
+        //left: 12px;
+        left: -257px;
+        z-index: 20;
+    }//.the-talk__background
+    
+    .happiness-graph__clock-face{
+        display: none;
+            width: 150px;
+        top: 242px;
+        //left: 12px;
+        left: -257px;
+        z-index: 20;
+    }//.the-talk__brick
+    
+    .happiness-graph__clock-hand-hour{
+        display: none;
+            width: 150px;
+        top: 242px;
+        //left: 12px;
+        left: -257px;
+        z-index: 20;
+    }//.the-talk__kate
+    
+    .happiness-graph__clock-hand-minute{
+        display: none;
+            width: 150px;
+        top: 242px;
+        //left: 12px;
+        left: -257px;
+        z-index: 20;
+    }//.the-talk__matt
+    
+    .happiness-graph__happy-face{
+        display: none;
+            width: 145px;
+        //top: 490px;
+        top: 810px;
+        left: 340px;
+    }//.happiness-graph__happy-face
+    
+    [class^='happiness-graph__dash']{
+        display: none;
+        top: 79px;
+        left: 209px;
+    }//happiness-dashes
