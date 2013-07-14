@@ -573,6 +573,7 @@ li p {
   right: -100%; }
 
 .classmates__it-all-started {
+  display: none;
   position: absolute;
   top: 170px;
   left: 30px;
@@ -580,29 +581,29 @@ li p {
   width: 300px; }
 
 .classmates__class-scene {
+  display: none;
   position: absolute;
   top: 130px;
   right: 20px;
   width: 850px; }
 
 .classmates__matt-head {
-  display: block;
+  display: none;
   width: 240px;
   top: -330px;
   right: 566px;
   z-index: 10; }
 
 .classmates__kate-head {
-  display: block;
+  display: none;
   width: 240px;
   top: -285px;
   right: 58px;
   z-index: 10; }
 
 .classmates__final-day {
-  display: block;
-  width: 550px;
-  font-size: 20px;
+  width: 740px;
+  font-size: 26px;
   line-height: 1.2;
   top: 680px;
   right: -540px;
@@ -611,7 +612,7 @@ li p {
 
 /* Slide 2 */
 .slide.partiers .slide__title {
-  top: -64px;
+  top: -60px;
   right: -100%; }
 
 .partiers__drunkenly-biked {
@@ -632,7 +633,7 @@ li p {
   width: 290px;
   position: absolute;
   top: 680px;
-  right: 20px;
+  right: 130px;
   font-size: 30px;
   font-weight: 600; }
 
@@ -666,29 +667,124 @@ li p {
 
 .roadies__moved-home {
   display: none;
-  width: 240px;
+  width: 350px;
   font-size: 20px;
   text-align: right;
   position: absolute;
-  top: 250px;
-  right: 20px; }
+  top: 200px;
+  right: 50px; }
 
 .roadies__foreshadowing {
   display: none;
-  width: 240px;
-  font-size: 20px;
+  width: 410px;
+  font-size: 30px;
+  text-align: right;
   position: absolute;
-  top: 390px;
-  left: 20px; }
+  top: 640px;
+  right: 50px; }
+
+.roadies__beaumont {
+  display: none;
+  height: 0px;
+  top: 450px;
+  left: 540px;
+  z-index: 20; }
+
+.roadies__caulder {
+  display: none;
+  height: 0px;
+  top: 660px;
+  left: 290px;
+  z-index: 20; }
+
+.roadies__el {
+  display: none;
+  height: 0px;
+  top: 310px;
+  left: 320px;
+  z-index: 30; }
+
+.roadies__gr {
+  display: none;
+  height: 0px;
+  top: 550px;
+  left: 200px;
+  z-index: 30; }
 
 .roadies__michigan {
   display: none;
-  width: 500px;
+  width: 580px;
   z-index: 10;
-  top: 10px;
-  left: 80px; }
+  top: 770px;
+  left: 130px; }
+
+.roadies__path1,
+.roadies__path2,
+.roadies__path3,
+.roadies__path4,
+.roadies__path5,
+.roadies__path6,
+.roadies__path7,
+.roadies__path8 {
+  display: none;
+  width: 115px;
+  z-index: 25;
+  top: 490px;
+  left: 390px; }
 
 /* Slide 4 */
+.slide.the-talk .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.the-talk__stolen-thunder1 {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 125px;
+  left: 55px;
+  font-size: 22px; }
+
+.the-talk__stolen-thunder2 {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 265px;
+  left: 55px;
+  font-size: 22px; }
+
+.the-talk__foreshadowing {
+  display: none;
+  width: 740px;
+  position: absolute;
+  top: 675px;
+  left: 55px;
+  font-size: 35px; }
+
+.the-talk__background {
+  display: none;
+  width: 680px;
+  top: 95px;
+  right: 12px; }
+
+.the-talk__brick {
+  display: none;
+  width: 626px;
+  top: 478px;
+  right: 1px; }
+
+.the-talk__kate {
+  display: none;
+  width: 220px;
+  top: 110px;
+  right: -235px; }
+
+.the-talk__matt {
+  display: none;
+  width: 241px;
+  top: 60px;
+  right: 1245px; }
+
 /* Slide 5 */
 /* Slide 6 */
 /* Slide 7 */

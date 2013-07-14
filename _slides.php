@@ -162,8 +162,12 @@ $slides = array(
     'slide_title' => 'The Talk',
     'slide_content' => array(
       array(
-        'identifier' => 'stolen-thunder',
-        'content' => 'So it was decided. On a weekend trip to Chicago, Matt would make this friendship a relationship, all he had to do was wait for the right moment…until of course Kate found the perfect moment herself—stealing Matt’s thunder.',
+        'identifier' => 'stolen-thunder1',
+        'content' => 'So it was decided. On a weekend trip to Chicago, Matt would make this friendship a relationship, all he had to do was wait for the right moment&hellip;',
+      ),
+      array(
+        'identifier' => 'stolen-thunder2',
+        'content' => '&hellip;until of course Kate found the perfect moment herself—stealing Matt’s thunder.',
       ),
       array(
         'identifier' => 'foreshadowing',

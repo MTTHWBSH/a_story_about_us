@@ -115,8 +115,26 @@ var loveStory = {
         //every animation ends with incrementing the pointer, so to go back we need to minus by 2
         self.pointer = self.pointer - 2;
         self.index(self.pointer);
-  
         
+      });
+      
+      leftKey.click(function(e){
+        e.preventDefault();
+        
+        //if the pointer is at 1 or 0, just stop
+        if(self.pointer <= 1){
+          self.pointer = 0;
+          return;
+        }
+        
+        //every animation ends with incrementing the pointer, so to go back we need to minus by 2
+        self.pointer = self.pointer - 2;
+        self.index(self.pointer);
+      });
+      
+      rightKey.click(function(e){
+        e.preventDefault();
+        self.index(self.pointer);
       });
       
       rightButton.click(function(e){
@@ -231,6 +249,11 @@ var loveStory = {
           var slideP1 = slideOne.find('.classmates__it-all-started');
           
           self.limbo(self.pointer);
+          
+          //Reset the styles for these bits so that the animations work correctly when the user clicks back
+          slideTitle.css('');
+          slideP1.css('');
+          
           uiWrapper.fadeIn(200).children().fadeIn(200);
           
           //hide everything, position the title, and show stuff
@@ -251,15 +274,21 @@ var loveStory = {
           var kate = slideOne.find('.classmates__kate-head');
           var lastP = slideOne.find('.classmates__final-day');
           
+          //reset the styles for this bad boy
+          classScene.css('');
+          matt.css('');
+          kate.css('');
+          lastP.css('');
+          
           classScene.fadeIn(800, function(){
             matt.show(0).animate({
               top: 130
             }, 900, 'easeOutBounce');
-  
+            
             kate.show().animate({
               top: 167
             }, 900, 'easeOutBounce');
-  
+            
             lastP.show(0).animate({
               right: 50
             },700);
@@ -270,6 +299,9 @@ var loveStory = {
         case 3:
           var slideTitle = slideTwo.find('.slide__title');
           var slideP1 = slideTwo.find('.partiers__drunkenly-biked');
+          
+          slideTitle.css('');
+          slideP1.css('');
           
           self.limbo(self.pointer);
           
@@ -291,6 +323,12 @@ var loveStory = {
           var cantSlip = slideTwo.find('.partiers__cant-slip-away');
           var matt = slideTwo.find('.partiers__drunk-matt');
           
+          flags.css('');
+          bar.css('');
+          couch.css('');
+          cantSlip.css('');
+          matt.css('');
+          
           var duration = 200;
           bar.fadeIn(duration);
           flags.fadeIn(duration);
@@ -305,13 +343,21 @@ var loveStory = {
           break;
         case 5:
           var foreshadowing = slideTwo.find('.partiers__foreshadowing');
+          
+          foreshadowing.css('');
+          
           foreshadowing.slideDown(200);
           break;
           
       //CHAPTER 3: ROADIES
         case 6: 
           var slideTitle = slideThree.find('.slide__title');
-          var roadiesTxt = slideTwo.find('.roadies__moved-home');
+          var roadiesTxt = slideThree.find('.roadies__moved-home');
+          var michigan = slideThree.find('.roadies__michigan');
+          
+          slideTitle.css('');
+          roadiesTxt.css('');
+          michigan.css('');
           
           self.limbo(self.pointer);
           
@@ -323,7 +369,128 @@ var loveStory = {
             }, 1000, function(){
               roadiesTxt.fadeIn(400);
             });
+          michigan.delay(400).show(0).animate({
+            top: 30
+          }, 1000);
+          
           break;
+        
+        case 7:
+          var eastLansing = slideThree.find('.roadies__el');
+          var grandRapids = slideThree.find('.roadies__gr');
+          var beaumont = slideThree.find('.roadies__beaumont');
+          var caulder = slideThree.find('.roadies__caulder');
+          var roadiesPrefix = '.roadies__path';
+          
+          eastLansing.css('');
+          grandRapids.css('');
+          beaumont.css('');
+          caulder.css('');
+          
+          eastLansing.show(0).animate({
+            height: 135
+          }, 300, function(){
+              
+              beaumont.show(0).animate({
+                height: 244,
+                top: 240,
+                left: 380
+              }, 400, 'easeOutBack');
+            });
+            
+          grandRapids.show(0).animate({
+            height: 125
+          }, 300, function(){
+              
+              caulder.show(0).animate({
+                height: 200,
+                top: 470,
+                left: 10
+              }, 400, 'easeOutBack');
+              
+              //There's definitely a better way to do this, but we'll figure that out later
+              var roadiesDuration = 150;
+              $(roadiesPrefix + '1').delay(roadiesDuration * 2).fadeIn(roadiesDuration, function(){
+                  $(roadiesPrefix + '2').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
+                      $(roadiesPrefix + '3').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
+                          $(roadiesPrefix + '4').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
+                                $(roadiesPrefix + '5').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
+                                    $(roadiesPrefix + '6').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
+                                        $(roadiesPrefix + '7').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
+                                            $(roadiesPrefix + '8').delay(roadiesDuration).fadeIn(roadiesDuration);
+                                        });
+                                    });
+                                });
+                            });
+                        });
+                    });
+                });//roadies
+            });//grand rapids
+          
+          break;
+          
+        case 8:
+            var foreshadowing = slideThree.find('.roadies__foreshadowing');
+            foreshadowing.css('');
+            foreshadowing.slideDown(300)
+            break;
+      //CHAPTER 4: THE TALK
+        case 9:
+            var slideTitle = slideFour.find('.slide__title');
+            var thunder1 = slideFour.find('.the-talk__stolen-thunder1');
+            var background = slideFour.find('.the-talk__background');
+            var brick = slideFour.find('.the-talk__brick');
+            var kate = slideFour.find('.the-talk__kate');
+            var matt = slideFour.find('.the-talk__matt');
+            
+            slideTitle.css('');
+            thunder1.css('');
+            background.css('');
+            brick.css('');
+            kate.css('');
+            matt.css('');
+            
+            self.limbo(self.pointer);
+            
+            slideFour.show(0);
+            
+            //animate the title
+            slideTitle.delay(500).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              thunder1.fadeIn(400);
+            });
+            
+            background.delay(500).fadeIn(500);
+            brick.delay(500).fadeIn(500, function(){
+                    matt.show(0).animate({
+                        right: 335
+                    }, 1550, 'easeInOutElastic');
+                    
+                    kate.show(0).animate({
+                        right: 90
+                    }, 1650, 'easeInOutElastic');
+                });
+            
+            break;
+        case 10:
+            var thunder2 = slideFour.find('.the-talk__stolen-thunder2');
+            var kate = slideFour.find('.the-talk__kate');
+            
+            thunder2.css('');
+            kate.css({right: 90});
+            
+            thunder2.fadeIn(500);
+            kate.animate({
+                right: 160
+            },800)
+            
+            break;
+        case 11:
+            var foreshadowing = slideFour.find('.the-talk__foreshadowing');
+            foreshadowing.css('');
+            foreshadowing.slideDown(450);
+            break;
     }//switch
     self.isBusy = false;
     self.pointer++;
