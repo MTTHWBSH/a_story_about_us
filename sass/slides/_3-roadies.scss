@@ -9,15 +9,18 @@
 }//.slide.classmates
 
     .roadies__moved-home{
-        width: 240px;
+        display: none;
+          width: 240px;
         font-size: $fontSizeNormal;
+        text-align: right;
         position: absolute;
           top: 250px;
           right: 20px;
     }//.partiers__drunkenly-biked
     
     .roadies__foreshadowing{
-        width: 240px;
+        display: none;
+          width: 240px;
         font-size: $fontSizeNormal;
         position: absolute;
           top: 390px;
@@ -41,7 +44,11 @@
     }//.roadies__gr
     
     .roadies__michigan{
-      
+      display: none;
+        width: 500px;
+        z-index: 10;
+      top: 10px;
+      left: 80px;
     }//.roadies__michigan
     
     .roadies__path1,

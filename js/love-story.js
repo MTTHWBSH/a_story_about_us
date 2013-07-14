@@ -16,6 +16,15 @@ var loveStory = {
   */
   init : function(){
     var self = this;
+    var uiWrapper = $('.ui-elements');
+    var leftButton = uiWrapper.find('.ui__left-button');
+    var rightButton = uiWrapper.find('.ui__right-button');
+    var keysWrapper = $('.ui__keyboard');
+    var upKey = keysWrapper.find('.ui__keyboard--top-key');
+    var leftKey = keysWrapper.find('.ui__keyboard--left-key');
+    var downKey = keysWrapper.find('.ui__keyboard--down-key');
+    var rightKey = keysWrapper.find('.ui__keyboard--right-key');
+    
     //reset the pointer
     self.pointer = 0;
     
@@ -23,20 +32,23 @@ var loveStory = {
     $(document).keydown(function(e){
       var keycode = e.keyCode;// || e.keycode || e.which;
       var keyLeft = 37;
+      var keyUp = 38;
       var keyRight = 39;
+      var keyDown = 40;
+
       var spaceBar = 32;
       
       if(keycode == keyLeft){
           e.preventDefault();
-
-/*
+          
+          leftKey.addClass('pressed');
+          
           //if the pointer is at 1 or 0, just stop
           if(self.pointer <= 1){
             self.pointer = 0;
             return;
           }
-*/
-          console.log('oh hai left key');
+          
           //every animation ends with incrementing the pointer, so to go back we need to minus by 2
           self.pointer = self.pointer - 2;
           self.index(self.pointer);
@@ -46,13 +58,72 @@ var loveStory = {
       
       if(keycode == keyRight || keycode == spaceBar){
           e.preventDefault();
-          console.log('oh hai right key');
+          
+          rightKey.addClass('pressed');
+          
           self.index(self.pointer);
           
           return;
       }
-
+      
+      if(keycode == keyUp){
+        upKey.addClass('pressed');
+      }//if keycode == up
+      
+      if(keycode == keyDown){
+        downKey.addClass('pressed');
+      }
+      
     });
+    
+    $(document).keyup(function(e){
+      var keycode = e.keyCode;// || e.keycode || e.which;
+      var keyLeft = 37;
+      var keyUp = 38;
+      var keyRight = 39;
+      var keyDown = 40;
+      
+      var spaceBar = 32;
+      
+      if(keycode == keyUp){
+        upKey.removeClass('pressed');
+      }//if keycode == up
+      
+      if(keycode == keyDown){
+        downKey.removeClass('pressed');
+      }
+      
+      if(keycode == keyLeft){
+        leftKey.removeClass('pressed');
+      }
+      
+      if(keycode == keyRight || keycode == spaceBar){
+        rightKey.removeClass('pressed');
+      }
+    });
+    
+    //ARROW BUTTONS
+      leftButton.click(function(e){
+        e.preventDefault();
+        
+        //if the pointer is at 1 or 0, just stop
+        if(self.pointer <= 1){
+          self.pointer = 0;
+          return;
+        }
+        
+        //every animation ends with incrementing the pointer, so to go back we need to minus by 2
+        self.pointer = self.pointer - 2;
+        self.index(self.pointer);
+  
+        
+      });
+      
+      rightButton.click(function(e){
+          e.preventDefault();
+          self.index(self.pointer);
+          return;
+      });
     
     //call the index
     var frame = $('.story_book');
@@ -122,7 +193,19 @@ var loveStory = {
           slideSix = frame.find('.slide.family-plus-plus'),
           slideSeven = frame.find('.slide.city-bound'),
           colophon = frame.find('.story_book__colophon');
-          
+    //ui selectors
+      var uiWrapper = $('.ui-elements');
+          leftArrow = uiWrapper.find('.ui__left-button'),
+          rightArrow = uiWrapper.find('.ui__right-button'),
+          upKey = uiWrapper.find('.ui__keyboard--top-key'),
+          downKey = uiWrapper.find('.ui__keyboard--bottom-key'),
+          leftKey = uiWrapper.find('.ui__keyboard--left-key'),
+          rightKey = uiWrapper.find('ui__keyboard--right-key');
+      
+      if(self.pointer >= 2){
+        uiWrapper.show(0).children().show(0);
+      }
+      
     // The nice thing a bout a switch is that the js actually doesn't load that much of the script at once. It 
     //   rifles through each possible case until it finds a match, then it stops. The bad thing about a switch 
     //   is that if you need variables pan-cases, you pretty much have to either name them all above the switch, 
@@ -143,10 +226,13 @@ var loveStory = {
       //CHAPTER 1: CLASSMATES
         //bring in the title and the first paragraph
         case 1 : 
+          
           var slideTitle = slideOne.find('.slide__title');
           var slideP1 = slideOne.find('.classmates__it-all-started');
           
           self.limbo(self.pointer);
+          uiWrapper.fadeIn(200).children().fadeIn(200);
+          
           //hide everything, position the title, and show stuff
           slideOne.children().hide(0);
           slideOne.show(0);
@@ -225,17 +311,17 @@ var loveStory = {
       //CHAPTER 3: ROADIES
         case 6: 
           var slideTitle = slideThree.find('.slide__title');
-          var slideP1 = slideTwo.find('.roadies__moved-home');
+          var roadiesTxt = slideTwo.find('.roadies__moved-home');
           
           self.limbo(self.pointer);
           
           slideThree.show(0);
-  
+          
           //animate the title
           slideTitle.delay(400).show(0).animate({
               right: '-2%'
             }, 1000, function(){
-              slideP1.fadeIn(400);
+              roadiesTxt.fadeIn(400);
             });
           break;
     }//switch

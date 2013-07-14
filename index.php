@@ -30,14 +30,32 @@
   <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
 </head>
 <body>
-  <div class="story_book">
-    <?php include( dirname(__FILE__) .'/covers/_front-cover.phtml'); ?>
-    <?php include( dirname(__FILE__) . '/_page-factory.phtml'); ?>
-    <?php include( dirname(__FILE__) . '/covers/_colophon.phtml'); ?>
-  </div><!-- .story_book -->
+  <div class="storyboard-container">
+    
+    <aside class="ui-elements">
+      <div class="ui__left-button">&nbsp;</div>
+      <div class="ui__right-button">&nbsp;</div>
+      
+      <div class="ui__keyboard">
+        <img src="img/ui-elements/top-arrow-key.png" alt="up arrow key" class="ui__keyboard--top-key" />
+        <img src="img/ui-elements/left-arrow-key.png" alt="left arrow key" class="ui__keyboard--left-key" />
+        <img src="img/ui-elements/bottom-arrow-key.png" alt="down arrow key" class="ui__keyboard--botom-key" />
+        <img src="img/ui-elements/right-arrow-key.png" alt="right arrow key" class="ui__keyboard--right-key" />
+      </div><!-- .ui__keyboard -->
+    </aside><!-- .ui-elements -->
+    
+    <div class="story_book">
+      <?php include( dirname(__FILE__) .'/covers/_front-cover.phtml'); ?>
+      <?php include( dirname(__FILE__) . '/_page-factory.phtml'); ?>
+      <?php include( dirname(__FILE__) . '/covers/_colophon.phtml'); ?>
+      
+    </div><!-- .story_book -->
+    
+  </div><!-- .container -->
   <!-- SCRIPTS
   ==============================================================================-->
   <script type="text/javascript" src="js/jquery.1.10.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.js"></script>
   <script type="text/javascript" src="js/love-story.js"></script>
 </body>
 </html>

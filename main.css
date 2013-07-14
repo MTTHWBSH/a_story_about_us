@@ -371,11 +371,17 @@ li p {
   -o-text-shadow: 2px 2px #9c9c9c;
   text-shadow: 2px 2px #9c9c9c; }
 
-.story_book {
+.storyboard-container {
   display: block;
   height: 760px;
   width: 1160px;
   margin: 80px auto;
+  position: relative; }
+
+.story_book, .ui-elements {
+  display: block;
+  height: 760px;
+  width: 1160px;
   overflow: hidden;
   border: solid thin #4e4e4e; }
 
@@ -471,11 +477,79 @@ li p {
 .story_book__colophon {
   display: none; }
 
+/* UI ELEMENTS */
+.ui-elements {
+  overflow: visible;
+  display: none;
+  border: none;
+  position: absolute; }
+
+.ui__keyboard {
+  position: absolute;
+  bottom: -90px;
+  right: 10px;
+  display: block;
+  width: 220px;
+  height: 80px; }
+  .ui__keyboard img {
+    display: inline-block;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    opacity: .5;
+    cursor: pointer; }
+    .ui__keyboard img.pressed {
+      opacity: 1; }
+  .ui__keyboard .ui__keyboard--top-key {
+    display: block;
+    clear: both;
+    float: none;
+    width: 65px;
+    margin: 0px 0px 0px 70px; }
+  .ui__keyboard .ui__keyboard--left-key,
+  .ui__keyboard .ui__keyboard--right-key {
+    width: 60px;
+    position: relative; }
+    .ui__keyboard .ui__keyboard--left-key:after,
+    .ui__keyboard .ui__keyboard--right-key:after {
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      font-family: "Gentium Basic", serif; }
+  .ui__keyboard .ui__keyboard-left-key:after {
+    content: 'Previous'; }
+  .ui__keyboard .ui__keyboard-right-key:after {
+    content: 'Next'; }
+  .ui__keyboard .ui__keyboard--botom-key {
+    width: 65px; }
+
+.ui__left-button,
+.ui__right-button {
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: .5; }
+  .ui__left-button:hover,
+  .ui__right-button:hover {
+    opacity: 1; }
+
+.ui__left-button {
+  background-image: url("img/ui-elements/left-arrow-buton.png");
+  left: -70px; }
+
+.ui__right-button {
+  background-image: url("img/ui-elements/right-arrow-button.png");
+  right: -70px; }
+
 /*  SLIDES */
 .slide {
   position: relative;
   display: none;
-  height: 2000px;
   margin: 0px 0px 100px; }
   .slide * {
     display: none; }
@@ -541,18 +615,18 @@ li p {
   right: -100%; }
 
 .partiers__drunkenly-biked {
-  width: 240px;
-  font-size: 20px;
+  width: 310px;
+  font-size: 25px;
   position: absolute;
-  top: 300px;
-  left: 20px; }
+  top: 250px;
+  left: 120px; }
 
 .partiers__cant-slip-away {
-  width: 240px;
-  font-size: 20px;
+  width: 310px;
+  font-size: 25px;
   position: absolute;
   top: 390px;
-  left: 20px; }
+  left: 120px; }
 
 .partiers__foreshadowing {
   width: 290px;
@@ -591,18 +665,28 @@ li p {
   right: -100%; }
 
 .roadies__moved-home {
+  display: none;
   width: 240px;
   font-size: 20px;
+  text-align: right;
   position: absolute;
   top: 250px;
   right: 20px; }
 
 .roadies__foreshadowing {
+  display: none;
   width: 240px;
   font-size: 20px;
   position: absolute;
   top: 390px;
   left: 20px; }
+
+.roadies__michigan {
+  display: none;
+  width: 500px;
+  z-index: 10;
+  top: 10px;
+  left: 80px; }
 
 /* Slide 4 */
 /* Slide 5 */

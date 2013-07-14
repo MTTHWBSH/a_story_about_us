@@ -239,17 +239,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/slide-5\/clock-hand-minute.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
-      "initialSize" : 7518,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/skyscraper.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -294,6 +283,17 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_modules.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/img\/slide-5\/clock-hand-minute.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "initialSize" : 7518,
+      "fileType" : 8192
     },
     "\/sass\/slides\/_3-roadies.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -619,17 +619,6 @@
       "initialSize" : 102215,
       "fileType" : 8192
     },
-    "\/img\/ui-elements\/right-arrow-key.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "initialSize" : 6583,
-      "fileType" : 8192
-    },
     "\/img\/slide-4\/matt.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -639,6 +628,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
       "initialSize" : 232775,
+      "fileType" : 8192
+    },
+    "\/img\/ui-elements\/right-arrow-key.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "initialSize" : 6583,
       "fileType" : 8192
     },
     "\/js\/jquery.easing.js" : {
