@@ -1,0 +1,3 @@
+/*
+  Love Story
+*/var loveStory={pointer:0,init:function(){var e=this;e.pointer=0;var t=$(".story_book"),n=t.find(".story_book__intro");t.children().hide();e.limbo(e.pointer)},limbo:function(e){var t=this,n=$(".story_book");e>0&&n.children().fadeOut(500);t.index(e)},index:function(e){var t=this,n=$(".story_book");switch(e){case 0:var r=n.find(".story_book__intro").fadeIn(800),i=r.find(".story_book__open");$(i).click(function(){t.pointer=1;t.limbo(t.pointer)});r.fadeIn(800);break;case 1:var s=n.find(".slide.classmates"),o=s.find(".slide_title"),u=s.find(".classmates__it-all-started");s.children().hide(0);o.css({display:"block",right:-1e4},0);s.show(0);o.css({right:-20},400);u.fadeIn(300)}}};$(function(){loveStory.init()});
