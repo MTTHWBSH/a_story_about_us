@@ -98,7 +98,7 @@
       "inputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
-      "initialSize" : 4247,
+      "initialSize" : 4740,
       "fileType" : 8192
     },
     "\/_slides.php" : {
@@ -619,17 +619,6 @@
       "initialSize" : 102215,
       "fileType" : 8192
     },
-    "\/img\/slide-4\/matt.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
-      "initialSize" : 232775,
-      "fileType" : 8192
-    },
     "\/img\/ui-elements\/right-arrow-key.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -639,6 +628,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
       "initialSize" : 6583,
+      "fileType" : 8192
+    },
+    "\/img\/slide-4\/matt.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
+      "initialSize" : 232775,
       "fileType" : 8192
     },
     "\/js\/jquery.easing.js" : {
