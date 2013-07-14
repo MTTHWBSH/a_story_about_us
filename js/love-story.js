@@ -549,6 +549,7 @@ var loveStory = {
             var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
             var graphPrefix = '.happiness-graph__dash-';
             
+            //TODO MAKE THE CLOCK HANDS ROTATE
             clockHour.animate({
                 animateTo: 1500
             }, 1500);
@@ -590,7 +591,11 @@ var loveStory = {
                     });
                 });//graph
             
-            
+            break;
+        
+        //CHAPTER 6: FAMILY++
+        case 14:
+            alert('this is where I left off');
             break;
     }//switch
     self.isBusy = false;
