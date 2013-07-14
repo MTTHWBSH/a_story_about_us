@@ -110,17 +110,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
-    "\/img\/apple-touch-icon.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
-      "initialSize" : 17714,
-      "fileType" : 8192
-    },
     "\/img\/slide-6\/margot-paw-right.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -130,6 +119,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
       "initialSize" : 13492,
+      "fileType" : 8192
+    },
+    "\/img\/apple-touch-icon.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
+      "initialSize" : 17714,
       "fileType" : 8192
     },
     "\/img\/slide-5\/dash-14.png" : {
@@ -176,7 +176,7 @@
     },
     "\/sass\/slides\/_8-roommates.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/sass\/slides\/_8-roommates.scss",
@@ -250,17 +250,6 @@
       "initialSize" : 7518,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/dash-5.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
-      "initialSize" : 7324,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/skyscraper.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -270,6 +259,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
       "initialSize" : 72269,
+      "fileType" : 8192
+    },
+    "\/img\/slide-5\/dash-5.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
+      "initialSize" : 7324,
       "fileType" : 8192
     },
     "\/img\/slide-6\/kate-head.png" : {
@@ -619,17 +619,6 @@
       "initialSize" : 102215,
       "fileType" : 8192
     },
-    "\/img\/ui-elements\/right-arrow-key.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "initialSize" : 6583,
-      "fileType" : 8192
-    },
     "\/img\/slide-4\/matt.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -639,6 +628,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
       "initialSize" : 232775,
+      "fileType" : 8192
+    },
+    "\/img\/ui-elements\/right-arrow-key.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "initialSize" : 6583,
       "fileType" : 8192
     },
     "\/js\/jquery.easing.js" : {
@@ -854,17 +854,6 @@
       "initialSize" : 7270,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/clock-hand-hour.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
-      "initialSize" : 7393,
-      "fileType" : 8192
-    },
     "\/img\/slide-4\/background.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -874,6 +863,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-4\/background.png",
       "initialSize" : 415172,
+      "fileType" : 8192
+    },
+    "\/img\/slide-5\/clock-hand-hour.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
+      "initialSize" : 7393,
       "fileType" : 8192
     },
     "\/img\/apple-touch-icon-72x72.png" : {
