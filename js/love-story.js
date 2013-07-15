@@ -531,11 +531,11 @@ var loveStory = {
                     
                     clockMin.show(0).animate({
                         left: 12
-                    }, 300, 'easeOutBounce');
+                    }, 800, 'easeOutBounce');
                     
                     happyFace.show(0).animate({
-                        top: 490
-                    }, 300, 'easeOutBounce');
+                        top: 560
+                    }, 800, 'easeOutBounce');
                     
                 });//axes
             
@@ -548,19 +548,20 @@ var loveStory = {
             var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
             var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
             var graphPrefix = '.happiness-graph__dash-';
-            
-            //TODO MAKE THE CLOCK HANDS ROTATE
+            var dashDuration = 150;
+            //clock duration should go the whole time the graph is animating, so 14 dashes with delays, and an extra delay at the beginning
+            var clockDuration = dashDuration * 30;
             clockHour.animate({
-                animateTo: 1500
-            }, 1500);
+                rotate: '1500deg'
+            }, clockDuration, 'easeInCirc');
             
             clockMin.animate({
-                animateTo: 6000
-            }, 1500);
+                rotate: '6000deg'
+            }, clockDuration, 'easeInCirc');
             
             
               //There's definitely a better way to do this, but we'll figure that out later
-              var dashDuration = 150;
+              
               $(graphPrefix + '1').delay( (dashDuration * 2) ).fadeIn(dashDuration, function(){
                   $(graphPrefix + '2').delay(dashDuration).fadeIn(dashDuration, function(){
                       $(graphPrefix + '3').delay(dashDuration).fadeIn(dashDuration, function(){

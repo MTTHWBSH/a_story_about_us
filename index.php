@@ -56,6 +56,7 @@
   ==============================================================================-->
   <script type="text/javascript" src="js/jquery.1.10.js"></script>
   <script type="text/javascript" src="js/jquery.easing.js"></script>
+  <script type="text/javascript" src="js/jquery.rotate.js"></script>
   <script type="text/javascript" src="js/love-story.js"></script>
 </body>
 </html>

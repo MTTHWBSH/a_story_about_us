@@ -31,46 +31,46 @@
     
     .happiness-graph__background{
         display: none;
-            width: 645px;
+            width: 725px;
         position: absolute;
-            top: 55px;
+            top: 65px;
             left: 55px;
-        font-size: 35px;
     }//.the-talk__foreshadowing
-    
+    $clockPosTop: 302px;
+    $clockPosLeft: -257px;
     .happiness-graph__clock-bg{
         display: none;
             width: 150px;
-        top: 242px;
+        top: $clockPosTop;
         //left: 12px;
-        left: -257px;
+        left: $clockPosLeft;
         z-index: 20;
     }//.the-talk__background
     
     .happiness-graph__clock-face{
         display: none;
             width: 150px;
-        top: 242px;
+        top: $clockPosTop;
         //left: 12px;
-        left: -257px;
+        left: $clockPosLeft;
         z-index: 20;
     }//.the-talk__brick
     
     .happiness-graph__clock-hand-hour{
         display: none;
             width: 150px;
-        top: 242px;
+        top: $clockPosTop;
         //left: 12px;
-        left: -257px;
+        left: $clockPosLeft;
         z-index: 20;
     }//.the-talk__kate
     
     .happiness-graph__clock-hand-minute{
         display: none;
             width: 150px;
-        top: 242px;
+        top: $clockPosTop;
         //left: 12px;
-        left: -257px;
+        left: $clockPosLeft;
         z-index: 20;
     }//.the-talk__matt
     
@@ -79,12 +79,12 @@
             width: 145px;
         //top: 490px;
         top: 810px;
-        left: 340px;
+        left: 370px;
     }//.happiness-graph__happy-face
     
     [class^='happiness-graph__dash']{
         display: none;
-            width: 420px;
-        top: 171px;
-        left: 209px;
+            width: 450px;
+        top: 204px;
+        left: 239px;
     }//happiness-dashes

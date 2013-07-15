@@ -810,37 +810,36 @@ li p {
 
 .happiness-graph__background {
   display: none;
-  width: 645px;
+  width: 725px;
   position: absolute;
-  top: 55px;
-  left: 55px;
-  font-size: 35px; }
+  top: 65px;
+  left: 55px; }
 
 .happiness-graph__clock-bg {
   display: none;
   width: 150px;
-  top: 242px;
+  top: 302px;
   left: -257px;
   z-index: 20; }
 
 .happiness-graph__clock-face {
   display: none;
   width: 150px;
-  top: 242px;
+  top: 302px;
   left: -257px;
   z-index: 20; }
 
 .happiness-graph__clock-hand-hour {
   display: none;
   width: 150px;
-  top: 242px;
+  top: 302px;
   left: -257px;
   z-index: 20; }
 
 .happiness-graph__clock-hand-minute {
   display: none;
   width: 150px;
-  top: 242px;
+  top: 302px;
   left: -257px;
   z-index: 20; }
 
@@ -848,13 +847,13 @@ li p {
   display: none;
   width: 145px;
   top: 810px;
-  left: 340px; }
+  left: 370px; }
 
 [class^='happiness-graph__dash'] {
   display: none;
-  width: 420px;
-  top: 171px;
-  left: 209px; }
+  width: 450px;
+  top: 204px;
+  left: 239px; }
 
 /* Slide 6 */
 /* Slide 7 */
