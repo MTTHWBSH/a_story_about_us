@@ -109,7 +109,7 @@
       "inputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
-      "initialSize" : 4247,
+      "initialSize" : 4740,
       "fileType" : 8192
     },
     "\/img\/apple-touch-icon.png" : {
@@ -241,16 +241,14 @@
       "initialSize" : 4865,
       "fileType" : 8192
     },
-    "\/img\/slide-7\/skyscraper.png" : {
+    "\/main.css" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
-      "initialSize" : 72269,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/main.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/slide-5\/clock-hand-minute.png" : {
       "ignoreWasSetByUser" : 0,
@@ -272,6 +270,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
       "initialSize" : 7324,
+      "fileType" : 8192
+    },
+    "\/img\/slide-7\/skyscraper.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-7\/skyscraper.png",
+      "initialSize" : 72269,
       "fileType" : 8192
     },
     "\/img\/slide-6\/kate-head.png" : {
@@ -296,15 +305,6 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_modules.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/main.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/main.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/sass\/slides\/_3-roadies.scss" : {
       "ignoreWasSetByUser" : 0,
@@ -630,15 +630,6 @@
       "initialSize" : 232775,
       "fileType" : 8192
     },
-    "\/sass\/css\/_mixins.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/css\/_mixins.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/img\/slide-3\/el.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -718,15 +709,6 @@
       "outputAbbreviatedPath" : "\/img\/slide-3\/path7.png",
       "initialSize" : 4239,
       "fileType" : 8192
-    },
-    "\/sass\/css\/_variables.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/css\/_variables.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/img\/slide-3\/caulder.png" : {
       "ignoreWasSetByUser" : 0,
