@@ -650,6 +650,12 @@ var loveStory = {
                 left: 555,
             }, 700, 'easeInOutElastic');
             
+            setup.delay(700).fadeIn(700, function(){
+                foreshadowing.show(0).animate({
+                    right: 50
+                }, 900, 'easeInOutBack');
+            });
+            
             break;
         //CHAPTER 7: CITY BOUND
     }//switch
