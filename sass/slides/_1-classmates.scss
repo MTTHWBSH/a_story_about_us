@@ -1,1 +1,53 @@
 /* Slide 1 */
+.slide.classmates{
+
+  .slide__title{
+    top: -64px;
+    right: -100%;
+  }//.slide__title
+}//.slide.classmates
+
+    .classmates__it-all-started{
+        display: none;
+        position: absolute;
+          top: 170px;
+          left: 30px;
+        display: block;
+          width: 300px;
+    }//.classmates__it-all-started
+  
+    .classmates__class-scene{
+        display: none;
+        position: absolute;
+          top: 130px;
+          right: 20px;
+        width: 850px;
+    
+    }//.classmates__class-scene
+  
+    .classmates__matt-head{
+        display: none;
+        width: 240px;
+        top: -330px;
+        right: 566px;
+        z-index: 10;
+    }//.classmates_matt-head
+  
+    .classmates__kate-head{
+        display: none;
+          width: 240px;
+        top: -285px;
+        right: 58px;
+        z-index: 10;
+    }//.classmates__kate-head
+  
+  
+    .classmates__final-day{
+        width: 740px;
+        font-size: 26px;
+        line-height: 1.2;
+        top: 680px;
+        right: -540px;
+        text-align: right;
+        position: absolute;
+    }//.classmates__final-day

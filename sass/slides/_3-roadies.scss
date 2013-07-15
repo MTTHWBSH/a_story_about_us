@@ -1,1 +1,92 @@
 /* Slide 3 */
+.slide.roadies{
+  
+  .slide__title{
+    top: -64px;
+    right: -100%;
+  }//.slide__title
+  
+}//.slide.classmates
+
+    .roadies__moved-home{
+        display: none;
+            width: 350px;
+        font-size: 20px;
+            text-align: right;
+        position: absolute;
+            top: 200px;
+            right: 50px;
+    }//.partiers__drunkenly-biked
+    
+    .roadies__foreshadowing{
+        display: none;
+            width: 410px;
+        font-size: 30px;
+            text-align: right;
+        position: absolute;
+            top: 640px;
+            right: 50px;
+    }//.cant-slip-away
+    
+    .roadies__beaumont{
+      display: none;
+      //height: 244px;
+      height: 0px;
+      //top: 240px;
+      top: 450px;
+      //left: 380px;
+      left: 540px;
+      z-index: 20;
+    }//.roadies__beaumont
+    
+    .roadies__caulder{
+      display: none;
+      //height: 200px;
+      height: 0px;
+      //top: 470px;
+      top: 660px;
+      //left: 10px;
+      left: 290px;
+      z-index: 20;
+    }//.roadies__caulder
+    
+    .roadies__el{
+      display: none;
+      //height: 135px;
+      height: 0px;
+      top: 310px;
+      left: 320px;
+      z-index: 30;
+    }//.roadies__el
+    
+    .roadies__gr{
+      display: none;
+      //height: 125px;
+      height: 0px;
+      top: 550px;
+      left: 200px;
+      z-index: 30;
+    }//.roadies__gr
+    
+    .roadies__michigan{
+      display: none;
+        width: 580px;
+        z-index: 10;
+      top: 770px;
+      left: 130px;
+    }//.roadies__michigan
+    
+    .roadies__path1,
+    .roadies__path2,
+    .roadies__path3,
+    .roadies__path4,
+    .roadies__path5,
+    .roadies__path6,
+    .roadies__path7,
+    .roadies__path8{
+      display: none;
+      width: 115px;
+      z-index: 25;
+      top: 490px;
+      left: 390px;
+    }//.roadies__path1

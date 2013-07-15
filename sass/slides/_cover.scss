@@ -3,7 +3,7 @@
 // Landing Styles
 //------------------------------------------------------------------------------
 .story_book__intro{
-  display: block;
+  display: none;
   padding: 20px;
   margin: 0 auto;
   text-align: center;
@@ -75,7 +75,7 @@
     font-size: 28px;
     padding: 100px 0 150px 0;
     font-weight: 300;
-    font-family: $bodyFont;
+    font-family: $serif;
   }
   
   h3  {

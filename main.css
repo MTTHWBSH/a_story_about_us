@@ -204,7 +204,7 @@ table {
   border-spacing: 0; }
 
 ::selection {
-  background-color: rgba(100, 100, 100, 0.4);
+  background-color: rgba(200, 200, 200, 0.3);
   color: white;
   text-shadow: none; }
 
@@ -421,17 +421,23 @@ footer {
     footer ul.colophon__collab-list li {
       display: inline-block; }
 
-.story_book {
+.storyboard-container {
   display: block;
-  height: 975px;
-  width: 1485px;
-  margin: 10px auto;
+  height: 760px;
+  width: 1160px;
+  margin: 80px auto;
+  position: relative; }
+
+.story_book, .ui-elements {
+  display: block;
+  height: 760px;
+  width: 1160px;
   overflow: hidden;
   border: solid thin #4e4e4e; }
 
 /* Cover */
 .story_book__intro {
-  display: block;
+  display: none;
   padding: 20px;
   margin: 0 auto;
   text-align: center;
@@ -512,28 +518,387 @@ footer {
     margin-top: 40px; }
 
 /* Coliphon */
+.story_book__colophon {
+  display: none; }
+
+/* UI ELEMENTS */
+.ui-elements {
+  overflow: visible;
+  display: none;
+  border: none;
+  position: absolute; }
+
+.ui__keyboard {
+  position: absolute;
+  bottom: -90px;
+  right: 10px;
+  display: block;
+  width: 220px;
+  height: 80px; }
+  .ui__keyboard img {
+    display: inline-block;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    opacity: .5;
+    cursor: pointer; }
+    .ui__keyboard img.pressed {
+      opacity: 1; }
+  .ui__keyboard .ui__keyboard--top-key {
+    display: block;
+    clear: both;
+    float: none;
+    width: 65px;
+    margin: 0px 0px 0px 70px; }
+  .ui__keyboard .ui__keyboard--left-key,
+  .ui__keyboard .ui__keyboard--right-key {
+    width: 60px;
+    position: relative; }
+    .ui__keyboard .ui__keyboard--left-key:after,
+    .ui__keyboard .ui__keyboard--right-key:after {
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      font-family: "Gentium Basic", serif; }
+  .ui__keyboard .ui__keyboard-left-key:after {
+    content: 'Previous'; }
+  .ui__keyboard .ui__keyboard-right-key:after {
+    content: 'Next'; }
+  .ui__keyboard .ui__keyboard--botom-key {
+    width: 65px; }
+
+.ui__left-button,
+.ui__right-button {
+  cursor: pointer;
+  display: block;
+  width: 50px;
+  height: 100%;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: .5; }
+  .ui__left-button:hover,
+  .ui__right-button:hover {
+    opacity: 1; }
+
+.ui__left-button {
+  background-image: url("img/ui-elements/left-arrow-buton.png");
+  left: -70px; }
+
+.ui__right-button {
+  background-image: url("img/ui-elements/right-arrow-button.png");
+  right: -70px; }
+
 /*  SLIDES */
 .slide {
   position: relative;
-  display: block;
-  height: 2000px;
+  display: none;
   margin: 0px 0px 100px; }
+  .slide * {
+    display: none; }
   .slide img {
     position: absolute; }
   .slide p {
     color: rgba(123, 152, 140, 0.999); }
+  .slide.visible {
+    display: block; }
 
 .slide__title {
+  position: absolute;
   text-align: right;
-  font-size: 214px;
-  line-height: 1.2;
+  font-size: 175px;
+  line-height: 1;
   color: #4e4e4e; }
 
 /* Slide 1 */
+.slide.classmates .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.classmates__it-all-started {
+  display: none;
+  position: absolute;
+  top: 170px;
+  left: 30px;
+  display: block;
+  width: 300px; }
+
+.classmates__class-scene {
+  display: none;
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  width: 850px; }
+
+.classmates__matt-head {
+  display: none;
+  width: 240px;
+  top: -330px;
+  right: 566px;
+  z-index: 10; }
+
+.classmates__kate-head {
+  display: none;
+  width: 240px;
+  top: -285px;
+  right: 58px;
+  z-index: 10; }
+
+.classmates__final-day {
+  width: 740px;
+  font-size: 26px;
+  line-height: 1.2;
+  top: 680px;
+  right: -540px;
+  text-align: right;
+  position: absolute; }
+
 /* Slide 2 */
+.slide.partiers .slide__title {
+  top: -60px;
+  right: -100%; }
+
+.partiers__drunkenly-biked {
+  width: 310px;
+  font-size: 25px;
+  position: absolute;
+  top: 250px;
+  left: 120px; }
+
+.partiers__cant-slip-away {
+  width: 310px;
+  font-size: 25px;
+  position: absolute;
+  top: 390px;
+  left: 120px; }
+
+.partiers__foreshadowing {
+  width: 290px;
+  position: absolute;
+  top: 680px;
+  right: 130px;
+  font-size: 30px;
+  font-weight: 600; }
+
+.partiers__little-flags {
+  width: 395px;
+  top: 85px;
+  left: 341px;
+  z-index: 20; }
+
+.partiers__drunk-matt {
+  width: 220px;
+  top: 130px;
+  left: -120px;
+  z-index: 15; }
+
+.partiers__kate-couch {
+  width: 325px;
+  top: 250px;
+  right: 240px;
+  z-index: 10; }
+
+.partiers__bar-bg {
+  width: 295px;
+  top: 185px;
+  right: 100px; }
+
 /* Slide 3 */
+.slide.roadies .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.roadies__moved-home {
+  display: none;
+  width: 350px;
+  font-size: 20px;
+  text-align: right;
+  position: absolute;
+  top: 200px;
+  right: 50px; }
+
+.roadies__foreshadowing {
+  display: none;
+  width: 410px;
+  font-size: 30px;
+  text-align: right;
+  position: absolute;
+  top: 640px;
+  right: 50px; }
+
+.roadies__beaumont {
+  display: none;
+  height: 0px;
+  top: 450px;
+  left: 540px;
+  z-index: 20; }
+
+.roadies__caulder {
+  display: none;
+  height: 0px;
+  top: 660px;
+  left: 290px;
+  z-index: 20; }
+
+.roadies__el {
+  display: none;
+  height: 0px;
+  top: 310px;
+  left: 320px;
+  z-index: 30; }
+
+.roadies__gr {
+  display: none;
+  height: 0px;
+  top: 550px;
+  left: 200px;
+  z-index: 30; }
+
+.roadies__michigan {
+  display: none;
+  width: 580px;
+  z-index: 10;
+  top: 770px;
+  left: 130px; }
+
+.roadies__path1,
+.roadies__path2,
+.roadies__path3,
+.roadies__path4,
+.roadies__path5,
+.roadies__path6,
+.roadies__path7,
+.roadies__path8 {
+  display: none;
+  width: 115px;
+  z-index: 25;
+  top: 490px;
+  left: 390px; }
+
 /* Slide 4 */
+.slide.the-talk .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.the-talk__stolen-thunder1 {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 125px;
+  left: 55px;
+  font-size: 22px; }
+
+.the-talk__stolen-thunder2 {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 265px;
+  left: 55px;
+  font-size: 22px; }
+
+.the-talk__foreshadowing {
+  display: none;
+  width: 740px;
+  position: absolute;
+  top: 675px;
+  left: 55px;
+  font-size: 35px; }
+
+.the-talk__background {
+  display: none;
+  width: 680px;
+  top: 95px;
+  right: 12px; }
+
+.the-talk__brick {
+  display: none;
+  width: 626px;
+  top: 478px;
+  right: 1px; }
+
+.the-talk__kate {
+  display: none;
+  width: 220px;
+  top: 110px;
+  right: -235px; }
+
+.the-talk__matt {
+  display: none;
+  width: 241px;
+  top: 60px;
+  right: 1245px; }
+
 /* Slide 5 */
+.slide.happiness-graph .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.happiness-graph__happiness-plus-plus {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 25px;
+  font-size: 22px;
+  text-align: right; }
+
+.happiness-graph__foreshadowing {
+  display: none;
+  width: 350px;
+  position: absolute;
+  top: 600px;
+  right: 20px;
+  text-align: right;
+  font-size: 32px; }
+
+.happiness-graph__background {
+  display: none;
+  width: 725px;
+  position: absolute;
+  top: 65px;
+  left: 55px; }
+
+.happiness-graph__clock-bg {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-face {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-hand-hour {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-hand-minute {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__happy-face {
+  display: none;
+  width: 145px;
+  top: 810px;
+  left: 370px; }
+
+[class^='happiness-graph__dash'] {
+  display: none;
+  width: 450px;
+  top: 204px;
+  left: 239px; }
+
 /* Slide 6 */
 /* Slide 7 */
 /* Slide 8 */

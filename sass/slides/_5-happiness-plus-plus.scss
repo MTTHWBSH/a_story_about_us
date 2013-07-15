@@ -1,1 +1,90 @@
 /* Slide 5 */
+
+.slide.happiness-graph{
+  
+  .slide__title{
+    top: -54px;
+    right: -100%;
+  }//.slide__title
+  
+}//.slide.the-talk
+
+    .happiness-graph__happiness-plus-plus{
+        display: none;
+        width: 335px;
+        position: absolute;
+        top: 125px;
+        right: 25px;
+        font-size: 22px;
+        text-align: right;
+    }//.the-talk__stolen-thunder
+
+    .happiness-graph__foreshadowing{
+        display: none;
+            width: 350px;
+        position: absolute;
+            top: 600px;
+            right: 20px;
+        text-align: right;
+            font-size: 32px;
+    }//.the-talk__stolen-thunder
+    
+    .happiness-graph__background{
+        display: none;
+            width: 725px;
+        position: absolute;
+            top: 65px;
+            left: 55px;
+    }//.the-talk__foreshadowing
+    $clockPosTop: 302px;
+    $clockPosLeft: -257px;
+    .happiness-graph__clock-bg{
+        display: none;
+            width: 150px;
+        top: $clockPosTop;
+        //left: 12px;
+        left: $clockPosLeft;
+        z-index: 20;
+    }//.the-talk__background
+    
+    .happiness-graph__clock-face{
+        display: none;
+            width: 150px;
+        top: $clockPosTop;
+        //left: 12px;
+        left: $clockPosLeft;
+        z-index: 20;
+    }//.the-talk__brick
+    
+    .happiness-graph__clock-hand-hour{
+        display: none;
+            width: 150px;
+        top: $clockPosTop;
+        //left: 12px;
+        left: $clockPosLeft;
+        z-index: 20;
+    }//.the-talk__kate
+    
+    .happiness-graph__clock-hand-minute{
+        display: none;
+            width: 150px;
+        top: $clockPosTop;
+        //left: 12px;
+        left: $clockPosLeft;
+        z-index: 20;
+    }//.the-talk__matt
+    
+    .happiness-graph__happy-face{
+        display: none;
+            width: 145px;
+        //top: 490px;
+        top: 810px;
+        left: 370px;
+    }//.happiness-graph__happy-face
+    
+    [class^='happiness-graph__dash']{
+        display: none;
+            width: 450px;
+        top: 204px;
+        left: 239px;
+    }//happiness-dashes
