@@ -572,7 +572,7 @@ footer {
 .ui__right-button {
   cursor: pointer;
   display: block;
-  width: 50px;
+  width: 70px;
   height: 100%;
   position: absolute;
   background-position: center center;
@@ -900,5 +900,64 @@ footer {
   left: 239px; }
 
 /* Slide 6 */
+.slide.family-plus-plus .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.family-plus-plus__along-came-margot {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 25px;
+  font-size: 22px;
+  text-align: right; }
+
+.family-plus-plus__setup {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 245px;
+  right: 25px;
+  font-size: 22px;
+  text-align: right; }
+
+.family-plus-plus__foreshadowing {
+  display: none;
+  width: 470px;
+  position: absolute;
+  top: 600px;
+  right: 20px;
+  text-align: right;
+  font-size: 32px; }
+
+.family-plus-plus__kate-head {
+  display: none;
+  width: 0px;
+  top: 610px;
+  left: 470px;
+  z-index: 22; }
+
+.family-plus-plus__matt-head {
+  display: none;
+  width: 0px;
+  top: 564px;
+  left: 613px;
+  z-index: 20; }
+
+.family-plus-plus__margot-head {
+  display: none;
+  width: 145px;
+  top: 490px;
+  left: 355px;
+  z-index: 10; }
+
+.family-plus-plus__margot-paw-right {
+  display: none;
+  width: 62px;
+  top: 545px;
+  left: 592px;
+  z-index: 10; }
+
 /* Slide 7 */
 /* Slide 8 */

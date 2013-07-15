@@ -519,19 +519,19 @@ var loveStory = {
                     
                     clockBG.show(0).animate({
                         left: 12
-                    }, 300, 'easeOutBounce');
+                    }, 800, 'easeOutBounce');
                     
                     clockFace.show(0).animate({
                         left: 12
-                    }, 300, 'easeOutBounce');
+                    }, 800, 'easeOutBounce');
                     
                     clockHour.show(0).animate({
                         left: 12
-                    }, 300, 'easeOutBounce');
+                    }, 900, 'easeOutBounce');
                     
                     clockMin.show(0).animate({
                         left: 12
-                    }, 800, 'easeOutBounce');
+                    }, 990, 'easeOutBounce');
                     
                     happyFace.show(0).animate({
                         top: 560
@@ -596,8 +596,62 @@ var loveStory = {
         
         //CHAPTER 6: FAMILY++
         case 14:
-            alert('this is where I left off');
+            
+            var slideTitle = slideSix.find('.slide__title');
+            var plusPlus = slideSix.find('.family-plus-plus__along-came-margot');
+            
+            var kate = slideSix.find('.family-plus-plus__kate-head');
+            var matt = slideSix.find('.family-plus-plus__matt-head');
+            
+            slideSix.children().css('');
+            
+            self.limbo(self.pointer);
+            slideSix.show(0);
+            
+            //animate the title
+            slideTitle.delay(400).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              plusPlus.fadeIn(400);
+              
+              matt.show(0).animate({
+                  width: 390,
+                  top: 74,
+                  left: 313
+              }, 500, 'easeOutElastic');
+              
+              kate.show(0).animate({
+                  width: 340,
+                  top: 200,
+                  left: 90,
+              }, 600, 'easeOutElastic');
+            });
+            
+            
+            
+            
             break;
+        case 15:
+            var margotHead = slideSix.find('.family-plus-plus__margot-head');
+            var margotPawR = slideSix.find('.family-plus-plus__margot-paw-right');
+            
+            var setup = slideSix.find('.family-plus-plus__setup');
+            var foreshadowing = slideSix.find('.family-plus-plus__foreshadowing');
+            
+            margotPawR.show(0).animate({
+                top: 535,
+                left: 672,
+                zIndex: 25,
+            }, 500, 'easeOutBack');
+            
+            margotHead.show(0).animate({
+                width: 265,
+                top: 279,
+                left: 555,
+            }, 700, 'easeInOutElastic');
+            
+            break;
+        //CHAPTER 7: CITY BOUND
     }//switch
     self.isBusy = false;
     self.pointer++;

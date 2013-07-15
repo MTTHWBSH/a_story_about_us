@@ -1,1 +1,85 @@
 /* Slide 6 */
+
+.slide.family-plus-plus{
+  
+  .slide__title{
+    top: -54px;
+    right: -100%;
+  }//.slide__title
+  
+}//.slide.the-talk
+
+    .family-plus-plus__along-came-margot{
+        display: none;
+        width: 335px;
+        position: absolute;
+        top: 125px;
+        right: 25px;
+        font-size: 22px;
+        text-align: right;
+    }//.the-talk__stolen-thunder
+
+    .family-plus-plus__setup{
+        display: none;
+        width: 335px;
+        position: absolute;
+        top: 245px;
+        right: 25px;
+        font-size: 22px;
+        text-align: right;
+    }//.the-talk__stolen-thunder
+    
+    .family-plus-plus__foreshadowing{
+        display: none;
+            width: 470px;
+        position: absolute;
+            top: 600px;
+            right: 20px;
+        text-align: right;
+            font-size: 32px;
+    }//.the-talk__foreshadowing
+    
+    .family-plus-plus__kate-head{
+        display: none;
+            //width: 340px;
+            width: 0px;
+        //top: 200px;
+        //left: 90px;
+        top: 610px;
+        left: 470px;
+        z-index: 22;
+    }//.family-plus-plus__kate-head
+    
+    .family-plus-plus__matt-head{
+        display: none;
+            //width: 390px;
+            width: 0px;
+        //top: 74px;
+        //left: 313px;
+        top: 564px;
+        left: 613px;
+        z-index: 20;
+    }//.family-plus-plus__matt-head
+    
+    .family-plus-plus__margot-head{
+        display: none;
+            //width: 265px;
+            width: 145px;
+        //top: 279px;
+        top: 490px;
+        //left: 555px;
+        left: 355px;
+        z-index: 10;
+    }//.family-plus-plus__margot-head
+    
+    .family-plus-plus__margot-paw-right{
+        display: none;
+            width: 62px;
+        //top: 535px;
+        top: 545px;
+        //left: 672px;
+        left: 592px;
+        //z-index: 25;
+        z-index: 10;
+    }//.family-plus-plus__margot-paw-right
+    

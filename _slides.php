@@ -337,12 +337,6 @@ $slides = array(
         'identifier' => 'margot-head',
         'path' => 'img/slide-6/margot-head.png',
       ),
-
-      array(
-        'identifier' => 'margot-paw-left',
-        'path' => 'img/slide-6/margot-paw-left.png',
-      ),
-
       array(
         'identifier' => 'margot-paw-right',
         'path' => 'img/slide-6/margot-paw-right.png',
