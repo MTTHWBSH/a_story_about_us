@@ -960,4 +960,91 @@ footer {
   z-index: 10; }
 
 /* Slide 7 */
+.slide.city-bound .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.city-bound__graduation {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 50px;
+  font-size: 22px;
+  text-align: right; }
+
+.city-bound__foreshadowing {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 255px;
+  right: -1000px;
+  font-size: 25px;
+  text-align: right; }
+
+.city-bound__bean {
+  display: none;
+  width: 80px;
+  top: 390px;
+  left: 465px;
+  z-index: 21; }
+
+.city-bound__car {
+  display: none;
+  width: 340px;
+  top: 500px;
+  left: 330px;
+  z-index: 23; }
+
+.city-bound__road {
+  display: none;
+  width: 850px;
+  top: 315px;
+  left: 42px;
+  z-index: 22; }
+
+.city-bound__apartment {
+  display: none;
+  height: 100px;
+  top: -314px;
+  left: 421px;
+  z-index: 20; }
+
+.city-bound__skyscraper {
+  display: none;
+  height: 100px;
+  top: 346px;
+  left: 434px;
+  z-index: 10; }
+
+.city-bound__willis-tower {
+  display: none;
+  height: 100px;
+  top: 365px;
+  left: 455px;
+  z-index: 19; }
+
 /* Slide 8 */
+.slide.meet-up .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.meet-up__message {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 50px;
+  font-size: 22px;
+  text-align: right; }
+
+.meet-up__map-canvas {
+  width: 745px;
+  height: 500px;
+  margin: 0px;
+  background-color: rgba(200, 200, 200, 0.3);
+  position: relative;
+  top: 221px;
+  font-size: 22px;
+  text-align: right;
+  left: 40px; }

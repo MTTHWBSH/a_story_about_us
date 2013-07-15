@@ -45,9 +45,10 @@
     </aside><!-- .ui-elements -->
     
     <div class="story_book">
-      <?php include( dirname(__FILE__) .'/covers/_front-cover.phtml'); ?>
-      <?php include( dirname(__FILE__) . '/_page-factory.phtml'); ?>
-      <?php include( dirname(__FILE__) . '/covers/_colophon.phtml'); ?>
+      <?php include( dirname(__FILE__) . '/pages/_front-cover.phtml'); ?>
+      <?php include( dirname(__FILE__) . '/pages/_page-factory.phtml'); ?>
+      <?php include( dirname(__FILE__) . '/pages/_map.phtml');?>
+      <?php include( dirname(__FILE__) . '/pages/_colophon.phtml'); ?>
       
     </div><!-- .story_book -->
     

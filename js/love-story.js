@@ -146,18 +146,51 @@ var loveStory = {
     //call the index
     var frame = $('.story_book');
     var intro = frame.find('.story_book__intro');
-    self.hide_this(frame.children('.slide'));
+    frame.find('.slide').hide(0);
     self.limbo(self.pointer);
+    //so now that we've initialize everything, let'cs call the map in the background
+    self.mapsHooo();
   },
-  
-  //expects a jquery object
-  hide_this: function(this_guy){
-    this_guy.removeClass('visible');
-  },//hide_this
-  //expects a jquery object
-  show_this: function(this_guy){
-    this_guy.addClass('visible');
-  },//show_this()
+  /**
+    mapsHooo()
+    --
+    call google maps and set our options. 
+    
+    @param null
+    @return void
+  */
+    mapsHooo : function(){
+        //call the maps
+        var script = document.createElement('script');
+        script.type ='text/javascript';
+        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDq5Q0qZTzd7CyB5EthuZr8cXLQHeZCmes&sensor=false';
+        document.body.appendChild(script);
+        
+        $(window).ready(function(){
+            //if google loaded, fine, else, bloody tell me
+            if(typeof google === 'undefined' ){
+                console.log('Google did not load successfully');
+            } else {
+                var mapMarker = {
+                    
+                };//mapMarker
+                
+                var mapCanvas = $('.meet-up__map-canvas');
+                
+                var mapOptions = {
+                    center: new google.maps.LatLng(41.926797,-87.644987),
+                    zoom: 8,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };//mapOpts
+                
+                
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                
+            }//if google == undefined
+            
+            console.log('TODO: \n * call map with options,\n * style map container and rest of last slide.\n * Style colophon,\n * style cover,\n * add thumbnails,\n * make back button call animations properly,\n * favicon (bean),\n * get twitter/facebook sharing stuff together,\n * polish animations/type treatment on earlier slides,\n * fix bug with first slide,\n * make meta (title, desc, author, readme, etc) better');
+        });
+  },//mapsHooo()
   
   /**
     limbo()
@@ -210,6 +243,7 @@ var loveStory = {
           slideFive = frame.find('.slide.happiness-graph'),
           slideSix = frame.find('.slide.family-plus-plus'),
           slideSeven = frame.find('.slide.city-bound'),
+          slideEight = frame.find('.slide.meet-up'),
           colophon = frame.find('.story_book__colophon');
     //ui selectors
       var uiWrapper = $('.ui-elements');
@@ -657,7 +691,114 @@ var loveStory = {
             });
             
             break;
+        
         //CHAPTER 7: CITY BOUND
+        case 16:
+            var slideTitle = slideSeven.find('.slide__title');
+            var graduation = slideSeven.find('.city-bound__graduation');
+            
+            slideSeven.children().css('');
+            
+            self.limbo(self.pointer);
+            
+            slideSeven.show(0);
+            
+            //animate the title
+            slideTitle.delay(400).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              graduation.fadeIn(400);
+            });
+            break;
+        case 17:
+            var foreshadowing = slideSeven.find('.city-bound__foreshadowing');
+            var road = slideSeven.find('.city-bound__road');
+            var skyScraper = slideSeven.find('.city-bound__skyscraper');
+            var willisTower = slideSeven.find('.city-bound__willis-tower');
+            var bean = slideSeven.find('.city-bound__bean');
+            var apartment = slideSeven.find('.city-bound__apartment');
+            var car = slideSeven.find('.city-bound__car');
+            
+            //set how long the car will drive, then determine how long each object should delay, and how long the animation should take once it's done delaying
+            var carDuration = 1000;
+            
+            var skyScraperDelay = carDuration - 850,
+                skyScraperDuration = carDuration - skyScraperDelay;
+            
+            var beanDelay = carDuration - 650,
+                beanDuration = carDuration - beanDelay;
+                
+            var apartmentDelay = carDuration - 800,
+                apartmentDuration = carDuration - apartmentDelay;
+                
+            var willisTowerDelay = carDuration - 850,
+                willisTowerDuration = carDuration - willisTowerDelay;
+            
+            var roadFadein = 600;
+            
+            road.fadeIn(roadFadein, function(){
+                foreshadowing.show(0).animate({
+                    right: 50
+                }, 500, function(){
+                    //no need to show the car because it's fading in at the same time as the road
+                    car.animate({
+                        width: 20,
+                        top: 320,
+                        left: 497
+                    }, carDuration, 'easeInBack', function(){
+                        car.fadeOut(150);
+                    });
+                    
+                    //the car is fading in at the same time as the road, so when this callback fires, the car should be moving
+                    skyScraper.delay(skyScraperDelay).show(0).animate({
+                        height: 250,
+                        top: 126,
+                        left: 334
+                    }, skyScraperDuration, 'easeOutElastic');
+                    
+                    bean.delay(beanDelay).show(0).animate({
+                        width: 105,
+                        top: 299,
+                        left: 282
+                    }, beanDuration, 'easeOutElastic');
+                    
+                    willisTower.delay(willisTowerDelay).show(0).animate({
+                        height: 285,
+                        top: 92,
+                        left: 579
+                    }, willisTowerDuration, 'easeOutElastic');
+                    
+                    apartment.delay(apartmentDelay).show(0).animate({
+                        height: 290,
+                        top: 66,
+                    }, apartmentDuration, 'easeOutBounce');
+                });
+            });//road.fadein
+            
+            car.fadeIn(roadFadein);
+            
+            break;
+        //CHAPTER 8: MEET UP
+        case 18:
+            var slideTitle = slideEight.find('.slide__title');
+            var meetup = slideEight.find('.meet-up__message');
+            var map = slideEight.find('.meet-up__map');
+            
+            slideEight.children().css('');
+            
+            self.limbo(self.pointer);
+            
+            slideEight.show(0);
+            
+            //animate the title
+            slideTitle.delay(400).show(0).animate({
+              right: '-2%'
+            }, 1000, function(){
+              meetup.fadeIn(400);
+              map.fadeIn(400);
+            });
+
+            break;
     }//switch
     self.isBusy = false;
     self.pointer++;
