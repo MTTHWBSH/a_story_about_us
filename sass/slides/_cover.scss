@@ -1,96 +1,99 @@
 /* Cover */
+
+/*
+    when styling specific elements, it's actually best to avoid using element selectors to style specific elements, like the title of the page. You end up getting really strange 
+*/
 //------------------------------------------------------------------------------
 // Landing Styles
 //------------------------------------------------------------------------------
 .story_book__intro{
-  display: none;
-  padding: 20px;
-  margin: 0 auto;
-  text-align: center;
-  color: $slate;
-  
-  a{
-    color:$pink;
-    opacity: .7;
-    text-decoration: none;
-  
-    &:hover  {
-      color: $pink;
-      opacity: 1.0;
-      text-decoration: none;
-  
-      @include prefixed(text-shadow, 2px 4px #999);
-      @include prefixed(transform, translateY(-2px));
-  
-      font-size: 38px;
-    }
-  }//a
-  
-  a.button{
-    opacity: .9;
+    display: none;
+        width: 100%;
+        padding: 20px;
+    position: absolute;
+        left: 0px;
     text-align: center;
-    padding: 10px 25px;
-    font-size: 22px;
-    //font-weight: 500;
-    color: white;
-    //font-weight: bold;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    background-color: #AF5F50;
-    background-image: -moz-linear-gradient(top, #AF5F50, #D17665);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AF5F50), to(#D17665));
-    background-image: -webkit-linear-gradient(top, #AF5F50, #D17665);
-    background-image: -o-linear-gradient(top, #AF5F50, #D17665);
-    background-image: linear-gradient(to bottom, #AF5F50, #D17665);
-    background-repeat: repeat-x;
-    border: 1px solid #AC5D4E;
-    border-radius: 4px;
-    -moz-box-shadow: 1px 1px 15px 1px $slate;
-    -webkit-box-shadow: 1px 1px 15px 1px $slate;
-    box-shadow: 1px 1px 15px 1px $slate;
-    &:hover  {
-      text-decoration: none;
-      background-position: 0 -25px;
-      -webkit-transition: background-position 0.25s linear;
-      -moz-transition: background-position 0.25s linear;
-      -o-transition: background-position 025s linear;
-      transition: background-position 0.25s linear;
-      opacity: 1.0;
-    }
+    color: $slate;
+    
+    a{
+        color: $pink;
+        opacity: .7;
+        text-decoration: none;
+    
+        &:hover  {
+            color: $pink;
+            opacity: 1.0;
+            text-decoration: none;
+            
+            @include prefixed(text-shadow, 2px 4px #999);
+            @include prefixed(transform, translateY(-2px));
+            
+            font-size: 38px;
+        }//:hoer
+    }//a
+  
+    a.button{
+        opacity: .9;
+        text-align: center;
+        padding: 10px 25px;
+        font-size: 22px;
+        //font-weight: 500;
+        color: white;
+        //font-weight: bold;
+        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        background-color: #AF5F50;
+        background-image: -moz-linear-gradient(top, #AF5F50, #D17665);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AF5F50), to(#D17665));
+        background-image: -webkit-linear-gradient(top, #AF5F50, #D17665);
+        background-image: -o-linear-gradient(top, #AF5F50, #D17665);
+        background-image: linear-gradient(to bottom, #AF5F50, #D17665);
+        background-repeat: repeat-x;
+        border: 1px solid #AC5D4E;
+        border-radius: 4px;
+        -moz-box-shadow: 1px 1px 15px 1px $slate;
+        -webkit-box-shadow: 1px 1px 15px 1px $slate;
+        box-shadow: 1px 1px 15px 1px $slate;
+        
+        &:hover  {
+            text-decoration: none;
+            background-position: 0 -25px;
+            -webkit-transition: background-position 0.25s linear;
+            -moz-transition: background-position 0.25s linear;
+            -o-transition: background-position 025s linear;
+            transition: background-position 0.25s linear;
+            opacity: 1.0;
+        }
     &:active  {
       @include prefixed(transform, translateY(-2px))
     }
   }//.button
-  
-  span  {
-    color: $pink;
-    font-weight: bold;
-    font-size: 50px;
-    font-family: $sans;
-  }
-  
-  h1  {
-    opacity: .9;
-    font-size: 36px;
-    line-height: 42px;
-    font-size: 28px;
-    padding: 100px 0 150px 0;
-    font-weight: 300;
-    font-family: $serif;
-  }
-  
-  h3  {
-    font-size: 24px;
-    margin: 0;
-    font-weight: 300;
-    span  {
-      font-size: 24px;
-      font-weight: bold;
-    }
-  }
-  
-  h4	{
-	  margin-top: 40px;
-  }
-
-
 }//.story_book__intro
+
+    .story_book__intro__header {
+        opacity: .9;
+        font-size: 36px;
+        line-height: 42px;
+        font-size: 28px;
+        padding: 100px 0 150px 0;
+        font-weight: 300;
+        font-family: $serif;
+    }
+    
+    .story_book__intro__to-from{
+        
+    }//story_book__intro__to-from
+        
+        .story_book__intro__to-from--label{
+            font-size: 24px;
+            margin: 0;
+            font-weight: 300;
+        }//.story_book__intro__to-from--label
+        
+        .story_book__intro__to-from--name{
+            font-size: 24px;
+            font-weight: bold;
+            color: $pink;
+            font-weight: bold;
+            font-size: 50px;
+            font-family: $sans;
+        }//.story_book__intro__to-from--name

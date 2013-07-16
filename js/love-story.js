@@ -369,7 +369,7 @@ var loveStory = {
           couch.fadeIn(duration, function(){
               cantSlip.delay(duration).slideDown(duration, function(){
                   matt.delay(400).fadeIn(20).animate({
-                    left: 447
+                    left: 337
                   }, 1200, 'easeInOutElastic');
                 });
             });

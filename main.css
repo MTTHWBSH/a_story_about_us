@@ -436,10 +436,15 @@ footer {
   border: solid thin #4e4e4e; }
 
 /* Cover */
+/*
+    when styling specific elements, it's actually best to avoid using element selectors to style specific elements, like the title of the page. You end up getting really strange 
+*/
 .story_book__intro {
   display: none;
+  width: 100%;
   padding: 20px;
-  margin: 0 auto;
+  position: absolute;
+  left: 0px;
   text-align: center;
   color: #4e4e4e; }
   .story_book__intro a {
@@ -494,28 +499,28 @@ footer {
       -ms-transform: translateY(-2px);
       -o-transform: translateY(-2px);
       transform: translateY(-2px); }
-  .story_book__intro span {
-    color: #af5f50;
-    font-weight: bold;
-    font-size: 50px;
-    font-family: "Source Sans Pro", sans-serif; }
-  .story_book__intro h1 {
-    opacity: .9;
-    font-size: 36px;
-    line-height: 42px;
-    font-size: 28px;
-    padding: 100px 0 150px 0;
-    font-weight: 300;
-    font-family: "Gentium Basic", serif; }
-  .story_book__intro h3 {
-    font-size: 24px;
-    margin: 0;
-    font-weight: 300; }
-    .story_book__intro h3 span {
-      font-size: 24px;
-      font-weight: bold; }
-  .story_book__intro h4 {
-    margin-top: 40px; }
+
+.story_book__intro__header {
+  opacity: .9;
+  font-size: 36px;
+  line-height: 42px;
+  font-size: 28px;
+  padding: 100px 0 150px 0;
+  font-weight: 300;
+  font-family: "Gentium Basic", serif; }
+
+.story_book__intro__to-from--label {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 300; }
+
+.story_book__intro__to-from--name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #af5f50;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: "Source Sans Pro", sans-serif; }
 
 /* Coliphon */
 .story_book__colophon {
@@ -664,14 +669,14 @@ footer {
   font-size: 25px;
   position: absolute;
   top: 250px;
-  left: 120px; }
+  left: 50px; }
 
 .partiers__cant-slip-away {
   width: 310px;
   font-size: 25px;
   position: absolute;
   top: 390px;
-  left: 120px; }
+  left: 50px; }
 
 .partiers__foreshadowing {
   width: 290px;
@@ -682,27 +687,27 @@ footer {
   font-weight: 600; }
 
 .partiers__little-flags {
-  width: 395px;
-  top: 85px;
-  left: 341px;
+  width: 495px;
+  top: 75px;
+  left: 211px;
   z-index: 20; }
 
 .partiers__drunk-matt {
-  width: 220px;
+  width: 270px;
   top: 130px;
   left: -120px;
   z-index: 15; }
 
 .partiers__kate-couch {
-  width: 325px;
-  top: 250px;
-  right: 240px;
+  width: 385px;
+  top: 280px;
+  right: 250px;
   z-index: 10; }
 
 .partiers__bar-bg {
-  width: 295px;
-  top: 185px;
-  right: 100px; }
+  width: 345px;
+  top: 205px;
+  right: 90px; }
 
 /* Slide 3 */
 .slide.roadies .slide__title {
