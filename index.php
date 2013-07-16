@@ -42,6 +42,13 @@
         <img src="img/ui-elements/bottom-arrow-key.png" alt="down arrow key" class="ui__keyboard--botom-key" />
         <img src="img/ui-elements/right-arrow-key.png" alt="right arrow key" class="ui__keyboard--right-key" />
       </div><!-- .ui__keyboard -->
+      
+      <ul class="ui__nav">
+        <?php for($i = 1; $i < 9; $i++){ ?>
+            <li class="<?php echo 'ui__nav__slide' . $i; ?>"></li>
+        <?php } ?>
+            <li class="ui__nav__colophon"></li>
+      </ul>
     </aside><!-- .ui-elements -->
     
     <div class="story_book">

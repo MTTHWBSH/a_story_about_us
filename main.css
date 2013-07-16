@@ -526,6 +526,14 @@ footer {
 .story_book__colophon {
   display: none; }
 
+.slide__title {
+  position: absolute;
+  text-align: right;
+  font-size: 175px;
+  line-height: 1;
+  color: #4e4e4e; }
+
+/* UI ELEMENTS */
 /* UI ELEMENTS */
 .ui-elements {
   overflow: visible;
@@ -595,6 +603,56 @@ footer {
   background-image: url("img/ui-elements/right-arrow-button.png");
   right: -70px; }
 
+.ui__nav {
+  display: block;
+  width: 78%;
+  height: 200px;
+  position: relative;
+  top: 750px; }
+
+[class^="ui__nav__slide"] {
+  display: block;
+  width: 11.5%;
+  height: 110px;
+  margin-right: 5px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+  opacity: 0.5; }
+  [class^="ui__nav__slide"]:hover {
+    opacity: 0.7; }
+  [class^="ui__nav__slide"]:active {
+    opacity: 1; }
+
+.ui__nav__slide1 {
+  background-image: url("img/ui-elements/thumbnails/slide1-thumb.png"); }
+
+.ui__nav__slide2 {
+  background-image: url("img/ui-elements/thumbnails/slide2-thumb.png"); }
+
+.ui__nav__slide3 {
+  background-image: url("img/ui-elements/thumbnails/slide3-thumb.png"); }
+
+.ui__nav__slide4 {
+  background-image: url("img/ui-elements/thumbnails/slide4-thumb.png"); }
+
+.ui__nav__slide5 {
+  background-image: url("img/ui-elements/thumbnails/slide5-thumb.png"); }
+
+.ui__nav__slide6 {
+  background-image: url("img/ui-elements/thumbnails/slide6-thumb.png"); }
+
+.ui__nav__slide7 {
+  background-image: url("img/ui-elements/thumbnails/slide7-thumb.png"); }
+
+.ui__nav__slide8 {
+  background-image: url("img/ui-elements/thumbnails/slide8-thumb.png"); }
+
+.ui__nav__colophon {
+  background-image: url("img/ui-elements/thumbnails/colophon-thumb.png"); }
+
 /*  SLIDES */
 .slide {
   position: relative;
@@ -608,13 +666,6 @@ footer {
     color: rgba(123, 152, 140, 0.999); }
   .slide.visible {
     display: block; }
-
-.slide__title {
-  position: absolute;
-  text-align: right;
-  font-size: 175px;
-  line-height: 1;
-  color: #4e4e4e; }
 
 /* Slide 1 */
 .slide.classmates .slide__title {
@@ -681,10 +732,9 @@ footer {
 .partiers__foreshadowing {
   width: 290px;
   position: absolute;
-  top: 680px;
-  right: 130px;
-  font-size: 30px;
-  font-weight: 600; }
+  top: 700px;
+  right: 110px;
+  font-size: 32px; }
 
 .partiers__little-flags {
   width: 495px;

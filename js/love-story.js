@@ -5,6 +5,15 @@
 var loveStory = {
   pointer : 0,
   isBusy: false,
+  Chapter1: 1,
+  Chapter2: 3,
+  Chapter3: 6,
+  Chapter4: 9,
+  Chapter5: 12,
+  Chapter6: 14,
+  Chapter7: 16,
+  Chapter8: 18,
+  Colophon: 19,
   //TODO MAKE SHIFT + ARROW ADVANCE BETWEEN CHAPTERS
   /**
     init()
@@ -24,6 +33,16 @@ var loveStory = {
     var leftKey = keysWrapper.find('.ui__keyboard--left-key');
     var downKey = keysWrapper.find('.ui__keyboard--down-key');
     var rightKey = keysWrapper.find('.ui__keyboard--right-key');
+    var uiNav = uiWrapper.find('.ui__nav');
+    var chapter1 = uiNav.find('.ui__nav__slide1');
+    var chapter2 = uiNav.find('.ui__nav__slide2');
+    var chapter3 = uiNav.find('.ui__nav__slide3');
+    var chapter4 = uiNav.find('.ui__nav__slide4');
+    var chapter5 = uiNav.find('.ui__nav__slide5');
+    var chapter6 = uiNav.find('.ui__nav__slide6');
+    var chapter7 = uiNav.find('.ui__nav__slide7');
+    var chapter8 = uiNav.find('.ui__nav__slide8');
+    var colophonThumb = uiNav.find('.ui__nav__colophon');
     
     //reset the pointer
     self.pointer = 0;
@@ -143,6 +162,51 @@ var loveStory = {
           return;
       });
     
+    //THUMBNAIL NAV
+      chapter1.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter1);
+      });
+      
+      chapter2.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter2);
+      });
+      
+      chapter3.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter3);
+      });
+      
+      chapter4.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter4);
+      });
+      
+      chapter5.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter5);
+      });
+      
+      chapter6.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter6);
+      });
+      
+      chapter7.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter7);
+      });
+      
+      chapter8.click(function(e){
+          e.preventDefault();
+          self.index(self.Chapter8);
+      });
+      
+      colophonThumb.click(function(e){
+          e.preventDefault();
+          self.index(self.Colophon);
+      });
     //call the index
     var frame = $('.story_book');
     var intro = frame.find('.story_book__intro');
@@ -797,7 +861,20 @@ var loveStory = {
               meetup.fadeIn(400);
               map.fadeIn(400);
             });
-
+            
+            break;
+        //COLOPHON
+        case 19:
+            var matt = colophon.find('.colophon__collab-list__li--matt');
+            var josh = colophon.find('.colophon__collab-list__li--josh');
+            var gabe = colophon.find('.colophon__collab-list__li--gabe');
+            
+            colophon.children().css('');
+            
+            self.limbo(self.pointer);
+            
+            colophon.show(0);
+            
             break;
     }//switch
     self.isBusy = false;

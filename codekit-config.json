@@ -36,17 +36,6 @@
       "initialSize" : 7244,
       "fileType" : 8192
     },
-    "\/img\/slide-2\/bar.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
-      "initialSize" : 119639,
-      "fileType" : 8192
-    },
     "\/img\/slide-5\/dash-2.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -56,6 +45,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-2.png",
       "initialSize" : 7206,
+      "fileType" : 8192
+    },
+    "\/img\/slide-2\/bar.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-2\/bar.png",
+      "initialSize" : 119639,
       "fileType" : 8192
     },
     "\/img\/contributor-thumbs\/matt.jpg" : {
@@ -112,6 +112,15 @@
       "initialSize" : 17714,
       "fileType" : 8192
     },
+    "\/pages\/_slides.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/pages\/_slides.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/img\/slide-6\/margot-paw-right.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -122,15 +131,6 @@
       "outputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
       "initialSize" : 13492,
       "fileType" : 8192
-    },
-    "\/pages\/_slides.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pages\/_slides.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/img\/slide-3\/path1.png" : {
       "ignoreWasSetByUser" : 0,
@@ -173,6 +173,17 @@
       "inputAbbreviatedPath" : "\/sass\/base.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
+    },
+    "\/img\/ui-elements\/thumbnails\/slide2-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide2-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide2-thumb.png",
+      "initialSize" : 22987,
+      "fileType" : 8192
     },
     "\/img\/slide-6\/matt-head.png" : {
       "ignoreWasSetByUser" : 0,
@@ -228,6 +239,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
+    "\/img\/ui-elements\/thumbnails\/slide4-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide4-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide4-thumb.png",
+      "initialSize" : 42002,
+      "fileType" : 8192
+    },
     "\/img\/slide-2\/matt.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -261,15 +283,6 @@
       "initialSize" : 4865,
       "fileType" : 8192
     },
-    "\/main.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/main.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/img\/slide-7\/skyscraper.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -281,6 +294,17 @@
       "initialSize" : 72269,
       "fileType" : 8192
     },
+    "\/img\/slide-5\/clock-hand-minute.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "initialSize" : 7518,
+      "fileType" : 8192
+    },
     "\/img\/slide-5\/dash-5.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -290,17 +314,6 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
       "initialSize" : 7324,
-      "fileType" : 8192
-    },
-    "\/img\/slide-6\/kate-head.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
-      "initialSize" : 284806,
       "fileType" : 8192
     },
     "\/sass\/global\/_modules.scss" : {
@@ -315,15 +328,35 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/img\/slide-5\/clock-hand-minute.png" : {
+    "\/img\/slide-6\/kate-head.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
+      "inputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-minute.png",
-      "initialSize" : 7518,
+      "outputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
+      "initialSize" : 284806,
+      "fileType" : 8192
+    },
+    "\/main.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/main.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/img\/ui-elements\/thumbnails\/slide6-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide6-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide6-thumb.png",
+      "initialSize" : 49845,
       "fileType" : 8192
     },
     "\/sass\/slides\/_3-roadies.scss" : {
@@ -347,6 +380,29 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-11.png",
       "initialSize" : 7258,
+      "fileType" : 8192
+    },
+    "\/sass\/global\/_storyboard.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/global\/_storyboard.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/sass\/css\/_storyboard.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
+    "\/img\/ui-elements\/thumbnails\/slide8-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide8-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide8-thumb.png",
+      "initialSize" : 22960,
       "fileType" : 8192
     },
     "\/js\/love-story-ck.js" : {
@@ -451,6 +507,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/img\/ui-elements\/thumbnails\/colophon-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/colophon-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/colophon-thumb.png",
+      "initialSize" : 59506,
+      "fileType" : 8192
+    },
     "\/img\/slide-5\/clock-bg.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -473,17 +540,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.rotate-ck.js",
       "fileType" : 64
     },
-    "\/img\/ui-elements\/right-arrow-button.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-button.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-button.png",
-      "initialSize" : 4953,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/car.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -493,6 +549,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-7\/car.png",
       "initialSize" : 152807,
+      "fileType" : 8192
+    },
+    "\/img\/ui-elements\/right-arrow-button.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-button.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-button.png",
+      "initialSize" : 4953,
       "fileType" : 8192
     },
     "\/img\/ui-elements\/top-arrow-key.png" : {
@@ -528,17 +595,6 @@
       "initialSize" : 7313,
       "fileType" : 8192
     },
-    "\/img\/slide-1\/class-scene.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-1\/class-scene.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-1\/class-scene.png",
-      "initialSize" : 2130965,
-      "fileType" : 8192
-    },
     "\/img\/slide-3\/path8.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -548,6 +604,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-3\/path8.png",
       "initialSize" : 4310,
+      "fileType" : 8192
+    },
+    "\/img\/slide-1\/class-scene.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-1\/class-scene.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-1\/class-scene.png",
+      "initialSize" : 2130965,
       "fileType" : 8192
     },
     "\/img\/slide-7\/bean.png" : {
@@ -582,6 +649,18 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/sass\/global\/_ui-elements.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/global\/_ui-elements.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/sass\/css\/_ui-elements.css",
+      "fileType" : 4,
+      "debugStyle" : 0
+    },
     "\/img\/slide-5\/dash-1.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -593,15 +672,15 @@
       "initialSize" : 7253,
       "fileType" : 8192
     },
-    "\/img\/slide-3\/path3.png" : {
+    "\/img\/ui-elements\/thumbnails\/slide1-thumb.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
-      "initialSize" : 4757,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
+      "initialSize" : 40308,
       "fileType" : 8192
     },
     "\/img\/slide-1\/kate-head.png" : {
@@ -615,17 +694,16 @@
       "initialSize" : 100682,
       "fileType" : 8192
     },
-    "\/sass\/index.scss" : {
+    "\/img\/slide-5\/dash-6.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/sass\/index.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/main.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
+      "initialSize" : 7351,
+      "fileType" : 8192
     },
     "\/img\/apple-touch-icon-114x114.png" : {
       "ignoreWasSetByUser" : 0,
@@ -638,16 +716,17 @@
       "initialSize" : 17714,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/dash-6.png" : {
+    "\/sass\/slides\/_1-classmates.scss" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
-      "initialSize" : 7351,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/sass\/slides\/_1-classmates.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/sass\/css\/_1-classmates.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/img\/slide-1\/matt-head.png" : {
       "ignoreWasSetByUser" : 0,
@@ -660,26 +739,15 @@
       "initialSize" : 102215,
       "fileType" : 8192
     },
-    "\/js\/jquery.easing.js" : {
+    "\/img\/slide-3\/path3.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery.easing.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/jquery.easing-ck.js",
-      "fileType" : 64
-    },
-    "\/img\/ui-elements\/right-arrow-key.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "inputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "initialSize" : 6583,
+      "outputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
+      "initialSize" : 4757,
       "fileType" : 8192
     },
     "\/img\/slide-4\/matt.png" : {
@@ -693,15 +761,37 @@
       "initialSize" : 232775,
       "fileType" : 8192
     },
-    "\/sass\/slides\/_1-classmates.scss" : {
+    "\/img\/ui-elements\/right-arrow-key.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/slides\/_1-classmates.scss",
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "initialSize" : 6583,
+      "fileType" : 8192
+    },
+    "\/js\/jquery.easing.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery.easing.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/jquery.easing-ck.js",
+      "fileType" : 64
+    },
+    "\/sass\/index.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/sass\/index.scss",
       "outputStyle" : 0,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/sass\/css\/_1-classmates.css",
+      "outputAbbreviatedPath" : "\/main.css",
       "fileType" : 4,
       "debugStyle" : 0
     },
@@ -737,6 +827,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/img\/ui-elements\/thumbnails\/slide3-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide3-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide3-thumb.png",
+      "initialSize" : 23761,
+      "fileType" : 8192
+    },
     "\/sass\/global\/_reset.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -759,6 +860,17 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/jquery.1.10-ck.js",
       "fileType" : 64
+    },
+    "\/img\/ui-elements\/thumbnails\/slide7-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide7-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide7-thumb.png",
+      "initialSize" : 23686,
+      "fileType" : 8192
     },
     "\/img\/slide-4\/brick.png" : {
       "ignoreWasSetByUser" : 0,
@@ -823,6 +935,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-3\/caulder.png",
       "initialSize" : 93151,
+      "fileType" : 8192
+    },
+    "\/img\/ui-elements\/thumbnails\/slide5-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide5-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide5-thumb.png",
+      "initialSize" : 28587,
       "fileType" : 8192
     },
     "\/img\/ui-elements\/left-arrow-buton.png" : {
@@ -947,17 +1070,6 @@
       "initialSize" : 56570,
       "fileType" : 4096
     },
-    "\/img\/slide-5\/clock-hand-hour.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
-      "initialSize" : 7393,
-      "fileType" : 8192
-    },
     "\/img\/apple-touch-icon-72x72.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -967,6 +1079,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/apple-touch-icon-72x72.png",
       "initialSize" : 17714,
+      "fileType" : 8192
+    },
+    "\/img\/slide-5\/clock-hand-hour.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-hand-hour.png",
+      "initialSize" : 7393,
       "fileType" : 8192
     },
     "\/img\/contributor-thumbs\/gabe.jpg" : {
@@ -1036,15 +1159,6 @@
       "initialSize" : 403350,
       "fileType" : 8192
     },
-    "\/sass\/layout.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/layout.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/img\/slide-7\/willis-tower.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1055,6 +1169,15 @@
       "outputAbbreviatedPath" : "\/img\/slide-7\/willis-tower.png",
       "initialSize" : 75017,
       "fileType" : 8192
+    },
+    "\/sass\/layout.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/sass\/layout.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/slide-3\/gr.png" : {
       "ignoreWasSetByUser" : 0,
