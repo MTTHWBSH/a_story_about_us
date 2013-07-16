@@ -261,7 +261,7 @@ var loveStory = {
                 
             }//if google == undefined
             
-            console.log('TODO: \n * call map with options,\n * style map container and rest of last slide.\n * Style colophon,\n * style cover,\n * add thumbnails,\n * make back button call animations properly,\n * favicon (bean),\n * get twitter/facebook sharing stuff together,\n * polish animations/type treatment on earlier slides,\n * fix bug with first slide,\n * make meta (title, desc, author, readme, etc) better');
+            console.log('TODO: \n * call map with options,\n * style map container and rest of last slide.\n * Style colophon,\n * style cover,\n * make back button call animations properly,\n * favicon (bean),\n * get twitter/facebook sharing stuff together,\n * polish animations/type treatment on earlier slides,\n * fix bug with first slide,\n * make meta (title, desc, author, readme, etc) better');
         });
   },//mapsHooo()
   
