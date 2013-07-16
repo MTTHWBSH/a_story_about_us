@@ -610,9 +610,9 @@ footer {
   position: relative;
   top: 750px; }
 
-[class^="ui__nav__slide"] {
+[class^="ui__nav__"] {
   display: block;
-  width: 11.5%;
+  width: 10.5%;
   height: 110px;
   margin-right: 5px;
   float: left;
@@ -621,9 +621,9 @@ footer {
   background-size: 100%;
   cursor: pointer;
   opacity: 0.5; }
-  [class^="ui__nav__slide"]:hover {
+  [class^="ui__nav__"]:hover {
     opacity: 0.7; }
-  [class^="ui__nav__slide"]:active {
+  [class^="ui__nav__"]:active {
     opacity: 1; }
 
 .ui__nav__slide1 {

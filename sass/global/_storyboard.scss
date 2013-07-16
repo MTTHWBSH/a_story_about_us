@@ -1,0 +1,26 @@
+.storyboard-container{
+  display: block;
+    height: $storyBookHeight;
+    width: $storyBookWidth;
+    margin: 80px auto;
+  position: relative;
+}//.container
+
+.story_book{
+  display: block;
+    height: $storyBookHeight;
+    width: $storyBookWidth;
+  overflow: hidden;
+  border: solid thin $slate;
+}//.story_book
+//COVERS
+  @import "../slides/cover";
+  @import "../slides/coliphon";
+
+  .slide__title{  
+    position: absolute;
+    text-align: right;
+    font-size: 175px;
+    line-height: 1;
+    color: $slideTitleColor;
+  }//.slide__title

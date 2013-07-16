@@ -1,0 +1,191 @@
+/* UI ELEMENTS */
+/* UI ELEMENTS */
+.ui-elements{
+  @extend .story_book;
+  overflow: visible;
+  display: none;
+  border: none;
+  position: absolute;
+}//.ui-elements
+
+  .ui__keyboard{
+    position: absolute;
+      bottom: -90px;
+      right: 10px;
+    display: block;
+      width: 220px;
+      height: 80px;
+      
+    img{
+      display: inline-block;
+      float: left;
+      margin: 0px 10px 0px 0px;
+      opacity: .5;
+      cursor: pointer;
+      
+      &.pressed{
+        opacity: 1;
+      }//.pressed
+    }//img
+    
+      .ui__keyboard--top-key{
+        display: block;
+        clear: both;
+        float: none;
+        width: 65px;
+        margin: 0px 0px 0px 70px;
+      }//.ui__keyboard--top-key
+      
+      .ui__keyboard--left-key,
+      .ui__keyboard--right-key{
+        width: 60px;
+        position: relative;
+
+        &:after{
+          font-size: 10px;
+          display: block;
+          position: absolute;
+            top: -10px;
+            left: 0px;
+          font-family: $serif;
+        }
+      }//.ui__keyboard--top-key
+      
+      .ui__keyboard-left-key{
+        &:after{
+          content: 'Previous';
+        }//:after
+      }//.ui__keyboard-left-key
+      
+      .ui__keyboard-right-key{
+        &:after{
+          content: 'Next';
+        }
+      }//.ui__keyboard-right-keu
+      
+      .ui__keyboard--botom-key{
+        width: 65px;
+      }//.ui__keyboard--top-key
+      
+  }//.ui__keyboard
+  
+  .ui__left-button,
+  .ui__right-button{
+    cursor: pointer;
+    display: block;
+      width: 70px;
+      height: 100%;
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    opacity: .5;
+    
+    &:hover{
+      opacity: 1;
+    }//:hover
+    
+  }//.ui__left-button
+  
+  .ui__left-button{
+    background-image: url('img/ui-elements/left-arrow-buton.png');
+    left: -70px;
+
+  }//.ui__right-button
+  
+  .ui__right-button{
+    background-image: url('img/ui-elements/right-arrow-button.png');
+    right: -70px;
+  
+  }//.ui__right-button
+  
+  .ui__nav{
+    display: block;
+        width: 78%;
+        height: 200px;
+    position: relative;
+        top: 750px;
+  }//.ui__nav
+  
+    [class^="ui__nav__"]{
+        display: block;
+            width: 10.5%;
+            height: 110px;
+            margin-right: 5px;
+        float: left;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 100%;
+        cursor: pointer;
+        opacity: 0.5;
+        
+        &:hover{
+            opacity: 0.7;
+        }//:hover
+        
+        &:active{
+            opacity: 1;
+        }//:active
+    }//[class^="ui__nav__slide"]
+    
+        .ui__nav__slide1{
+            background-image: url('img/ui-elements/thumbnails/slide1-thumb.png')
+        }//ui__nav__slide
+        
+        .ui__nav__slide2{
+            background-image: url('img/ui-elements/thumbnails/slide2-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__slide3{
+            background-image: url('img/ui-elements/thumbnails/slide3-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__slide4{
+            background-image: url('img/ui-elements/thumbnails/slide4-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__slide5{
+            background-image: url('img/ui-elements/thumbnails/slide5-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__slide6{
+            background-image: url('img/ui-elements/thumbnails/slide6-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__slide7{
+            background-image: url('img/ui-elements/thumbnails/slide7-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__slide8{
+            background-image: url('img/ui-elements/thumbnails/slide8-thumb.png')
+        }//ui__nav__slid
+        
+        .ui__nav__colophon{
+            background-image: url('img/ui-elements/thumbnails/colophon-thumb.png');
+        }//.ui__nav__colophon
+
+
+/*  SLIDES */
+
+.slide{
+  position: relative;
+  display: none;
+    //height: 2000px;
+    margin: 0px 0px 100px;
+  
+  * {
+    display: none;
+  }
+    
+  img{
+    position: absolute;
+    
+  }
+  
+  p{
+    color: $slideBodyColor;
+  }//p
+  
+  &.visible{
+    display: block;
+  }//.visible
+}//.slide
