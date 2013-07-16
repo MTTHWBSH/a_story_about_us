@@ -539,7 +539,8 @@ footer {
   overflow: visible;
   display: none;
   border: none;
-  position: absolute; }
+  position: absolute;
+  z-index: -1; }
 
 .ui__keyboard {
   position: absolute;

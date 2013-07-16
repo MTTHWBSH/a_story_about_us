@@ -112,15 +112,6 @@
       "initialSize" : 17714,
       "fileType" : 8192
     },
-    "\/pages\/_slides.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/pages\/_slides.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/img\/slide-6\/margot-paw-right.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -131,6 +122,15 @@
       "outputAbbreviatedPath" : "\/img\/slide-6\/margot-paw-right.png",
       "initialSize" : 13492,
       "fileType" : 8192
+    },
+    "\/pages\/_slides.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/pages\/_slides.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/img\/slide-3\/path1.png" : {
       "ignoreWasSetByUser" : 0,
@@ -230,15 +230,6 @@
       "initialSize" : 531495,
       "fileType" : 8192
     },
-    "\/css\/index.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/index.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
-    },
     "\/img\/ui-elements\/thumbnails\/slide4-thumb.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -249,6 +240,15 @@
       "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide4-thumb.png",
       "initialSize" : 42002,
       "fileType" : 8192
+    },
+    "\/css\/index.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/index.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/slide-2\/matt.png" : {
       "ignoreWasSetByUser" : 0,
@@ -316,6 +316,17 @@
       "initialSize" : 7324,
       "fileType" : 8192
     },
+    "\/img\/slide-6\/kate-head.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
+      "initialSize" : 284806,
+      "fileType" : 8192
+    },
     "\/sass\/global\/_modules.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -327,17 +338,6 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_modules.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/img\/slide-6\/kate-head.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
-      "initialSize" : 284806,
-      "fileType" : 8192
     },
     "\/main.css" : {
       "ignoreWasSetByUser" : 0,
@@ -518,17 +518,6 @@
       "initialSize" : 59506,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/clock-bg.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-bg.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-bg.png",
-      "initialSize" : 61816,
-      "fileType" : 8192
-    },
     "\/js\/jquery.rotate.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -539,6 +528,17 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/jquery.rotate-ck.js",
       "fileType" : 64
+    },
+    "\/img\/slide-5\/clock-bg.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/clock-bg.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/clock-bg.png",
+      "initialSize" : 61816,
+      "fileType" : 8192
     },
     "\/img\/slide-7\/car.png" : {
       "ignoreWasSetByUser" : 0,
@@ -672,15 +672,15 @@
       "initialSize" : 7253,
       "fileType" : 8192
     },
-    "\/img\/ui-elements\/thumbnails\/slide1-thumb.png" : {
+    "\/img\/slide-3\/path3.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
+      "inputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
-      "initialSize" : 40308,
+      "outputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
+      "initialSize" : 4757,
       "fileType" : 8192
     },
     "\/img\/slide-1\/kate-head.png" : {
@@ -694,16 +694,17 @@
       "initialSize" : 100682,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/dash-6.png" : {
+    "\/sass\/index.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
-      "initialSize" : 7351,
-      "fileType" : 8192
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/sass\/index.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/main.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/img\/apple-touch-icon-114x114.png" : {
       "ignoreWasSetByUser" : 0,
@@ -728,48 +729,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/img\/slide-1\/matt-head.png" : {
+    "\/img\/slide-5\/dash-6.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
+      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
-      "initialSize" : 102215,
-      "fileType" : 8192
-    },
-    "\/img\/slide-3\/path3.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
-      "initialSize" : 4757,
-      "fileType" : 8192
-    },
-    "\/img\/slide-4\/matt.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
-      "initialSize" : 232775,
-      "fileType" : 8192
-    },
-    "\/img\/ui-elements\/right-arrow-key.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "initialSize" : 6583,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
+      "initialSize" : 7351,
       "fileType" : 8192
     },
     "\/js\/jquery.easing.js" : {
@@ -783,17 +751,49 @@
       "outputAbbreviatedPath" : "\/js\/jquery.easing-ck.js",
       "fileType" : 64
     },
-    "\/sass\/index.scss" : {
+    "\/img\/ui-elements\/right-arrow-key.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/sass\/index.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/main.css",
-      "fileType" : 4,
-      "debugStyle" : 0
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "initialSize" : 6583,
+      "fileType" : 8192
+    },
+    "\/img\/slide-4\/matt.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-4\/matt.png",
+      "initialSize" : 232775,
+      "fileType" : 8192
+    },
+    "\/img\/slide-1\/matt-head.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
+      "initialSize" : 102215,
+      "fileType" : 8192
+    },
+    "\/img\/ui-elements\/thumbnails\/slide1-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
+      "initialSize" : 40308,
+      "fileType" : 8192
     },
     "\/sass\/css\/_mixins.css" : {
       "ignoreWasSetByUser" : 0,
@@ -981,17 +981,6 @@
       "initialSize" : 13743,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/dash-13.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
-      "initialSize" : 7361,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/road.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1001,6 +990,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-7\/road.png",
       "initialSize" : 476072,
+      "fileType" : 8192
+    },
+    "\/img\/slide-5\/dash-13.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
+      "initialSize" : 7361,
       "fileType" : 8192
     },
     "\/sass\/slides\/_2-partiers.scss" : {
@@ -1148,16 +1148,14 @@
       "initialSize" : 44093,
       "fileType" : 8192
     },
-    "\/img\/slide-3\/michigan.png" : {
+    "\/sass\/layout.css" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-3\/michigan.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-3\/michigan.png",
-      "initialSize" : 403350,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/sass\/layout.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
     },
     "\/img\/slide-7\/willis-tower.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1170,14 +1168,16 @@
       "initialSize" : 75017,
       "fileType" : 8192
     },
-    "\/sass\/layout.css" : {
+    "\/img\/slide-3\/michigan.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/sass\/layout.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/img\/slide-3\/michigan.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-3\/michigan.png",
+      "initialSize" : 403350,
+      "fileType" : 8192
     },
     "\/img\/slide-3\/gr.png" : {
       "ignoreWasSetByUser" : 0,

@@ -165,47 +165,56 @@ var loveStory = {
     //THUMBNAIL NAV
       chapter1.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter1);
+          self.pointer = self.Chapter1;
+          self.index(self.pointer);
       });
       
       chapter2.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter2);
+          self.pointer = self.Chapter2;
+          self.index(self.pointer);
       });
       
       chapter3.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter3);
+          self.pointer = self.Chapter3;
+          self.index(self.pointer);
       });
       
       chapter4.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter4);
+          self.pointer = self.Chapter4;
+          self.index(self.pointer);
       });
       
       chapter5.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter5);
+          self.pointer = self.Chapter5
+          self.index(self.pointer);
       });
       
       chapter6.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter6);
+          self.pointer = self.Chapter6;
+          self.index(self.pointer);
       });
       
       chapter7.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter7);
+          self.pointer = self.Chapter7;
+          self.index(self.pointer);
       });
       
       chapter8.click(function(e){
           e.preventDefault();
-          self.index(self.Chapter8);
+          self.pointer = self.Chapter8;
+          self.index(self.pointer);
       });
       
       colophonThumb.click(function(e){
           e.preventDefault();
-          self.index(self.Colophon);
+          self.pointer = self.Colophon;
+          self.index(self.pointer);
       });
     //call the index
     var frame = $('.story_book');
