@@ -44,10 +44,10 @@
 
   <!-- Favicons
   ==============================================================================-->
-  <link rel="shortcut icon" href="img/favicons/favicon.ico">
-  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="<?php echo  dirname(__FILE__); ?>/img/favicons/favicon.ico">
+  <link rel="apple-touch-icon" href="<?php echo  dirname(__FILE__); ?>/img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo  dirname(__FILE__); ?>/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo  dirname(__FILE__); ?>/img/favicons/apple-touch-icon-114x114.png">
 </head>
 <body>
   <div class="storyboard-container">
@@ -57,10 +57,10 @@
       <div class="ui__right-button">&nbsp;</div>
       
       <div class="ui__keyboard">
-        <img src="<?php echo  dirname(__FILE__); ?>/img/ui-elements/top-arrow-key.png" alt="up arrow key" class="ui__keyboard--top-key" />
-        <img src="<?php echo  dirname(__FILE__); ?>/img/ui-elements/left-arrow-key.png" alt="left arrow key" class="ui__keyboard--left-key" />
-        <img src="<?php echo  dirname(__FILE__); ?>/img/ui-elements/bottom-arrow-key.png" alt="down arrow key" class="ui__keyboard--botom-key" />
-        <img src="<?php echo  dirname(__FILE__); ?>/img/ui-elements/right-arrow-key.png" alt="right arrow key" class="ui__keyboard--right-key" />
+        <img src="img/ui-elements/top-arrow-key.png" alt="up arrow key" class="ui__keyboard--top-key" />
+        <img src="img/ui-elements/left-arrow-key.png" alt="left arrow key" class="ui__keyboard--left-key" />
+        <img src="img/ui-elements/bottom-arrow-key.png" alt="down arrow key" class="ui__keyboard--botom-key" />
+        <img src="img/ui-elements/right-arrow-key.png" alt="right arrow key" class="ui__keyboard--right-key" />
       </div><!-- .ui__keyboard -->
       
       <ul class="ui__nav">
