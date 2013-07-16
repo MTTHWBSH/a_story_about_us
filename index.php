@@ -12,7 +12,7 @@
     $authors = '@joshDcomp, @mttwbsh @GabeCooper';
     $keywords = 'marriage, proposal, love, story, engagement, animation, illustration, MTTHWBSH, joshDcomp, GabeCooper, html5, css3, tech, story, love story, michigan state university, msu, grand rapids, chicago, east lansing';
     $ogURL = '';
-    $thumb = 'http://joshdcompton.com/img/fb-img.png';
+    $thumb = 'http://astoryabout.us/img/thumb.png';
 
 ?>
 <head>

@@ -222,7 +222,7 @@ var loveStory = {
     frame.find('.slide').hide(0);
     self.limbo(self.pointer);
     //so now that we've initialize everything, let'cs call the map in the background
-    self.mapsHooo();
+    //self.mapsHooo();
   },
   /**
     mapsHooo()
@@ -261,7 +261,7 @@ var loveStory = {
                 
             }//if google == undefined
             
-            console.log('TODO: \n * call map with options,\n * style map container and rest of last slide.\n * Style colophon,\n * style cover,\n * make back button call animations properly,\n * favicon (bean),\n * get twitter/facebook sharing stuff together,\n * polish animations/type treatment on earlier slides,\n * fix bug with first slide,\n * make meta (title, desc, author, readme, etc) better');
+            console.log('TODO: \n * Style colophon,\n * style cover,\n * make back button call animations properly,');
         });
   },//mapsHooo()
   
@@ -855,7 +855,8 @@ var loveStory = {
         case 18:
             var slideTitle = slideEight.find('.slide__title');
             var meetup = slideEight.find('.meet-up__message');
-            var map = slideEight.find('.meet-up__map');
+            var map = slideEight.find('.meet-up__map-canvas');
+            var mapOverlay = slideEight.find('.meet-up__map-tooltip');
             
             slideEight.children().css('');
             
@@ -868,6 +869,7 @@ var loveStory = {
               right: '-2%'
             }, 1000, function(){
               meetup.fadeIn(400);
+              mapOverlay.delay(400).fadeIn(400).children().show(0);
               map.fadeIn(400);
             });
             

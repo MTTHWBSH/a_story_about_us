@@ -109,7 +109,7 @@
 .container  {
   width: 800px;
   min-height: 900px;
-  margin: 30px auto;
+  margin: 10px auto;
   background-image: url(../img/home_bg.png);
     background-position: center center;
     background-repeat: no-repeat;
@@ -117,18 +117,7 @@
     transition:all 2s ease-in-out;
   perspective: 800px;
   perspective-origin: 50% 100px;
-  @include prefixed(text-shadow, 2px 2px #9C9C9C);
 } 
-
-a	{
-	color: $pink;
-	text-decoration: none;
-	&:hover	{
-		color: $pink;
-		@include ease_out ($duration: .3s);
-		@include prefixed(text-shadow, 2px 2px #9C9C9C);
-	}
-}
 
 /* Footer
 ================================================== */

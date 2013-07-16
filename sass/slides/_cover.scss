@@ -6,6 +6,8 @@
 //------------------------------------------------------------------------------
 // Landing Styles
 //------------------------------------------------------------------------------
+$everythingTop: 300px;
+
 .story_book__intro{
     display: none;
         width: 100%;
@@ -14,53 +16,29 @@
         left: 0px;
     text-align: center;
     color: $slate;
-    
-    a{
-        color: $pink;
-        opacity: .7;
-        text-decoration: none;
-    
-        &:hover  {
-            color: $pink;
-            opacity: 1.0;
-            text-decoration: none;
-            
-            @include prefixed(text-shadow, 2px 4px #999);
-            @include prefixed(transform, translateY(-2px));
-            
-            font-size: 38px;
-        }//:hoer
-    }//a
   
     a.button{
-        opacity: .9;
-        text-align: center;
-        padding: 10px 25px;
-        font-size: 22px;
-        //font-weight: 500;
+        opacity: .7;
+        background-image: url('img/enter-button.png');
+
+        padding: 33px 0;
+        position: absolute;
+            top: $everythingTop;
+            left: 38%;
+        display: block;
+            width: 210px;
+            height: 130px;
+        font-size: 42px;
+            font-family: $serif;
+            font-weight: 300;
+            font-style: italic;
+            text-transform: capitalize;
+            text-align: center;
         color: white;
-        //font-weight: bold;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-        background-color: #AF5F50;
-        background-image: -moz-linear-gradient(top, #AF5F50, #D17665);
-        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#AF5F50), to(#D17665));
-        background-image: -webkit-linear-gradient(top, #AF5F50, #D17665);
-        background-image: -o-linear-gradient(top, #AF5F50, #D17665);
-        background-image: linear-gradient(to bottom, #AF5F50, #D17665);
-        background-repeat: repeat-x;
-        border: 1px solid #AC5D4E;
-        border-radius: 4px;
-        -moz-box-shadow: 1px 1px 15px 1px $slate;
-        -webkit-box-shadow: 1px 1px 15px 1px $slate;
-        box-shadow: 1px 1px 15px 1px $slate;
+        background-repeat: no-repeat;
+        text-decoration: none;
         
         &:hover  {
-            text-decoration: none;
-            background-position: 0 -25px;
-            -webkit-transition: background-position 0.25s linear;
-            -moz-transition: background-position 0.25s linear;
-            -o-transition: background-position 025s linear;
-            transition: background-position 0.25s linear;
             opacity: 1.0;
         }
     &:active  {
@@ -70,30 +48,74 @@
 }//.story_book__intro
 
     .story_book__intro__header {
-        opacity: .9;
-        font-size: 36px;
-        line-height: 42px;
-        font-size: 28px;
-        padding: 100px 0 150px 0;
-        font-weight: 300;
-        font-family: $serif;
+        display: block;
+        position: absolute;
+            top: 600px;
+            right: 58px;
+        width: 355px;
+        font-weight: 900;
+        font-family: $sans;
+        text-transform: uppercase;
+        text-align: right;
+        color: $slate;
     }
+        .story_book__intro__header--preamble{
+            display: block;
+            font-size: 35px;
+            line-height: .9;
+        }//.story_book__intro__header--preamble
+        
+        .story_book__intro__header--story{
+            display: block;
+            font-size: 114px;
+            line-height: 76px;
+        }//.story_book__intro__header--story
     
     .story_book__intro__to-from{
+        position: absolute;
+        left: 50px;
         
+        &.kate{
+            top: 328px;
+        }
+        
+        &.matt{
+            top: 360px;
+        }
     }//story_book__intro__to-from
         
         .story_book__intro__to-from--label{
             font-size: 24px;
+                font-weight: 400;
+                font-family: $serif;
+                font-style: italic;
+                text-align: right;
+                text-transform: lowercase;
             margin: 0;
-            font-weight: 300;
+            width: 200px;
+            display: inline-block;
+            color: $teal;
+            vertical-align: middle;
         }//.story_book__intro__to-from--label
         
         .story_book__intro__to-from--name{
-            font-size: 24px;
-            font-weight: bold;
-            color: $pink;
-            font-weight: bold;
-            font-size: 50px;
+            font-size: 34px;
+            font-weight: 900;
+            text-align: left;
+            display: inline-block;
+            width: 300px;
+            color: $slate;
             font-family: $sans;
+            vertical-align: middle;
         }//.story_book__intro__to-from--name
+
+    .story_book__instructions{
+        display: block;
+        width: 270px;
+        top: 325px;
+        right: 176px;
+        position: absolute;
+        text-align: left;
+        color: $grayLight;
+
+    }//.story_book__instructions
