@@ -61,3 +61,19 @@
             
         }//h2
     }//.meet-up__map-tooltip
+    
+    .slide .meet-up__she-said-yes{
+        display: none;
+        position: absolute;
+        bottom: -109px;
+        right: 150px;
+        font-size: 62px;
+        text-align: right;
+        text-transform: uppercase;
+        font-family: $sans;
+        font-weight: 900;
+        font-style: normal;
+        width: 100px;
+        text-align: center;
+        color: $slate;
+    }

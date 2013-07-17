@@ -3,15 +3,19 @@
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<?php ini_set('display_errors',1); 
- error_reporting(E_ALL); ?>
+<?php 
+// ini_set('display_errors',1); 
+// error_reporting(E_ALL); 
+?>
  
  <?php 
     $title = 'This is a love story.';
     $descrip = 'A tale of two spartans, partners in crime, moved to the windy city (recruiting a furry friend along the way). This is their love story.';
+    $tweet = 'A /storied/ proposal followed by an uproarious “YES!”. This is a love story told by @joshDcomp @mttwbsh & @GabeCooper';
     $authors = '@joshDcomp, @mttwbsh @GabeCooper';
     $keywords = 'marriage, proposal, love, story, engagement, animation, illustration, MTTHWBSH, joshDcomp, GabeCooper, html5, css3, tech, story, love story, michigan state university, msu, grand rapids, chicago, east lansing';
-    $ogURL = '';
+    $ogURL = 'http://astoryabout.us/';
+    $shortURL = 'http://goo.gl/XbNhv';
     $thumb = 'http://astoryabout.us/img/thumb.png';
 
 ?>
@@ -53,6 +57,19 @@
   <div class="storyboard-container">
     
     <aside class="ui-elements">
+
+              <div class="social_ctas">
+                <a href="http://www.facebook.com/sharer.php?s=100&p[title]=<?php $title; 
+                                                               ?>&p[summary]=<?php echo urlencode($descrip); 
+                                                               ?>&p[url]=<?php echo $ogURL; 
+                                                               ?>&p[description]=<?php echo urlencode($descrip); 
+                                                               ?>&p[image]=<?php echo $ogURL; 
+                                                               ?>" class="post_share_facebook">&nbsp;</a>
+                                                               
+                <a href="<?php  echo $ogURL; ?>" title="<?php echo urlencode($tweet); ?>" class="post_share_tweet">&nbsp;</a>
+              </div><!-- .social_ctas -->
+
+
       <div class="ui__left-button">&nbsp;</div>
       <div class="ui__right-button">&nbsp;</div>
       
@@ -86,5 +103,17 @@
   <script type="text/javascript" src="js/jquery.easing.js"></script>
   <script type="text/javascript" src="js/jquery.rotate.js"></script>
   <script type="text/javascript" src="js/love-story.js"></script>
+  
+  <!-- ANALYTICS
+  ==============================================================================-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17210974-3', 'astoryabout.us');
+  ga('send', 'pageview');
+</script>
 </body>
 </html>

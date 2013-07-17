@@ -721,6 +721,31 @@ li p {
   .slide.visible {
     display: block; }
 
+[class^="post_share_"] {
+  opacity: .4;
+  display: block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-decoration: none; }
+  [class^="post_share_"]:hover {
+    opacity: .8; }
+
+.post_share_tweet {
+  background-image: url("img/ui-elements/twitter-icon.png");
+  top: -30px;
+  right: 20px; }
+
+.post_share_facebook {
+  background-image: url("img/ui-elements/facebook-icon.png");
+  top: -30px;
+  right: 45px; }
+
 /* Slide 1 */
 .slide.classmates .slide__title {
   top: -64px;
@@ -1180,6 +1205,21 @@ li p {
       color: #4e4e4e; }
     .meet-up__map-tooltip h2:hover {
       opacity: 1; }
+
+.slide .meet-up__she-said-yes {
+  display: none;
+  position: absolute;
+  bottom: -109px;
+  right: 150px;
+  font-size: 62px;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  width: 100px;
+  text-align: center;
+  color: #4e4e4e; }
 
 .tooltip {
   border-bottom: solid 1px;

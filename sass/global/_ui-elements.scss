@@ -205,3 +205,34 @@
     display: block;
   }//.visible
 }//.slide
+
+[class^="post_share_"]{
+    opacity: .4;
+    display: block;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        content: '';
+    position: absolute;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    text-decoration: none;
+    
+    &:hover{
+        opacity: .8;
+    }//:hover
+}
+
+
+.post_share_tweet{
+    background-image: url('img/ui-elements/twitter-icon.png');
+    top: -30px;
+    right: 20px;
+}
+
+.post_share_facebook{
+    background-image: url('img/ui-elements/facebook-icon.png');
+    top: -30px;
+    right: 45px;
+}

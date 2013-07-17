@@ -13,8 +13,7 @@ var loveStory = {
   Chapter6: 14,
   Chapter7: 16,
   Chapter8: 18,
-  Colophon: 19,
-  //TODO MAKE SHIFT + ARROW ADVANCE BETWEEN CHAPTERS
+  Colophon: 20,
   /**
     init()
     --
@@ -43,7 +42,7 @@ var loveStory = {
     var chapter7 = uiNav.find('.ui__nav__slide7');
     var chapter8 = uiNav.find('.ui__nav__slide8');
     var colophonThumb = uiNav.find('.ui__nav__colophon');
-    
+
     //reset the pointer
     self.pointer = 0;
     
@@ -343,6 +342,7 @@ var loveStory = {
             right: '-2%'
             }, 1000, function(){
               slideP1.fadeIn(400);
+              slideP1.children().fadeIn(400);
             });
           
           break;
@@ -397,12 +397,7 @@ var loveStory = {
           var matt = slideTwo.find('.partiers__drunk-matt');
           var foreshadowing = slideTwo.find('.partiers__foreshadowing');
           
-          flags.css('');
-          bar.css('');
-          couch.css('');
-          cantSlip.css('');
-          matt.css('');
-          foreshadowing.css('');
+          flags.add(bar).add(couch).add(cantSlip).add(matt).add(foreshadowing).removeAttr('style');
           
           var duration = 200;
           bar.fadeIn(duration);
@@ -416,10 +411,11 @@ var loveStory = {
             });
           
           break;
+          
         case 5:
           var foreshadowing = slideTwo.find('.partiers__foreshadowing');
           
-          foreshadowing.css('');
+          foreshadowing.removeAttr('style');
           
           foreshadowing.slideDown(200);
           break;
@@ -453,14 +449,12 @@ var loveStory = {
           var caulder = slideThree.find('.roadies__caulder');
           var foreshadowing = slideThree.find('.roadies__foreshadowing');
           
+          
+          
           var roadiesPrefix = '.roadies__path';
           
-          foreshadowing.css('');
-          eastLansing.css('');
-          grandRapids.css('');
-          beaumont.css('');
-          caulder.css('');
-          slideThree.find('img[class^="apple-"]').css('');
+          foreshadowing.add(eastLansing).add(grandRapids).add(beaumont).add(caulder).removeAttr('style');
+          slideThree.find('img[class^="roadies__path"]').removeAttr('style');
           
           eastLansing.show(0).animate({
             height: 135
@@ -506,9 +500,10 @@ var loveStory = {
           
         case 8:
             var foreshadowing = slideThree.find('.roadies__foreshadowing');
-            foreshadowing.css('');
+            foreshadowing.removeAttr('style');
             foreshadowing.slideDown(300)
             break;
+            
       //CHAPTER 4: THE TALK
         case 9:
             var slideTitle = slideFour.find('.slide__title');
@@ -546,8 +541,7 @@ var loveStory = {
             var kate = slideFour.find('.the-talk__kate');
             var foreshadowing = slideFour.find('.the-talk__foreshadowing');
             
-            foreshadowing.css('');
-            thunder2.css('');
+            foreshadowing.add(thunder2).removeAttr('style');
             kate.css({right: 90});
             
             thunder2.fadeIn(500);
@@ -558,7 +552,7 @@ var loveStory = {
             break;
         case 11:
             var foreshadowing = slideFour.find('.the-talk__foreshadowing');
-            foreshadowing.css('');
+            foreshadowing.removeAttr('style');
             foreshadowing.slideDown(450);
             break;
         //CHAPTER 5: HAPPINESS GRAPH
@@ -616,7 +610,8 @@ var loveStory = {
             var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
             var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
             
-            
+            foreshadowing.removeAttr('style');
+            $('img[class^="happiness-graph__dash"]').removeAttr('style');
             
             var graphPrefix = '.happiness-graph__dash-';
             var dashDuration = 150;
@@ -667,16 +662,14 @@ var loveStory = {
         
         //CHAPTER 6: FAMILY++
         case 14:
-            
             var slideTitle = slideSix.find('.slide__title');
             var plusPlus = slideSix.find('.family-plus-plus__along-came-margot');
             
             var kate = slideSix.find('.family-plus-plus__kate-head');
             var matt = slideSix.find('.family-plus-plus__matt-head');
             
-            slideSix.children().css('');
-            
             self.limbo(self.pointer);
+            slideSix.children().removeAttr('style');
             slideSix.show(0);
             
             //animate the title
@@ -698,9 +691,6 @@ var loveStory = {
               }, 600, 'easeOutElastic');
             });
             
-            
-            
-            
             break;
         case 15:
             var margotHead = slideSix.find('.family-plus-plus__margot-head');
@@ -708,6 +698,8 @@ var loveStory = {
             
             var setup = slideSix.find('.family-plus-plus__setup');
             var foreshadowing = slideSix.find('.family-plus-plus__foreshadowing');
+            
+            margotHead.add(margotPawR).add(setup).add(foreshadowing).removeAttr('style');
             
             margotPawR.show(0).animate({
                 top: 535,
@@ -734,10 +726,8 @@ var loveStory = {
             var slideTitle = slideSeven.find('.slide__title');
             var graduation = slideSeven.find('.city-bound__graduation');
             
-            slideSeven.children().css('');
-            
             self.limbo(self.pointer);
-            
+            slideSeven.children().removeAttr('style');
             slideSeven.show(0);
             
             //animate the title
@@ -755,6 +745,8 @@ var loveStory = {
             var bean = slideSeven.find('.city-bound__bean');
             var apartment = slideSeven.find('.city-bound__apartment');
             var car = slideSeven.find('.city-bound__car');
+            
+            foreshadowing.add(road).add(skyScraper).add(willisTower).add(bean).add(apartment).add(car).removeAttr('style');
             
             //set how long the car will drive, then determine how long each object should delay, and how long the animation should take once it's done delaying
             var carDuration = 1000;
@@ -822,10 +814,8 @@ var loveStory = {
             var map = slideEight.find('.meet-up__map-canvas');
             var mapOverlay = slideEight.find('.meet-up__map-tooltip');
             
-            slideEight.children().css('');
-            
             self.limbo(self.pointer);
-            
+            slideEight.children().removeAttr('style');
             slideEight.show(0);
             
             //animate the title
@@ -838,20 +828,24 @@ var loveStory = {
             });
             
             break;
-        //COLOPHON
         case 19:
+            var sheSaidYes = slideEight.find('.meet-up__she-said-yes');
+            sheSaidYes.removeAttr('style');
+            sheSaidYes.fadeIn(300);
+            break;
+        //COLOPHON
+        case 20:
             var matt = colophon.find('.colophon__collab-list__li--matt');
             var josh = colophon.find('.colophon__collab-list__li--josh');
             var gabe = colophon.find('.colophon__collab-list__li--gabe');
-            
-            colophon.children().css('');
-            
             self.limbo(self.pointer);
-            
-            colophon.show(0);
+            rightArrow.hide();
+            colophon.children().removeAttr('style');
+            colophon.delay(1000).fadeIn(800);
             
             break;
     }//switch
+    //tell the browser it's ok to exectute things again, and incrememnt our pointer
     self.isBusy = false;
     self.pointer++;
   }//index()
@@ -861,3 +855,32 @@ var loveStory = {
 $(function() {
   loveStory.init();
 });
+
+  /*
+   * Bind an event to the 'Share' link, passing the event information
+   * The handler has to stay in the .on() method or the event doesn't
+   * get caught in time.
+   */
+$(document).ready(function() {//document ready makes things happy. I'm not changing it :D
+  $('a.post_share_tweet', this).on('click', function(e){
+    e.preventDefault();
+    
+    // Because we're not using the regular twitter.com/intent/tweet or whatever,
+    // we store the url of the card in the href of the link, and the title is the actual tweet
+    var loc = $(this).attr('href');
+    var tweet  = $(this).attr('title');
+    
+    //Trigger a new window with the Twitter dialog, in the middle of the page
+    window.open('http://twitter.com/share?url=' + loc + '&text=' + tweet, 'twitterwindow', 'height=300, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+  });//(a.tweet).bind()
+  
+  
+  $('a.post_share_facebook', this).on('click', function(e){
+    e.preventDefault();
+    
+    var fb_link = $(this).attr('href');
+    
+    //Trigger a new window with the Facebook dialogue
+    window.open( fb_link, 'popup', 'height=300, width=550, top='+($(window).height()/2 - 225) +', left='+$(window).width()/2 +', toolbar=0, location=0, menubar=0, directories=0, scrollbars=0');
+  });
+});//document.ready
