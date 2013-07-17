@@ -11,8 +11,8 @@
  <?php 
     $title = 'This is a love story.';
     $descrip = 'A tale of two spartans, partners in crime, moved to the windy city (recruiting a furry friend along the way). This is their love story.';
-    $tweet = 'A /storied/ proposal followed by an uproarious “YES!”. This is a love story told by @joshDcomp @mttwbsh & @GabeCooper';
-    $authors = '@joshDcomp, @mttwbsh @GabeCooper';
+    $tweet = 'A /storied/ proposal followed by an uproarious “YES!” This is a love story told by @joshDcomp @mtthwbsh & @GabeCooper';
+    $authors = '@joshDcomp, @mtthwbsh @GabeCooper';
     $keywords = 'marriage, proposal, love, story, engagement, animation, illustration, MTTHWBSH, joshDcomp, GabeCooper, html5, css3, tech, story, love story, michigan state university, msu, grand rapids, chicago, east lansing';
     $ogURL = 'http://astoryabout.us/';
     $shortURL = 'http://goo.gl/XbNhv';
