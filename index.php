@@ -44,10 +44,10 @@
 
   <!-- Favicons
   ==============================================================================-->
-  <link rel="shortcut icon" href="<?php echo  dirname(__FILE__); ?>/img/favicons/favicon.ico">
-  <link rel="apple-touch-icon" href="<?php echo  dirname(__FILE__); ?>/img/favicons/apple-touch-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="<?php echo  dirname(__FILE__); ?>/img/favicons/apple-touch-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="<?php echo  dirname(__FILE__); ?>/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="shortcut icon" href="img/favicons/favicon.ico">
+  <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
 </head>
 <body>
   <div class="storyboard-container">

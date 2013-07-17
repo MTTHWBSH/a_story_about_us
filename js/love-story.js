@@ -232,47 +232,8 @@ var loveStory = {
     frame.find('.slide').hide(0);
     leftButton.hide(0);
     self.limbo(self.pointer);
-    //so now that we've initialize everything, let'cs call the map in the background
-    //self.mapsHooo();
+
   },
-  /**
-    mapsHooo()
-    --
-    call google maps and set our options. 
-    
-    @param null
-    @return void
-  */
-    mapsHooo : function(){
-        //call the maps
-        var script = document.createElement('script');
-        script.type ='text/javascript';
-        script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDq5Q0qZTzd7CyB5EthuZr8cXLQHeZCmes&sensor=false';
-        document.body.appendChild(script);
-        
-        $(window).ready(function(){
-            //if google loaded, fine, else, bloody tell me
-            if(typeof google === 'undefined' ){
-                console.log('Google did not load successfully');
-            } else {
-                var mapMarker = {
-                    
-                };//mapMarker
-                
-                var mapCanvas = $('.meet-up__map-canvas');
-                
-                var mapOptions = {
-                    center: new google.maps.LatLng(41.926797,-87.644987),
-                    zoom: 8,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };//mapOpts
-                
-                
-                var map = new google.maps.Map(mapCanvas, mapOptions);
-                
-            }//if google == undefined
-        });
-  },//mapsHooo()
   
   /**
     limbo()
@@ -339,9 +300,9 @@ var loveStory = {
       if(self.pointer >= 2){
         uiWrapper.show(0).children().show(0);
       }
-      //take this out when you're ready to reverse the story
+      
       var leftButton = uiWrapper.find('.ui__left-button');
-      leftButton.hide(0);
+
     // The nice thing a bout a switch is that the js actually doesn't load that much of the script at once. It 
     //   rifles through each possible case until it finds a match, then it stops. The bad thing about a switch 
     //   is that if you need variables pan-cases, you pretty much have to either name them all above the switch, 
@@ -369,8 +330,7 @@ var loveStory = {
           self.limbo(self.pointer);
           
           //Reset the styles for these bits so that the animations work correctly when the user clicks back
-          slideTitle.css('');
-          slideP1.css('');
+          slideOne.children().removeAttr('style');
           
           uiWrapper.fadeIn(200).children().fadeIn(200);
           leftButton.hide(0);
@@ -392,11 +352,7 @@ var loveStory = {
           var kate = slideOne.find('.classmates__kate-head');
           var lastP = slideOne.find('.classmates__final-day');
           
-          //reset the styles for this bad boy
-          classScene.css('');
-          matt.css('');
-          kate.css('');
-          lastP.css('');
+          classScene.add(matt).add(kate).add(lastP).removeAttr('style');
           
           classScene.fadeIn(800, function(){
             matt.show(0).animate({
@@ -418,11 +374,9 @@ var loveStory = {
           var slideTitle = slideTwo.find('.slide__title');
           var slideP1 = slideTwo.find('.partiers__drunkenly-biked');
           
-          slideTitle.css('');
-          slideP1.css('');
           
           self.limbo(self.pointer);
-          
+          slideTwo.children().removeAttr('style');
           slideTwo.show(0);
   
           //animate the title
@@ -441,12 +395,14 @@ var loveStory = {
           var couch = slideTwo.find('.partiers__kate-couch');
           var cantSlip = slideTwo.find('.partiers__cant-slip-away');
           var matt = slideTwo.find('.partiers__drunk-matt');
+          var foreshadowing = slideTwo.find('.partiers__foreshadowing');
           
           flags.css('');
           bar.css('');
           couch.css('');
           cantSlip.css('');
           matt.css('');
+          foreshadowing.css('');
           
           var duration = 200;
           bar.fadeIn(duration);
@@ -474,12 +430,8 @@ var loveStory = {
           var roadiesTxt = slideThree.find('.roadies__moved-home');
           var michigan = slideThree.find('.roadies__michigan');
           
-          slideTitle.css('');
-          roadiesTxt.css('');
-          michigan.css('');
-          
           self.limbo(self.pointer);
-          
+          slideThree.children().removeAttr('style');
           slideThree.show(0);
           
           //animate the title
@@ -499,12 +451,16 @@ var loveStory = {
           var grandRapids = slideThree.find('.roadies__gr');
           var beaumont = slideThree.find('.roadies__beaumont');
           var caulder = slideThree.find('.roadies__caulder');
+          var foreshadowing = slideThree.find('.roadies__foreshadowing');
+          
           var roadiesPrefix = '.roadies__path';
           
+          foreshadowing.css('');
           eastLansing.css('');
           grandRapids.css('');
           beaumont.css('');
           caulder.css('');
+          slideThree.find('img[class^="apple-"]').css('');
           
           eastLansing.show(0).animate({
             height: 135
@@ -562,15 +518,8 @@ var loveStory = {
             var kate = slideFour.find('.the-talk__kate');
             var matt = slideFour.find('.the-talk__matt');
             
-            slideTitle.css('');
-            thunder1.css('');
-            background.css('');
-            brick.css('');
-            kate.css('');
-            matt.css('');
-            
             self.limbo(self.pointer);
-            
+            slideFour.children().removeAttr('style');
             slideFour.show(0);
             
             //animate the title
@@ -595,7 +544,9 @@ var loveStory = {
         case 10:
             var thunder2 = slideFour.find('.the-talk__stolen-thunder2');
             var kate = slideFour.find('.the-talk__kate');
+            var foreshadowing = slideFour.find('.the-talk__foreshadowing');
             
+            foreshadowing.css('');
             thunder2.css('');
             kate.css({right: 90});
             
@@ -621,10 +572,8 @@ var loveStory = {
             var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
             var happyFace = slideFive.find('.happiness-graph__happy-face');
             
-            slideFive.children().css('');
-            
             self.limbo(self.pointer);
-            
+            slideFive.children().css('');
             slideFive.show(0);
             
             //animate the title
@@ -666,6 +615,9 @@ var loveStory = {
             var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
             var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
             var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
+            
+            
+            
             var graphPrefix = '.happiness-graph__dash-';
             var dashDuration = 150;
             //clock duration should go the whole time the graph is animating, so 14 dashes with delays, and an extra delay at the beginning
