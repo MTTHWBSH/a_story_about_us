@@ -216,10 +216,21 @@ var loveStory = {
           self.pointer = self.Colophon;
           self.index(self.pointer);
       });
+
+    //do tooltip stuff
+    var tooltipPrime = $('.tooltip'),
+        tooltipContent = tooltipPrime.data('tooltip-title');
+    var tooltipJr = $('<span />');
+        tooltipJr.addClass('tooltip--contents');
+        tooltipJr.text(tooltipContent);
+    //It's a boy!
+    tooltipPrime.append(tooltipJr);
+    
     //call the index
     var frame = $('.story_book');
     var intro = frame.find('.story_book__intro');
     frame.find('.slide').hide(0);
+    leftButton.hide(0);
     self.limbo(self.pointer);
     //so now that we've initialize everything, let'cs call the map in the background
     //self.mapsHooo();
@@ -330,7 +341,9 @@ var loveStory = {
       if(self.pointer >= 2){
         uiWrapper.show(0).children().show(0);
       }
-      
+      //take this out when you're ready to reverse the story
+      var leftButton = uiWrapper.find('.ui__left-button');
+      leftButton.hide(0);
     // The nice thing a bout a switch is that the js actually doesn't load that much of the script at once. It 
     //   rifles through each possible case until it finds a match, then it stops. The bad thing about a switch 
     //   is that if you need variables pan-cases, you pretty much have to either name them all above the switch, 
@@ -362,7 +375,7 @@ var loveStory = {
           slideP1.css('');
           
           uiWrapper.fadeIn(200).children().fadeIn(200);
-          
+          leftButton.hide(0);
           //hide everything, position the title, and show stuff
           slideOne.children().hide(0);
           slideOne.show(0);
@@ -419,6 +432,7 @@ var loveStory = {
               right: '-2%'
             }, 1000, function(){
               slideP1.fadeIn(400);
+              slideP1.children().fadeIn(400);
             });
           
           break;

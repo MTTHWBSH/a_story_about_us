@@ -23,3 +23,39 @@ $storyBookHeight: 760px;
   @import "slides/6-family-plus-plus";
   @import "slides/7-city-bound";
   @import "slides/8-roommates";
+  
+.tooltip {
+  border-bottom: solid 1px;
+  position: relative;
+  cursor: pointer; }
+  .tooltip .tooltip--contents {
+    display: none;
+    width: 250px;
+    position: absolute;
+    top: -115px;
+    left: -105px;
+    text-align: center;
+    background-color: #4e4e4e;
+    border-radius: 3px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s; }
+    .tooltip .tooltip--contents:after {
+      position: absolute;
+      content: '';
+      display: block;
+      bottom: -20px;
+      left: 45%;
+      width: 0;
+      height: 0;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-top: 20px solid #4e4e4e;
+      z-index: 100; }
+  .tooltip:hover {
+    background-color: rgba(123, 152, 140, 0.999);
+    color: white; }
+    .tooltip:hover .tooltip--contents {
+      display: block; }
