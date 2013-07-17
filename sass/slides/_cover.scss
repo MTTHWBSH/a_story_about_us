@@ -17,10 +17,10 @@ $everythingTop: 300px;
     text-align: center;
     color: $slate;
   
-    a.button{
+    .button{
         opacity: .7;
         background-image: url('img/enter-button.png');
-
+        cursor: pointer;
         padding: 33px 0;
         position: absolute;
             top: $everythingTop;

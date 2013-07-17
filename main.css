@@ -392,9 +392,10 @@ li p {
   left: 0px;
   text-align: center;
   color: #4e4e4e; }
-  .story_book__intro a.button {
+  .story_book__intro .button {
     opacity: .7;
     background-image: url("img/enter-button.png");
+    cursor: pointer;
     padding: 33px 0;
     position: absolute;
     top: 300px;
@@ -411,9 +412,9 @@ li p {
     color: white;
     background-repeat: no-repeat;
     text-decoration: none; }
-    .story_book__intro a.button:hover {
+    .story_book__intro .button:hover {
       opacity: 1.0; }
-    .story_book__intro a.button:active {
+    .story_book__intro .button:active {
       -webkit-transform: translateY(-2px);
       -moz-transform: translateY(-2px);
       -ms-transform: translateY(-2px);
