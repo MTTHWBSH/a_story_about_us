@@ -90,15 +90,15 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/img\/slide-3\/path1.png" : {
+    "\/img\/apple-touch-icon.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
-      "initialSize" : 4740,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
+      "initialSize" : 17714,
       "fileType" : 8192
     },
     "\/img\/slide-6\/margot-paw-right.png" : {
@@ -112,17 +112,6 @@
       "initialSize" : 13492,
       "fileType" : 8192
     },
-    "\/img\/apple-touch-icon.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/apple-touch-icon.png",
-      "initialSize" : 17714,
-      "fileType" : 8192
-    },
     "\/pages\/_slides.php" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -131,6 +120,17 @@
       "inputAbbreviatedPath" : "\/pages\/_slides.php",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
+    },
+    "\/img\/slide-3\/path1.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-3\/path1.png",
+      "initialSize" : 4740,
+      "fileType" : 8192
     },
     "\/img\/slide-5\/dash-14.png" : {
       "ignoreWasSetByUser" : 0,
@@ -314,17 +314,6 @@
       "initialSize" : 7518,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/dash-5.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
-      "initialSize" : 7324,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/skyscraper.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -336,15 +325,15 @@
       "initialSize" : 72269,
       "fileType" : 8192
     },
-    "\/img\/slide-6\/kate-head.png" : {
+    "\/img\/slide-5\/dash-5.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
+      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
-      "initialSize" : 284806,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-5.png",
+      "initialSize" : 7324,
       "fileType" : 8192
     },
     "\/sass\/global\/_modules.scss" : {
@@ -358,6 +347,17 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_modules.css",
       "fileType" : 4,
       "debugStyle" : 0
+    },
+    "\/img\/slide-6\/kate-head.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-6\/kate-head.png",
+      "initialSize" : 284806,
+      "fileType" : 8192
     },
     "\/img\/ui-elements\/thumbnails\/slide6-thumb.png" : {
       "ignoreWasSetByUser" : 0,
@@ -382,17 +382,6 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/img\/enter-button.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/enter-button.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/enter-button.png",
-      "initialSize" : 14234,
-      "fileType" : 8192
-    },
     "\/img\/slide-5\/dash-11.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -402,6 +391,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-11.png",
       "initialSize" : 7258,
+      "fileType" : 8192
+    },
+    "\/img\/enter-button.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/enter-button.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/enter-button.png",
+      "initialSize" : 14234,
       "fileType" : 8192
     },
     "\/img\/meetup-map.png" : {
@@ -716,15 +716,15 @@
       "initialSize" : 7253,
       "fileType" : 8192
     },
-    "\/img\/slide-3\/path3.png" : {
+    "\/img\/ui-elements\/thumbnails\/slide1-thumb.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
-      "initialSize" : 4757,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
+      "initialSize" : 40308,
       "fileType" : 8192
     },
     "\/img\/slide-1\/kate-head.png" : {
@@ -738,18 +738,6 @@
       "initialSize" : 100682,
       "fileType" : 8192
     },
-    "\/sass\/index.scss" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 1,
-      "inputAbbreviatedPath" : "\/sass\/index.scss",
-      "outputStyle" : 0,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/main.css",
-      "fileType" : 4,
-      "debugStyle" : 0
-    },
     "\/img\/slide-5\/dash-6.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -759,6 +747,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-5\/dash-6.png",
       "initialSize" : 7351,
+      "fileType" : 8192
+    },
+    "\/img\/apple-touch-icon-114x114.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon-114x114.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon-114x114.png",
+      "initialSize" : 17714,
       "fileType" : 8192
     },
     "\/sass\/slides\/_1-classmates.scss" : {
@@ -773,15 +772,15 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
-    "\/img\/slide-1\/matt-head.png" : {
+    "\/img\/slide-3\/path3.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
+      "inputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
-      "initialSize" : 102215,
+      "outputAbbreviatedPath" : "\/img\/slide-3\/path3.png",
+      "initialSize" : 4757,
       "fileType" : 8192
     },
     "\/js\/jquery.easing.js" : {
@@ -795,17 +794,6 @@
       "outputAbbreviatedPath" : "\/js\/jquery.easing-ck.js",
       "fileType" : 64
     },
-    "\/img\/ui-elements\/right-arrow-key.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
-      "initialSize" : 6583,
-      "fileType" : 8192
-    },
     "\/img\/slide-4\/matt.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -817,27 +805,39 @@
       "initialSize" : 232775,
       "fileType" : 8192
     },
-    "\/img\/ui-elements\/thumbnails\/slide1-thumb.png" : {
+    "\/img\/ui-elements\/right-arrow-key.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide1-thumb.png",
-      "initialSize" : 40308,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/right-arrow-key.png",
+      "initialSize" : 6583,
       "fileType" : 8192
     },
-    "\/img\/apple-touch-icon-114x114.png" : {
+    "\/img\/slide-1\/matt-head.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/apple-touch-icon-114x114.png",
+      "inputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/apple-touch-icon-114x114.png",
-      "initialSize" : 17714,
+      "outputAbbreviatedPath" : "\/img\/slide-1\/matt-head.png",
+      "initialSize" : 102215,
       "fileType" : 8192
+    },
+    "\/sass\/index.scss" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 1,
+      "inputAbbreviatedPath" : "\/sass\/index.scss",
+      "outputStyle" : 0,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/main.css",
+      "fileType" : 4,
+      "debugStyle" : 0
     },
     "\/sass\/css\/_mixins.css" : {
       "ignoreWasSetByUser" : 0,
@@ -871,6 +871,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/img\/ui-elements\/thumbnails\/slide3-thumb.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide3-thumb.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide3-thumb.png",
+      "initialSize" : 23761,
+      "fileType" : 8192
+    },
     "\/sass\/global\/_reset.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -882,17 +893,6 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_reset.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/img\/ui-elements\/thumbnails\/slide3-thumb.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide3-thumb.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/thumbnails\/slide3-thumb.png",
-      "initialSize" : 23761,
-      "fileType" : 8192
     },
     "\/js\/jquery.1.10.js" : {
       "ignoreWasSetByUser" : 0,
@@ -927,6 +927,17 @@
       "initialSize" : 274841,
       "fileType" : 8192
     },
+    "\/img\/ui-elements\/left-arrow-key.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-key.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-key.png",
+      "initialSize" : 6503,
+      "fileType" : 8192
+    },
     "\/sass\/slides\/_4-the-talk.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -938,17 +949,6 @@
       "outputAbbreviatedPath" : "\/sass\/css\/_4-the-talk.css",
       "fileType" : 4,
       "debugStyle" : 0
-    },
-    "\/img\/ui-elements\/left-arrow-key.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-key.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-key.png",
-      "initialSize" : 6503,
-      "fileType" : 8192
     },
     "\/img\/slide-3\/path7.png" : {
       "ignoreWasSetByUser" : 0,
@@ -992,17 +992,6 @@
       "initialSize" : 28587,
       "fileType" : 8192
     },
-    "\/img\/ui-elements\/left-arrow-buton.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-buton.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-buton.png",
-      "initialSize" : 4807,
-      "fileType" : 8192
-    },
     "\/img\/home_bg.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1012,6 +1001,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/home_bg.png",
       "initialSize" : 677781,
+      "fileType" : 8192
+    },
+    "\/img\/ui-elements\/left-arrow-buton.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-buton.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/ui-elements\/left-arrow-buton.png",
+      "initialSize" : 4807,
       "fileType" : 8192
     },
     "\/img\/slide-6\/margot-paw-left.png" : {
@@ -1025,17 +1025,6 @@
       "initialSize" : 13743,
       "fileType" : 8192
     },
-    "\/img\/slide-5\/dash-13.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
-      "initialSize" : 7361,
-      "fileType" : 8192
-    },
     "\/img\/slide-7\/road.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1045,6 +1034,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-7\/road.png",
       "initialSize" : 476072,
+      "fileType" : 8192
+    },
+    "\/img\/slide-5\/dash-13.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-5\/dash-13.png",
+      "initialSize" : 7361,
       "fileType" : 8192
     },
     "\/sass\/slides\/_2-partiers.scss" : {
@@ -1158,28 +1158,6 @@
       "initialSize" : 118839,
       "fileType" : 8192
     },
-    "\/img\/slide-7\/willis-tower.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-7\/willis-tower.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-7\/willis-tower.png",
-      "initialSize" : 75017,
-      "fileType" : 8192
-    },
-    "\/img\/slide-2\/banner.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/slide-2\/banner.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/slide-2\/banner.png",
-      "initialSize" : 44093,
-      "fileType" : 8192
-    },
     "\/sass\/global\/_variables.scss" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1192,6 +1170,17 @@
       "fileType" : 4,
       "debugStyle" : 0
     },
+    "\/img\/slide-2\/banner.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-2\/banner.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-2\/banner.png",
+      "initialSize" : 44093,
+      "fileType" : 8192
+    },
     "\/img\/slide-3\/michigan.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1201,6 +1190,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/slide-3\/michigan.png",
       "initialSize" : 403350,
+      "fileType" : 8192
+    },
+    "\/img\/slide-7\/willis-tower.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/slide-7\/willis-tower.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/slide-7\/willis-tower.png",
+      "initialSize" : 75017,
       "fileType" : 8192
     },
     "\/sass\/layout.css" : {

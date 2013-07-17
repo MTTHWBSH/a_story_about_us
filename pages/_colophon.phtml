@@ -1,41 +1,70 @@
 <footer class="story_book__colophon">
-    <h1>This experience was crafted by:</h1>
-    	
-      <section>	
-   	  <h2>Heroic Collaborators</h2>
-	  <ul class="colophon__collab-list">
-	    <?php //Matt ?>
-	    <li class="colophon__collab-list__li--matt">
-	      <a href="http://mtthwbsh.com" target="_blank" class="collab-list__img-link"><img src="img/contributor-thumbs/matt.png" alt="" />Matthew Bush</a>
-	    </li>
-	    <?php //Gabe ?>
-	    <li class="colophon__collab-list__li--gabe">
-	      <a href="http://gabecooper.com" target="_blank" class="collab-list__img-link"><img src="img/contributor-thumbs/gabe.png" alt="" />Gabe Cooper</a>
-	    </li>
-	    <?php //Josh ?>
-	    <li class="colophon__collab-list__li--josh">
-	      <a href="http://joshdcompton.com" target="_blank" class="collab-list__img-link"><img src="img/contributor-thumbs/josh.png" alt="" />Josh Compton</a>
-	    </li>
-	  </ul>
+    <h1 class="colophon__title">Thanks to</h1>
+    
+      <section class="colphon__credits--names">
+          <ul class="colophon__collab-list">
+            <?php //Matt ?>
+            <li class="colophon__collab-list__li--matt">
+                <img class="colophon__collab-list--faces" src="img/contributor-thumbs/matt.png" alt="Matt Bush's no-longer-single smile" />
+                <h2 class="collab-list__link">
+                    <a href="http://mtthwbsh.com" target="_blank" class="collab-list__link--portfolio">Matthew Bush</a>
+                    <a href="https://twitter.com/mtthwbsh" target="_blank" class="collab-list__link-twitter">(@mttwbsh)</a>
+                </h2>
+                <p class="collab-list__roles">Story, Art direction, Wedding proposal</p>
+            </li>
+            <?php //Josh ?>
+            <li class="colophon__collab-list__li--josh" >
+                <img class="colophon__collab-list--faces" src="img/contributor-thumbs/josh.png" alt="Josh Compton's glorious visage" />
+                <h2 class="collab-list__link">
+                    <a href="http://joshdcompton.com" target="_blank" class="collab-list__img-link">Josh Compton</a>
+                    <a href="http://twitter.com/joshdcomp" target="_blank" class="collab-list__link-twitter">(@joshdcomp)</a>
+                </h2>
+                <p class="collab-list__roles">Animations, Dev, UI,  Beard</p>
+            </li>
+            
+            <?php //Gabe ?>
+            <li class="colophon__collab-list__li--gabe">
+                <img class="colophon__collab-list--faces" src="img/contributor-thumbs/gabe.png" alt="Gabe Cooper's cute little face" />
+                <h2 class="collab-list__link">
+                    <a href="http://gabecooper.com" target="_blank" class="collab-list__img-link">Gabe Cooper</a>
+                    <a href="https://twitter.com/gabecooper" target="_blank" class="collab-list__link-twitter">(@gabecooper)</a>
+                </h2>
+                <p class="collab-list__roles">Illustrations, Aesthetic, good things</p>
+            </li>
+          </ul>
       </section>
-	  
-	  <section>
-	  <h2>Toolkit</h2>
-	  <ul class="colophon__tools-list">
-	    <li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
-	    <li><a href="http://www.getskeleton.com/" target="_blank">Skeleton</a></li>
-	    <li><a href="http://emmet.io/" target="_blank">Emmet</a></li>
-	    <li><a href="http://panic.com/coda/" target="_blank">Coda</a></li>
-	    <li><a href="http://incident57.com/codekit/" target="_blank">CodeKit</a></li>
-	  </ul>
-	  </section>
-	  
-	  <section>
-	  <h2>Design Notes</h2>
-	  <ul class="colophon__design-list">
-	    <li><a href="http://www.google.com/fonts#UsePlace:use/Collection:Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic|Gentium+Basic:400,700,400italic,700italic" target="_blank">Fonts</a>
-	    </li>
-	  </ul>
-	  </section>
-  
+      
+    <section class="colphon__credits">
+        <div class="credits__toolkit">
+          <h1 class="colphon__credits--title">Toolkit</h1>
+          <ul class="colophon__credits__list--tools">
+            <li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+            <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">BEM</a></li>
+            <li><a href="http://panic.com/coda/" target="_blank">Coda</a></li>
+            <li><a href="http://emmet.io/" target="_blank">Emmet</a></li>
+            <li><a href="http://incident57.com/codekit/" target="_blank">CodeKit</a></li>
+            <li><a href="http://easings.net/" target="_blank">Easings.Net</a></li>
+            <li><a href="https://bitbucket.org/" target="_blank">Bitbucket</a></li>
+          </ul>
+        </div><!-- credits__toolkit -->
+
+      
+        <div class="credits__fonts">
+          <h1 class="colphon__credits--title">Fonts</h1>
+          <ul class="colophon__credits__list--fonts">
+            <li class="colophon__credits__list__li"><a href="http://www.google.com/fonts/#ChoosePlace:select/Collection:Source+Sans+Pro" target="_blank">Source Sans Pro</a></li>
+            <li class="colophon__credits__list__li"><a href="http://www.google.com/fonts/#ChoosePlace:select/Collection:Gentium+Basic" target="_blank">Gentium Basic</a></li>
+          </ul>
+        </div><!-- credits__fonts -->
+
+        <div class="credits__libs">
+          <h1 class="colphon__credits--title">Libs</h1>
+          <ul class="colophon__credits__list--libs">
+            <li class="colophon__credits__list--libs"><a href="http://google.com/webfonts" target="_blank">Google Webfonts</a></li>
+            <li class="colophon__credits__list--libs"><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+            <li class="colophon__credits__list--libs"><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery.Easing</a></li>
+            <li class="colophon__credits__list--libs"><a href="https://github.com/zachstronaut/jquery-animate-css-rotate-scale/" target="_blank">jQuery.Rotate</a></li>
+          </ul>
+        </div><!-- credits__libs -->
+    </section><!-- colphon__credits -->
 </footer><!-- story_book__colophon -->

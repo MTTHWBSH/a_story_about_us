@@ -271,8 +271,6 @@ var loveStory = {
                 var map = new google.maps.Map(mapCanvas, mapOptions);
                 
             }//if google == undefined
-            
-            console.log('TODO: \n * Style colophon,\n * style cover,\n * make back button call animations properly,');
         });
   },//mapsHooo()
   
