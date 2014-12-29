@@ -91,18 +91,12 @@ module.exports = function(grunt) {
     //   the cli won't know what we're asking
     grunt.registerTask('default', ['concat', 'sass:main', 'watch']);
 
-    //Concat specific scripts
-    grunt.registerTask('js', ['concat:js']);
+    grunt.registerTask('js', ['concat:js', 'watch:js']);
+    grunt.registerTask('js-w', ['concat:js']);
 
-    // Specific watch stuff--the general principal here is before we start
-    //  watching, compile stuff in case you just made a change
-    grunt.registerTask('watch-js', [
-                                         'concat:js',
-                                         'watch:js'
-                                        ]);
-
-    grunt.registerTask('watch-sass', ['sass:main', 'watch:sass']);
+    grunt.registerTask('sass', ['sass:main', 'watch:sass']);
+    grunt.registerTask('sass-w', ['sass:main']);
 
     //Production
-    grunt.registerTask('prod', ['concat', 'sass:main', 'uglify']);
+    grunt.registerTask('prod', ['concat', 'sass:prod', 'uglify']);
 };
