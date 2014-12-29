@@ -1,0 +1,27 @@
+<?php
+/*
+ * Page Template: There's a javascript object that builds out all of the
+ * actual content. This is just a foreach that takes a simulated controller
+ * object and builds sections
+
+ * TODO: give all image arrays alt text
+ */
+include 'pages/slides.json';
+
+foreach( $slides as $slide ){
+    $slideBem = $slide['slide_bem'];
+    $slideTitle = $slide['slide_title'];
+    $slidePs = $slide['slide_content'];
+    $slideImgs = $slide['slide_images']
+?>
+    <section class="slide <?php echo $slideBem; ?>">
+        <h1 class="slide__title"><?php echo $slideTitle; ?></h1>
+        <?php foreach( $slidePs as $p ){ ?>
+            <p class="<?php echo $slideBem . '__' . $p['identifier']; ?>"><?php echo $p['content']; ?></p>
+        <?php } ?>
+
+        <?php foreach( $slideImgs as $img ){ ?>
+            <img class="<?php echo $slide['slide_bem'] . '__' . $img['identifier']; ?>" src="<?php echo $img['path']; ?>" alt="<?php echo $img['identifier']; ?>" />
+        <?php } ?>
+    </section>
+<?php }//enforeach ?>
