@@ -37,8 +37,8 @@ module.exports = function(grunt) {
             },
 
             js: {
-                src: ['pre/js/*.js', 'pre/js/**/*.js'],
-                dest: 'www/js/scripts.js',
+                src: ['pre/js/**/*.js'],
+                dest: 'www/js/love-story.js',
                 nonull: true
             },//js
         },
@@ -94,8 +94,8 @@ module.exports = function(grunt) {
     grunt.registerTask('js', ['concat:js', 'watch:js']);
     grunt.registerTask('js-w', ['concat:js']);
 
-    grunt.registerTask('sass', ['sass:main', 'watch:sass']);
-    grunt.registerTask('sass-w', ['sass:main']);
+    grunt.registerTask('css', ['sass:main', 'watch:sass']);
+    grunt.registerTask('css-w', ['sass:main']);
 
     //Production
     grunt.registerTask('prod', ['concat', 'sass:prod', 'uglify']);

@@ -22,6 +22,9 @@ If you only want to compile specifically sass or js as a one-off, use `$grunt sa
 
 For a one-off minified compile of all assets, `$grunt prod` is your man.
 
+###JS
+Dependency mangement on this is really primitive. Grunt cycles through files/directories in ascending alpha-numeric order, so if you have a script with dependencies, make sure the dependency's file path shows up before the script in question. For instance, all third party files are in `1-vend`, and all app-specific scripts are in `2-local`. jQuery is a dependency, but it's hosted on the Google CDN with a local fallback so it's not included in `love-story.js`.
+
 Images
 ------
 Go in the `www/img` directory. If you have workables, they should go in `pre/img`, which doesn't exist, but I'm sure you could figure out how to add it. If there is interest, I know Grunt has a tool for crunching `.png` files, but I don't feel the need to do that atm.
