@@ -1,57 +1,4 @@
-/*
-  Love Story
-  @TODO break things up into separate classes. One for rendering the page, one for handling the UI, and one for handling animations
-*/
-
-function LoveStory(){
-    this.fn = this.prototype;
-    this.isBusy: false;
-
-    this.pointer = 0;
-
-    this.bookmarks = {
-        ch1 : 1,
-        ch2 : 3,
-        ch3 : 6,
-        ch4 : 9,
-        ch5 : 12,
-        ch6 : 14,
-        ch7 : 16,
-        ch8 : 18,
-        colophon : 20
-    };
-
-    //Relevant shortcut keycodes
-    this.keyCode = {
-        up: 38,
-        left: 37,
-        down: 40,
-        right: 39,
-        space: 32
-    }
-
-    this.uiActions = {
-        back: $('.ui-do_back'),
-        next: $('.ui-do_next'),
-        skipTo: $('.ui-do_skip_to')
-    };
-
-    this.navBack = $('.ui__back-button');
-    this.navNext = $('.ui__next-button');
-
-    var $uiKeysWrapper = $('.ui__keyboard');
-    this.uiKeys = {
-        up: $uiKeysWrapper.find('.ui__keyboard--top-key'),
-        left: $uiKeysWrapper.find('.ui__keyboard--left-key'),
-        down: $uiKeysWrapper.find('.ui__keyboard--down-key'),
-        right: $uiKeysWrapper.find('.ui__keyboard--right-key');
-    };
-}
-// Alias `fn` for `prototype`
-// LoveStory.fn = LoveStory.prototype;
-
-// Animations
-LoveStory.pages = {
+var loveStoryAnimations = {
     0: function(){
         var enterButton = intro.find('.story_book__open');
         //when the enter button is clicked, set the pointer to 1, and call limbo (start of chapter 1)
@@ -219,7 +166,7 @@ LoveStory.pages = {
 
             //There's definitely a better way to do this, but we'll figure that out later
             var roadiesDuration = 150;
-            $(roadiesPrefix + '1').delay(roadiesDuration * 2).fadeIn(roadiesDuration, function(){
+            $(roadiesPrefix + '1').delay(roadiesDuration  * 2).fadeIn(roadiesDuration, function(){
                 $(roadiesPrefix + '2').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
                     $(roadiesPrefix + '3').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
                         $(roadiesPrefix + '4').delay(roadiesDuration).fadeIn(roadiesDuration, function(){
@@ -355,7 +302,7 @@ LoveStory.pages = {
         var graphPrefix = '.happiness-graph__dash-';
         var dashDuration = 150;
         //clock duration should go the whole time the graph is animating, so 14 dashes with delays, and an extra delay at the beginning
-        var clockDuration = dashDuration * 30;
+        var clockDuration = dashDuration  * 30;
         clockHour.animate({
             rotate: '1500deg'
         }, clockDuration, 'easeInCirc');
@@ -366,7 +313,7 @@ LoveStory.pages = {
 
 
         //There's definitely a better way to do this, but we'll figure that out later
-        $(graphPrefix + '1').delay( (dashDuration * 2) ).fadeIn(dashDuration, function(){
+        $(graphPrefix + '1').delay( (dashDuration  * 2) ).fadeIn(dashDuration, function(){
             $(graphPrefix + '2').delay(dashDuration).fadeIn(dashDuration, function(){
                 $(graphPrefix + '3').delay(dashDuration).fadeIn(dashDuration, function(){
                     $(graphPrefix + '4').delay(dashDuration).fadeIn(dashDuration, function(){
@@ -581,243 +528,3 @@ LoveStory.pages = {
         colophon.delay(1000).fadeIn(800);
     }
 };
-
-/**
- * keyDownHandler()
- * --
- * any keydown is routed through here
- *
- * @param null
- * @return this
- */
-LoveStory.fn.keyDownHandler = function(e){
-    var keycode = e.keyCode;// || e.keycode || e.which;
-
-    switch(keycode){
-        case this.keyCode.left:
-            e.preventDefault();
-            this.uiKeys.left.addClass('pressed');
-
-            //if the pointer is at 1 or 0, just stop
-            if(this.pointer <= 1) this.pointer = 0; return this;
-
-            //every animation ends with incrementing the pointer, so to go back we need to decrement by 2
-            this.pointer = this.pointer - 2;
-            this.index(this.pointer);
-
-            break;
-
-        case this.keyCode.right || key.space :
-            e.preventDefault();
-            this.uiKeys.right.addClass('pressed');
-            this.index(this.pointer);
-            break;
-
-        case this.keyCode.up :
-            this.uiKeys.up.addClass('pressed');
-            break;
-
-        case this.keyCode.down :
-            this.uiKeys.down.addClass('pressed');
-            break;
-    }
-
-    return this;
-}
-
-/**
- * keyUpHandler()
- * --
- * not much needs to happen on keyup atm so just keep things simple for the moment
- *
- * @param null
- * @return this
- */
-LoveStory.fn.keyUpHandler = function(){
-    $('.ui__keyboard').find('.ui__keyboard--key').removeClass('pressed');
-    return this;
-}
-
-/**
- * uiBack()
- * --
- * any action to step back one animation
- *
- * @param null
- * @return this
- */
-LoveStory.fn.uiBack = function(e){
-    e.preventDefault();
-
-    //if the pointer is at 1 or 0, just stop
-    if(this.pointer <= 1) this.pointer = 0; return this;
-
-    //every animation ends with incrementing the pointer, so to go back we need to minus by 2
-    this.pointer = this.pointer - 2;
-    this.index(this.pointer);
-    return this;
-}
-
-/**
- * uiNext()
- * --
- * any action to advance one animation
- *
- * @param null
- * @return this
- */
-LoveStory.fn.uiNext = function(e){
-    e.preventDefault();
-    this.index(this.pointer);
-    return this;
-}
-
-/**
- * uiSkipTo()
- * --
- * skip to a specific chapter
- *
- * @param null
- * @return this
- */
-LoveStory.fn.uiSkipTo = function(e){
-    e.preventDefault();
-    var bookmark = $(e.currentTarget).data('bookmark');
-
-    //if the key doesn't exist, make sure this.pointer has a value
-    this.pointer = this.bookmarks[bookmark] || this.pointer;
-    this.index(this.pointer);
-    return this;
-}
-
-/**
- * renderTooltips()
- * --
- * render tooltip markup based on data(tooltip-title)
- *
- * @param null
- * @return this
- */
-LoveStory.fn.renderTooltips = function(){
-    //do tooltip stuff
-    var tooltips = $('.tooltip');
-    for(var tooltip in tooltips){
-        var content = $(tooltip).data('tooltip-title');
-        var container = $('<span />');
-        container.addClass('tooltip--contents')
-                 .text(tooltipContent);
-
-        $(tooltip).append(container);
-    }
-    return this;
-}
-
-/**
- * limbo()
- * --
- * clear the stage between pages or non-sequential transitions, put in a spinner, and call the
- * index with the proper animation. It's assumed that the first animation of the chapter will
- * show the slide, title, and whatever else
-
- * @param int page | define the page we're transitioning /to/
- * @return this
- */
-LoveStory.fn.limbo = function(pointer){
-    var self = this;
-    //hide everything and call the index with the current animation
-    var frame = $('.story_book');
-    if(pointer >= 0){
-        frame.children().fadeOut(500);
-    }
-
-    this.index(pointer);
-    return this;
-}
-
-/**
- * index()
- * --
- * take in the current animation position on the timeline, execute the proper animation for that position, and increment the pointer
- *
- * @param int position
- * @param
- * @return this
- */
-LoveStory.fn.index = function(pos){
-    var self = this;
-
-    if( this.isBusy === true ) return this;
-
-    this.isBusy = true;
-
-    var frame = $('.story_book');
-    //chapter selectors
-    var intro = frame.find('.story_book__intro'),
-        slideOne = frame.find('.slide.classmates'),
-        slideTwo = frame.find('.slide.partiers')
-        slideThree = frame.find('.slide.roadies'),
-        slideFour = frame.find('.slide.the-talk'),
-        slideFive = frame.find('.slide.happiness-graph'),
-        slideSix = frame.find('.slide.family-plus-plus'),
-        slideSeven = frame.find('.slide.city-bound'),
-        slideEight = frame.find('.slide.meet-up'),
-        colophon = frame.find('.story_book__colophon');
-
-    //ui selectors
-    var $uiWrapper = $('.ui-elements');
-        leftArrow = $uiWrapper.find('.ui__left-button'),
-        rightArrow = $uiWrapper.find('.ui__right-button'),
-        upKey = $uiWrapper.find('.ui__keyboard--top-key'),
-        downKey = $uiWrapper.find('.ui__keyboard--bottom-key'),
-        leftKey = $uiWrapper.find('.ui__keyboard--left-key'),
-        rightKey = $uiWrapper.find('ui__keyboard--right-key');
-
-    if(this.pointer >= 2){
-        $uiWrapper.show(0).children().show(0);
-    }
-
-    var $left = $uiWrapper.find('.ui__left-button');
-
-    this.pages[pos]();
-    this.isBusy = false;
-    this.pointer++;
-}
-
-/**
- * init()
- * --
- * set up our event listeners, make sure we're at the beginning, reset everything.
- *
- * @param null
- * @return void
- */
-LoveStory.fn.init = function(){
-    //reset the pointer
-    this.pointer = 0;
-
-    //basic setup
-    var storyBook = $('.story_book');
-    var intro = storyBook.find('.story_book__intro');
-    storyBook.find('.slide').hide(0);
-    this.ui.hide(0);
-    this.limbo(this.pointer);
-
-    //Event listener setup
-    //KEYDOWN/KEYUP
-    $(document).on('keydown', $.proxy(this.keyDownHandler, this));
-    $(document).on('keyup', $.proxy(this.keyUpHandler, this));
-
-    //ARROW AND SLIDE NAV
-    this.uiActions.back.on('click', $.proxy(this.uiBack, this));
-    this.uiActions.next.on('click', $.proxy(this.uiNext, this));
-    this.uiActions.skipTo.on('click', $.proxy(this.uiSkipTo, this));
-
-    //Set up our tooltips
-    this.renderTooltips();
-}
-
-//And here...we...go
-var loveStory = new LoveStory();
-$(function() {
-  loveStory.init();
-});
