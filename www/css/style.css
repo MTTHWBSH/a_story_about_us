@@ -1,0 +1,1265 @@
+/*
+  Made with love by @joshDComp & @mtthwbsh
+*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic);
+@import url(http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic);
+/*
+	HTML5-SKELETON :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+	html5 Reset					:: http://html5reset.org
+	Eric Meyer					:: http://ericmeyer.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+-------------------------------------------------------------------------------*/
+/* Let's default this puppy out - Reset Default Style
+-------------------------------------------------------------------------------*/
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* Tell the browser to render HTML 5 elements as block */
+header, footer, aside, nav, article, section, figure, hgroup {
+  display: block; }
+
+html {
+  min-height: 100%; }
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+   If this default setting for images is causing issues, you might want to replace it with a .responsive class instead. */
+img, object, embed {
+  max-width: 100%; }
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+  overflow-y: scroll; }
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help; }
+
+/* tables still need cellspacing="0" in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+th {
+  font-weight: bold;
+  vertical-align: bottom; }
+
+td {
+  font-weight: normal;
+  vertical-align: top; }
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
+pre {
+  white-space: pre;
+  /* CSS2 */
+  white-space: pre-wrap;
+  /* CSS 2.1 */
+  white-space: pre-line;
+  /* CSS 3 (and 2.1 as well, actually) */
+  word-wrap: break-word;
+  /* IE */ }
+
+input[type="radio"] {
+  vertical-align: text-bottom; }
+
+input[type="checkbox"] {
+  vertical-align: bottom;
+  *vertical-align: baseline; }
+
+.ie6 input {
+  vertical-align: text-bottom; }
+
+select, input, textarea {
+  font: 99% sans-serif; }
+
+table {
+  font-size: inherit;
+  font: 100%; }
+
+/* Accessible focus treatment people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {
+  outline: none; }
+
+small {
+  font-size: 85%; }
+
+strong, th {
+  font-weight: bold; }
+
+td, td img {
+  vertical-align: top; }
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {
+  font-family: monospace, sans-serif; }
+
+/* hand cursor on clickable elements */
+.clickable, label, input[type=button], input[type=submit], button {
+  cursor: pointer; }
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {
+  margin: 0; }
+
+/* make buttons play nice in IE */
+button {
+  width: auto;
+  overflow: visible; }
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  zoom: 1; }
+
+/* GLOBAL STYLES */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+::selection {
+  background-color: rgba(200, 200, 200, 0.3);
+  color: white;
+  text-shadow: none; }
+
+body {
+  background: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #444;
+  -webkit-font-smoothing: antialiased;
+  /* Fix for webkit rendering */
+  -webkit-text-size-adjust: 100%; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  text-transform: uppercase; }
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  font-weight: inherit; }
+
+h1 {
+  font-size: 46px;
+  line-height: 50px;
+  margin-bottom: 14px; }
+
+h2 {
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 10px; }
+
+h3 {
+  font-size: 28px;
+  line-height: 34px;
+  margin-bottom: 8px; }
+
+h4 {
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 4px; }
+
+h5 {
+  font-size: 17px;
+  line-height: 24px; }
+
+h6 {
+  font-size: 14px;
+  line-height: 21px; }
+
+.subheader {
+  color: #777; }
+
+p {
+  font-family: "Gentium Basic", serif;
+  font-style: italic;
+  font-size: 20px;
+  line-height: 1.2;
+  margin: 0 0 20px 0; }
+
+p img {
+  margin: 0; }
+
+p.lead {
+  font-size: 21px;
+  line-height: 27px;
+  color: #777; }
+
+em {
+  font-style: italic; }
+
+strong {
+  font-weight: bold;
+  color: #333; }
+
+small {
+  font-size: 80%; }
+
+/*  Blockquotes  */
+blockquote, blockquote p {
+  font-size: 17px;
+  line-height: 24px;
+  color: #777;
+  font-style: italic; }
+
+blockquote {
+  margin: 0 0 20px;
+  padding: 9px 20px 0 19px;
+  border-left: 1px solid #ddd; }
+
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  color: #555; }
+
+blockquote cite:before {
+  content: "\2014 \0020"; }
+
+blockquote cite a, blockquote cite a:visited, blockquote cite a:visited {
+  color: #555; }
+
+hr {
+  border: solid #ddd;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 10px 0 30px;
+  height: 0; }
+
+/* #Lists
+================================================== */
+ul, ol {
+  margin-bottom: 20px; }
+
+ul {
+  list-style: none outside; }
+
+ol {
+  list-style: decimal; }
+
+ol, ul.square, ul.circle, ul.disc {
+  margin-left: 30px; }
+
+ul.square {
+  list-style: square outside; }
+
+ul.circle {
+  list-style: circle outside; }
+
+ul.disc {
+  list-style: disc outside; }
+
+ul ul, ul ol,
+ol ol, ol ul {
+  margin: 4px 0 5px 30px;
+  font-size: 90%; }
+
+ul ul li, ul ol li,
+ol ol li, ol ul li {
+  margin-bottom: 6px; }
+
+li {
+  line-height: 18px;
+  margin-bottom: 12px; }
+
+ul.large li {
+  line-height: 21px; }
+
+li p {
+  line-height: 21px; }
+
+/* General custom stuff
+================================================== */
+.container {
+  width: 800px;
+  min-height: 900px;
+  margin: 10px auto;
+  background-image: url(../img/home_bg.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 2s ease-in-out;
+  perspective: 800px;
+  perspective-origin: 50% 100px; }
+
+.storyboard-container {
+  display: block;
+  height: 760px;
+  width: 1160px;
+  margin: 40px auto 80px;
+  position: relative; }
+
+.story_book, .ui-elements {
+  display: block;
+  height: 760px;
+  width: 1160px;
+  overflow: hidden;
+  border: solid thin #4e4e4e; }
+
+/* Cover */
+/*
+    when styling specific elements, it's actually best to avoid using element selectors to style specific elements, like the title of the page. You end up getting really strange 
+*/
+.story_book__intro {
+  display: none;
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  left: 0px;
+  text-align: center;
+  color: #4e4e4e; }
+  .story_book__intro .button {
+    opacity: .7;
+    background-image: url("img/enter-button.png");
+    cursor: pointer;
+    padding: 33px 0;
+    position: absolute;
+    top: 300px;
+    left: 38%;
+    display: block;
+    width: 210px;
+    height: 130px;
+    font-size: 42px;
+    font-family: "Gentium Basic", serif;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: capitalize;
+    text-align: center;
+    color: white;
+    background-repeat: no-repeat;
+    text-decoration: none; }
+    .story_book__intro .button:hover {
+      opacity: 1.0; }
+    .story_book__intro .button:active {
+      -webkit-transform: translateY(-2px);
+      -moz-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+      -o-transform: translateY(-2px);
+      transform: translateY(-2px); }
+
+.story_book__intro__header {
+  display: block;
+  position: absolute;
+  top: 600px;
+  right: 58px;
+  width: 355px;
+  font-weight: 900;
+  font-family: "Source Sans Pro", sans-serif;
+  text-transform: uppercase;
+  text-align: right;
+  color: #4e4e4e; }
+
+.story_book__intro__header--preamble {
+  display: block;
+  font-size: 35px;
+  line-height: .9; }
+
+.story_book__intro__header--story {
+  display: block;
+  font-size: 114px;
+  line-height: 76px; }
+
+.story_book__intro__to-from {
+  position: absolute;
+  left: 50px; }
+  .story_book__intro__to-from.kate {
+    top: 328px; }
+  .story_book__intro__to-from.matt {
+    top: 360px; }
+
+.story_book__intro__to-from--label {
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Gentium Basic", serif;
+  font-style: italic;
+  text-align: right;
+  text-transform: lowercase;
+  margin: 0;
+  width: 200px;
+  display: inline-block;
+  color: rgba(123, 152, 140, 0.999);
+  vertical-align: middle; }
+
+.story_book__intro__to-from--name {
+  font-size: 34px;
+  font-weight: 900;
+  text-align: left;
+  display: inline-block;
+  width: 300px;
+  color: #4e4e4e;
+  font-family: "Source Sans Pro", sans-serif;
+  vertical-align: middle; }
+
+.story_book__instructions {
+  display: block;
+  width: 270px;
+  top: 325px;
+  right: 176px;
+  position: absolute;
+  text-align: left;
+  color: #AFAFAF; }
+
+/* Coliphon */
+.story_book__colophon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  display: none;
+  overflow: hidden; }
+  .story_book__colophon a {
+    color: #4e4e4e;
+    display: inline-block;
+    text-decoration: none; }
+
+.colophon__title {
+  position: absolute;
+  top: -55px;
+  right: -20px;
+  text-align: right;
+  font-size: 175px;
+  line-height: 1;
+  color: #4e4e4e; }
+
+.colphon__credits--names {
+  display: inline-block;
+  width: 45%; }
+
+.colophon__collab-list {
+  display: block;
+  margin-top: 150px;
+  padding-left: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .colophon__collab-list li {
+    display: block;
+    min-height: 160px;
+    clear: both;
+    margin-bottom: 50px; }
+    .colophon__collab-list li .collab-list__link {
+      font-size: 22px;
+      text-transform: uppercase;
+      margin-left: 150px;
+      margin-bottom: 5px; }
+    .colophon__collab-list li .collab-list__roles {
+      display: block;
+      font-size: 19px;
+      font-family: "Gentium Basic", serif;
+      color: rgba(123, 152, 140, 0.999);
+      margin-left: 150px; }
+
+.colophon__collab-list--faces {
+  width: 110px;
+  display: block;
+  float: left;
+  clear: left; }
+
+.colophon__collab-list__li--josh .colophon__collab-list--faces {
+  width: 135px; }
+
+.colphon__credits {
+  display: inline-block;
+  width: 34%;
+  position: relative;
+  top: 0;
+  float: right;
+  margin-top: 155px; }
+  .colphon__credits li {
+    font-size: 19px;
+    line-height: 1;
+    margin-bottom: 0px; }
+  .colphon__credits a {
+    font-family: "Gentium Basic", serif;
+    color: rgba(123, 152, 140, 0.999);
+    font-style: italic;
+    font-weight: 300; }
+
+.colphon__credits--title {
+  font-size: 22px;
+  line-height: 1;
+  margin-bottom: 5px; }
+
+.slide__title {
+  position: absolute;
+  text-align: right;
+  font-size: 175px;
+  line-height: 1;
+  color: #4e4e4e; }
+
+/* UI ELEMENTS */
+.ui-elements {
+  overflow: visible;
+  display: none;
+  border: none;
+  position: absolute;
+  z-index: 0; }
+
+.ui__keyboard {
+  position: absolute;
+  bottom: -90px;
+  right: 10px;
+  display: block;
+  width: 220px;
+  height: 80px; }
+  .ui__keyboard img {
+    display: inline-block;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    opacity: .5;
+    cursor: pointer; }
+    .ui__keyboard img.pressed {
+      opacity: 1; }
+  .ui__keyboard .ui__keyboard--top-key {
+    display: block;
+    clear: both;
+    float: none;
+    width: 65px;
+    margin: 0px 0px 0px 70px; }
+  .ui__keyboard .ui__keyboard--left-key,
+  .ui__keyboard .ui__keyboard--right-key {
+    width: 60px;
+    position: relative; }
+    .ui__keyboard .ui__keyboard--left-key:after,
+    .ui__keyboard .ui__keyboard--right-key:after {
+      font-size: 10px;
+      display: block;
+      position: absolute;
+      top: -10px;
+      left: 0px;
+      font-family: "Gentium Basic", serif; }
+  .ui__keyboard .ui__keyboard-left-key:after {
+    content: 'Previous'; }
+  .ui__keyboard .ui__keyboard-right-key:after {
+    content: 'Next'; }
+  .ui__keyboard .ui__keyboard--botom-key {
+    width: 65px; }
+
+.ui__left-button,
+.ui__right-button {
+  cursor: pointer;
+  display: block;
+  width: 70px;
+  height: 100%;
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  opacity: .5; }
+  .ui__left-button:hover,
+  .ui__right-button:hover {
+    opacity: 1; }
+
+.ui__left-button {
+  background-image: url("img/ui-elements/left-arrow-buton.png");
+  left: -70px; }
+
+.ui__right-button {
+  background-image: url("img/ui-elements/right-arrow-button.png");
+  right: -70px; }
+
+.ui__nav {
+  display: block;
+  width: 78%;
+  height: 200px;
+  position: relative;
+  top: 750px;
+  counter-reset: ui__nav; }
+
+[class^="ui__nav__"] {
+  display: block;
+  width: 10.5%;
+  height: 110px;
+  margin-right: 5px;
+  float: left;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+  cursor: pointer;
+  opacity: 0.5;
+  position: relative; }
+  [class^="ui__nav__"]:hover {
+    opacity: 0.7; }
+  [class^="ui__nav__"]:active {
+    opacity: 1; }
+  [class^="ui__nav__"]:after {
+    counter-increment: ui__nav;
+    content: counter(ui__nav);
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    color: #4e4e4e;
+    font-size: 32px;
+    display: block;
+    position: absolute;
+    top: 32px;
+    left: 10px;
+    text-shadow: 0px 0px 15px rgba(10, 10, 10, 0.8); }
+
+.ui__nav__slide1 {
+  background-image: url("img/ui-elements/thumbnails/slide1-thumb.png"); }
+
+.ui__nav__slide2 {
+  background-image: url("img/ui-elements/thumbnails/slide2-thumb.png"); }
+
+.ui__nav__slide3 {
+  background-image: url("img/ui-elements/thumbnails/slide3-thumb.png"); }
+
+.ui__nav__slide4 {
+  background-image: url("img/ui-elements/thumbnails/slide4-thumb.png"); }
+
+.ui__nav__slide5 {
+  background-image: url("img/ui-elements/thumbnails/slide5-thumb.png"); }
+
+.ui__nav__slide6 {
+  background-image: url("img/ui-elements/thumbnails/slide6-thumb.png"); }
+
+.ui__nav__slide7 {
+  background-image: url("img/ui-elements/thumbnails/slide7-thumb.png"); }
+
+.ui__nav__slide8 {
+  background-image: url("img/ui-elements/thumbnails/slide8-thumb.png"); }
+
+.ui__nav__colophon {
+  background-image: url("img/ui-elements/thumbnails/colophon-thumb.png"); }
+
+/*  SLIDES */
+.slide {
+  position: relative;
+  display: none;
+  margin: 0px 0px 100px; }
+  .slide * {
+    display: none; }
+  .slide img {
+    position: absolute; }
+  .slide p {
+    color: rgba(123, 152, 140, 0.999); }
+  .slide.visible {
+    display: block; }
+
+[class^="post_share_"] {
+  opacity: .4;
+  display: block;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  content: '';
+  position: absolute;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  text-decoration: none; }
+  [class^="post_share_"]:hover {
+    opacity: .8; }
+
+.post_share_tweet {
+  background-image: url("img/ui-elements/twitter-icon.png");
+  top: -30px;
+  right: 20px; }
+
+.post_share_facebook {
+  background-image: url("img/ui-elements/facebook-icon.png");
+  top: -30px;
+  right: 45px; }
+
+/* Slide 1 */
+.slide.classmates .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.classmates__it-all-started {
+  display: none;
+  position: absolute;
+  top: 170px;
+  left: 30px;
+  display: block;
+  width: 300px; }
+
+.classmates__class-scene {
+  display: none;
+  position: absolute;
+  top: 130px;
+  right: 20px;
+  width: 850px; }
+
+.classmates__matt-head {
+  display: none;
+  width: 240px;
+  top: -330px;
+  right: 566px;
+  z-index: 10; }
+
+.classmates__kate-head {
+  display: none;
+  width: 240px;
+  top: -285px;
+  right: 58px;
+  z-index: 10; }
+
+.classmates__final-day {
+  width: 740px;
+  font-size: 26px;
+  line-height: 1.2;
+  top: 680px;
+  right: -540px;
+  text-align: right;
+  position: absolute; }
+
+/* Slide 2 */
+.slide.partiers .slide__title {
+  top: -60px;
+  right: -100%; }
+
+.partiers__drunkenly-biked {
+  width: 310px;
+  font-size: 25px;
+  position: absolute;
+  top: 250px;
+  left: 50px; }
+
+.partiers__cant-slip-away {
+  width: 310px;
+  font-size: 25px;
+  position: absolute;
+  top: 390px;
+  left: 50px; }
+
+.partiers__foreshadowing {
+  width: 290px;
+  position: absolute;
+  top: 700px;
+  right: 110px;
+  font-size: 32px; }
+
+.partiers__little-flags {
+  width: 495px;
+  top: 75px;
+  left: 211px;
+  z-index: 20; }
+
+.partiers__drunk-matt {
+  width: 270px;
+  top: 130px;
+  left: -120px;
+  z-index: 15; }
+
+.partiers__kate-couch {
+  width: 385px;
+  top: 280px;
+  right: 250px;
+  z-index: 10; }
+
+.partiers__bar-bg {
+  width: 345px;
+  top: 205px;
+  right: 90px; }
+
+/* Slide 3 */
+.slide.roadies .slide__title {
+  top: -64px;
+  right: -100%; }
+
+.roadies__moved-home {
+  display: none;
+  width: 350px;
+  font-size: 20px;
+  text-align: right;
+  position: absolute;
+  top: 200px;
+  right: 50px; }
+
+.roadies__foreshadowing {
+  display: none;
+  width: 410px;
+  font-size: 30px;
+  text-align: right;
+  position: absolute;
+  top: 640px;
+  right: 50px; }
+
+.roadies__beaumont {
+  display: none;
+  height: 0px;
+  top: 450px;
+  left: 540px;
+  z-index: 20; }
+
+.roadies__caulder {
+  display: none;
+  height: 0px;
+  top: 660px;
+  left: 290px;
+  z-index: 20; }
+
+.roadies__el {
+  display: none;
+  height: 0px;
+  top: 310px;
+  left: 320px;
+  z-index: 30; }
+
+.roadies__gr {
+  display: none;
+  height: 0px;
+  top: 550px;
+  left: 200px;
+  z-index: 30; }
+
+.roadies__michigan {
+  display: none;
+  width: 580px;
+  z-index: 10;
+  top: 770px;
+  left: 130px; }
+
+.roadies__path1,
+.roadies__path2,
+.roadies__path3,
+.roadies__path4,
+.roadies__path5,
+.roadies__path6,
+.roadies__path7,
+.roadies__path8 {
+  display: none;
+  width: 115px;
+  z-index: 25;
+  top: 490px;
+  left: 390px; }
+
+/* Slide 4 */
+.slide.the-talk .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.the-talk__stolen-thunder1 {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 125px;
+  left: 55px;
+  font-size: 22px; }
+
+.the-talk__stolen-thunder2 {
+  display: none;
+  width: 345px;
+  position: absolute;
+  top: 265px;
+  left: 55px;
+  font-size: 22px; }
+
+.the-talk__foreshadowing {
+  display: none;
+  width: 740px;
+  position: absolute;
+  top: 675px;
+  left: 55px;
+  font-size: 35px; }
+
+.the-talk__background {
+  display: none;
+  width: 680px;
+  top: 95px;
+  right: 12px; }
+
+.the-talk__brick {
+  display: none;
+  width: 626px;
+  top: 478px;
+  right: 1px; }
+
+.the-talk__kate {
+  display: none;
+  width: 220px;
+  top: 110px;
+  right: -235px; }
+
+.the-talk__matt {
+  display: none;
+  width: 241px;
+  top: 60px;
+  right: 1245px; }
+
+/* Slide 5 */
+.slide.happiness-graph .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.happiness-graph__happiness-plus-plus {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 25px;
+  font-size: 22px;
+  text-align: right; }
+
+.happiness-graph__foreshadowing {
+  display: none;
+  width: 350px;
+  position: absolute;
+  top: 600px;
+  right: 20px;
+  text-align: right;
+  font-size: 32px; }
+
+.happiness-graph__background {
+  display: none;
+  width: 725px;
+  position: absolute;
+  top: 65px;
+  left: 55px; }
+
+.happiness-graph__clock-bg {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-face {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-hand-hour {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__clock-hand-minute {
+  display: none;
+  width: 150px;
+  top: 302px;
+  left: -257px;
+  z-index: 20; }
+
+.happiness-graph__happy-face {
+  display: none;
+  width: 145px;
+  top: 810px;
+  left: 370px; }
+
+[class^='happiness-graph__dash'] {
+  display: none;
+  width: 450px;
+  top: 204px;
+  left: 239px; }
+
+/* Slide 6 */
+.slide.family-plus-plus .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.family-plus-plus__along-came-margot {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 50px;
+  font-size: 22px;
+  text-align: right; }
+
+.family-plus-plus__setup {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 245px;
+  right: 50px;
+  font-size: 22px;
+  text-align: right; }
+
+.family-plus-plus__foreshadowing {
+  display: none;
+  width: 470px;
+  position: absolute;
+  top: 690px;
+  right: -550px;
+  text-align: right;
+  font-size: 32px; }
+
+.family-plus-plus__kate-head {
+  display: none;
+  width: 0px;
+  top: 610px;
+  left: 470px;
+  z-index: 22; }
+
+.family-plus-plus__matt-head {
+  display: none;
+  width: 0px;
+  top: 564px;
+  left: 613px;
+  z-index: 20; }
+
+.family-plus-plus__margot-head {
+  display: none;
+  width: 145px;
+  top: 490px;
+  left: 355px;
+  z-index: 10; }
+
+.family-plus-plus__margot-paw-right {
+  display: none;
+  width: 62px;
+  top: 545px;
+  left: 592px;
+  z-index: 10; }
+
+/* Slide 7 */
+.slide.city-bound .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.city-bound__graduation {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 50px;
+  font-size: 22px;
+  text-align: right; }
+
+.city-bound__foreshadowing {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 255px;
+  right: -1000px;
+  font-size: 25px;
+  text-align: right; }
+
+.city-bound__bean {
+  display: none;
+  width: 80px;
+  top: 390px;
+  left: 465px;
+  z-index: 21; }
+
+.city-bound__car {
+  display: none;
+  width: 340px;
+  top: 500px;
+  left: 330px;
+  z-index: 23; }
+
+.city-bound__road {
+  display: none;
+  width: 850px;
+  top: 315px;
+  left: 42px;
+  z-index: 22; }
+
+.city-bound__apartment {
+  display: none;
+  height: 100px;
+  top: -314px;
+  left: 421px;
+  z-index: 20; }
+
+.city-bound__skyscraper {
+  display: none;
+  height: 100px;
+  top: 346px;
+  left: 434px;
+  z-index: 10; }
+
+.city-bound__willis-tower {
+  display: none;
+  height: 100px;
+  top: 365px;
+  left: 455px;
+  z-index: 19; }
+
+/* Slide 8 */
+.slide.meet-up .slide__title {
+  top: -54px;
+  right: -100%; }
+
+.meet-up__message {
+  display: none;
+  width: 335px;
+  position: absolute;
+  top: 125px;
+  right: 50px;
+  font-size: 22px;
+  text-align: right; }
+
+.meet-up__map-canvas {
+  width: 745px;
+  height: 500px;
+  margin: 0px;
+  background-image: url("img/meetup-map.png");
+  position: relative;
+  top: 221px;
+  font-size: 22px;
+  text-align: right;
+  left: 40px; }
+
+.meet-up__map-tooltip {
+  display: none;
+  width: 300px;
+  height: 50px;
+  overflow: auto;
+  background-color: white;
+  position: absolute;
+  top: 346px;
+  left: 144px;
+  box-shadow: 0px 0px 10px rgba(20, 20, 20, 0.3);
+  z-index: 10; }
+  .meet-up__map-tooltip h2 {
+    display: block;
+    font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    opacity: .7; }
+    .meet-up__map-tooltip h2 a {
+      display: block;
+      color: #4e4e4e; }
+    .meet-up__map-tooltip h2:hover {
+      opacity: 1; }
+
+.slide .meet-up__she-said-yes {
+  display: none;
+  position: absolute;
+  bottom: -109px;
+  right: 150px;
+  font-size: 62px;
+  text-align: right;
+  text-transform: uppercase;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  width: 100px;
+  text-align: center;
+  color: #4e4e4e; }
+
+.tooltip {
+  border-bottom: solid 1px;
+  position: relative;
+  cursor: pointer; }
+
+.tooltip .tooltip--contents {
+  display: none;
+  width: 250px;
+  position: absolute;
+  top: -115px;
+  left: -105px;
+  text-align: center;
+  background-color: #4e4e4e;
+  border-radius: 3px;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -ms-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s; }
+
+.tooltip .tooltip--contents:after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: -20px;
+  left: 45%;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #4e4e4e;
+  z-index: 100; }
+
+.tooltip:hover {
+  background-color: rgba(123, 152, 140, 0.999);
+  color: white; }
+
+.tooltip:hover .tooltip--contents {
+  display: block; }
+
+/*# sourceMappingURL=style.css.map */
