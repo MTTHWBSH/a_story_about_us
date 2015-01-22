@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<?php
+// ini_set('display_errors',1);
+// error_reporting(E_ALL);
+?>
+
+<head>
+    <meta charset="utf-8">
+
+    <title>This is a love story</title>
+        <meta name="description" content="A tale of two spartans, partners in crime, moved to the windy city (recruiting a furry friend along the way). This is their love story.">
+        <meta name="keywords" content="marriage, proposal, love, story, engagement, animation, illustration, MTTHWBSH, joshDcomp, GabeCooper, html5, css3, love story, michigan state university, msu, grand rapids, chicago, east lansing">
+        <meta name="author" content="@joshDcomp, @mtthwbsh @GabeCooper">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Social Media & Google meta
+    ==============================================================================-->
+        <!-- FB -->
+        <meta property="og:url" content="http://astoryabout.us/"/>
+        <meta property="og:title" content="This is a love story"/>
+        <meta property="og:description" content="A tale of two spartans, partners in crime, moved to the windy city (recruiting a furry friend along the way). This is their love story."/>
+        <meta property="og:image" content="//astoryabout.us/img/thumb.png"/>
+        <!-- Google -->
+        <meta name="thumbnail" content="//astoryabout.us/img/thumb.png" />
+
+    <!-- CSS
+    ==============================================================================-->
+        <link rel="stylesheet" href="css/main.css">
+    <!-- Fonts
+    ==============================================================================-->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:900|Gentium+Basic:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Favicons
+    ==============================================================================-->
+        <link rel="shortcut icon" href="img/favicons/favicon.ico">
+        <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png">
+</head>
+<body>
+    <div class="templates" style="display: none;">
+
+        <textarea id="partial-ui">
+            <nav class="ui-elements">
+
+                <div class="social_ctas">
+                    <a
+                        href="{{ui.fbLink}}"
+                        class="post_share_facebook"
+                    >&nbsp;</a>
+
+                    <a  href="{{ui.shareLink}}"
+                        title="{{ui.tweet}}"
+                        class="post_share_tweet"
+                    >&nbsp;</a>
+                </div>
+
+
+                <div class="ui__back-button ui-do_back">&nbsp;</div>
+                <div class="ui__next-button ui-do_next">&nbsp;</div>
+
+                <div class="ui__keyboard">
+                    <img
+                        src="img/ui-elements/top-arrow-key.png"
+                        alt="up arrow key"
+                        class="ui__keyboard--key ui__keyboard--top-key ui-do_up"
+                     />
+                    <img
+                        src="img/ui-elements/left-arrow-key.png"
+                        alt="left arrow key"
+                        class="ui__keyboard--key ui__keyboard--left-key ui-do_back"
+                     />
+                    <img
+                        src="img/ui-elements/bottom-arrow-key.png"
+                        alt="down arrow key"
+                        class="ui__keyboard--key ui__keyboard--botom-key ui-do_down"
+                     />
+                    <img
+                        src="img/ui-elements/right-arrow-key.png"
+                        alt="right arrow key"
+                        class="ui__keyboard--key ui__keyboard--right-key ui-do_next"
+                     />
+                </div>
+
+                <ul class="ui__nav">
+                    {{#ui.bookmarks}}
+                        <li
+                            class="ui__nav__slide ui__nav__{{@key}} ui-do_skip_to"
+                            data-bookmark="{{@key}}"
+                        ></li>
+                    {{/ui.bookmarks}}
+                        {{!<li class="ui__nav__slide ui__nav__colophon ui-do_skip_to" data-bookmark="colophon"></li>}}
+                </ul>
+            </nav>
+        </textarea>
+
+        <textarea id="partial-cover">
+            <header class="story_book__intro">
+
+
+                <h1 class="story_book__intro__header">
+                    <span class="story_book__intro__header--preamble">This is</span>
+                    <span class="story_book__intro__header--preamble">a love</span>
+                    <span class="story_book__intro__header--story">story</span>
+                </h1>
+
+                <h2 class="story_book__intro__to-from kate"><span class="story_book__intro__to-from--label">To:</span> <span class="story_book__intro__to-from--name">Kate</span></h2>
+                <h2 class="story_book__intro__to-from matt"><span class="story_book__intro__to-from--label">From:</span> <span class="story_book__intro__to-from--name">Matt</span></h2>
+
+                <p class="button story_book__open ui-do_next">Begin</p>
+
+                <p class="story_book__instructions">To start, click ‘Begin’, and use your right arrow key or the space bar to advance.</p>
+
+            </header>
+        </textarea>
+
+        <textarea id="partial-pages">
+            {{#pages}}
+                <section class="slide {{bem}}">
+                    {{#if isMap}}
+                        <h1 class="slide__title">Continue?</h1>
+                        <p class="{{bem}}__message">"That brings us to July 16, 2013. Matt didn't think the story should end with a cliffhanger, so he told Kate to meet him at 635 W. Arlington Pl in Lincoln park, and asked a simple question…"</p>
+                        <div class="{{slideBem}}__map-tooltip">
+                            <h2><a href="https://maps.google.com/maps?q=635+W.+Arlington,+in+Lincoln+Park&hl=en&sll=40.697488,-73.979681&sspn=0.930813,1.686401&hnear=635+W+Arlington+Pl,+Chicago,+Cook,+Illinois+60614&t=m&z=17">635 W. Arlington pl</a></h2>
+                        </div>
+                        <div class="{{bem}}__map-canvas"></div>
+                        <p class="meet-up__she-said-yes">She said yes!</p>
+                    {{else}}
+                        <h1 class="slide__title">{{title}}</h1>
+                        {{#paragraphs}}
+                            <p class="{{../bem}}__{{identifier}}">{{{content}}}</p>
+                        {{/paragraphs}}
+
+                        {{#images}}
+                            <img class="{{../bem}}__{{identifier}}" src="{{path}}" alt="{{identifier}}" />
+                        {{/images}}
+                    {{/if}}
+                </section>
+            {{/pages}}
+        </textarea>
+
+        <textarea id="partial-afterword">
+            <footer class="story_book__colophon">
+                <h1 class="colophon__title">src=</h1>
+
+                <section class="colphon__credits--names">
+                    <ul class="colophon__collab-list">
+                        <li class="colophon__collab-list__li--matt">
+                            <img class="colophon__collab-list--faces" src="img/contributor-thumbs/matt.png" alt="Matt Bush's no-longer-single smile" />
+                            <h2 class="collab-list__link">
+                                <a href="http://mtthwbsh.com" target="_blank" class="collab-list__link--portfolio">Matthew Bush</a>
+                                <a href="https://twitter.com/mtthwbsh" target="_blank" class="collab-list__link-twitter">(@mtthwbsh)</a>
+                            </h2>
+                            <p class="collab-list__roles">Story, Art direction, Wedding proposal</p>
+                        </li>
+                        <li class="colophon__collab-list__li--josh" >
+                            <img class="colophon__collab-list--faces" src="img/contributor-thumbs/josh.png" alt="Josh Compton's glorious visage" />
+                            <h2 class="collab-list__link">
+                                <a href="http://joshdcompton.com" target="_blank" class="collab-list__img-link">Josh Compton</a>
+                                <a href="http://twitter.com/joshdcomp" target="_blank" class="collab-list__link-twitter">(@joshdcomp)</a>
+                            </h2>
+                            <p class="collab-list__roles">Animations, Dev, UI,  Beard</p>
+                        </li>
+                        <li class="colophon__collab-list__li--gabe">
+                            <img class="colophon__collab-list--faces" src="img/contributor-thumbs/gabe.png" alt="Gabe Cooper's cute little face" />
+                            <h2 class="collab-list__link">
+                                <a href="http://gabecooper.com" target="_blank" class="collab-list__img-link">Gabe Cooper</a>
+                                <a href="https://twitter.com/gabecooper" target="_blank" class="collab-list__link-twitter">(@gabecooper)</a>
+                            </h2>
+                            <p class="collab-list__roles">Illustrations, Aesthetic, good things</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="colphon__credits">
+                    <div class="credits__toolkit">
+                        <h1 class="colphon__credits--title">Toolkit</h1>
+                        <ul class="colophon__credits__list--tools">
+                            <li><a href="http://sass-lang.com/" target="_blank">SASS</a></li>
+                            <li><a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">BEM</a></li>
+                            <li><a href="http://panic.com/coda/" target="_blank">Coda</a></li>
+                            <li><a href="http://emmet.io/" target="_blank">Emmet</a></li>
+                            <li><a href="http://incident57.com/codekit/" target="_blank">CodeKit</a></li>
+                            <li><a href="http://easings.net/" target="_blank">Easings.Net</a></li>
+                            <li><a href="https://bitbucket.org/" target="_blank">Bitbucket</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="credits__fonts">
+                        <h1 class="colphon__credits--title">Fonts</h1>
+                        <ul class="colophon__credits__list--fonts">
+                            <li class="colophon__credits__list__li"><a href="http://www.google.com/fonts/#ChoosePlace:select/Collection:Source+Sans+Pro" target="_blank">Source Sans Pro</a></li>
+                            <li class="colophon__credits__list__li"><a href="http://www.google.com/fonts/#ChoosePlace:select/Collection:Gentium+Basic" target="_blank">Gentium Basic</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="credits__libs">
+                        <h1 class="colphon__credits--title">Libs</h1>
+                        <ul class="colophon__credits__list--libs">
+                            <li class="colophon__credits__list--libs"><a href="http://google.com/webfonts" target="_blank">Google Webfonts</a></li>
+                            <li class="colophon__credits__list--libs"><a href="http://jquery.com/" target="_blank">jQuery</a></li>
+                            <li class="colophon__credits__list--libs"><a href="http://gsgd.co.uk/sandbox/jquery/easing/" target="_blank">jQuery.Easing</a></li>
+                            <li class="colophon__credits__list--libs"><a href="https://github.com/zachstronaut/jquery-animate-css-rotate-scale/" target="_blank">jQuery.Rotate</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </footer>
+        </textarea>
+
+        <textarea style="display:none;" id="view-storybook">
+            <div class="{{container}}">
+                {{> _ui}}
+
+                <div class="story_book">
+                    {{> _cover}}
+                    {{> _pages}}
+                    {{> _afterword}}
+                </div>
+            </div>
+        </textarea>
+    </div>
+    <!-- SCRIPTS
+    ==============================================================================-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/love-story.js"></script>
+
+    <!-- ANALYTICS
+    ==============================================================================-->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-17210974-3', 'astoryabout.us');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
