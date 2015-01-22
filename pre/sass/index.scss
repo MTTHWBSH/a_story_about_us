@@ -3,7 +3,6 @@ $storyBookHeight: 760px;
 /*
   Made with love by @joshDComp & @mtthwbsh
 */
-//each file below should have a block comment at the top of the document which acts as a debugging flag.
 //CONFIG/RESET
   @import "global/variables";
   @import "global/mixins";
@@ -15,15 +14,8 @@ $storyBookHeight: 760px;
   @import "global/storyboard";
   @import "global/ui-elements";
 //CONTAINER
-  @import "slides/1-classmates";
-  @import "slides/2-partiers";
-  @import "slides/3-roadies";
-  @import "slides/4-the-talk";
-  @import "slides/5-happiness-plus-plus";
-  @import "slides/6-family-plus-plus";
-  @import "slides/7-city-bound";
-  @import "slides/8-roommates";
-  
+  @import "slides/index";
+
 .tooltip {
   border-bottom: solid 1px;
   position: relative;
