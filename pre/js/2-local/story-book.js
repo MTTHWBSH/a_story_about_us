@@ -77,7 +77,12 @@ StoryBook.fn = StoryBook.prototype;
 StoryBook.fn.limbo = function(){
     //hide everything and call the index with the current animation
     if(this.pointer >= 0){
-        $(this.container).children().fadeOut(500);
+        this.UI.show();
+        $('.slide__' + this.chapter('name')).show(0)
+
+        // $(this.container).children().fadeOut(500);
+    } else {
+        this.UI.hide();
     }
 
     this.next();
@@ -144,16 +149,49 @@ StoryBook.fn.back = function(){
     this.validatePointer();
 
     if(this.pointer <= 2){
-        this.uiWrapper.hide(0).children().hide(0);
+        this.UI.hide();
         this.pointer = 0;
     }
     else{
         this.pointer = this.pointer - 2;
+        this.next();
     }
 
-    this.next();
-
     return this;
+}
+
+/**
+ * chapter()
+ * --
+ * Determines chapter by comparing this.pointer to this.bookmarks,
+ * then returns either the name or the page for that particular
+ * chapter, defaults to name
+ *
+ * @param string key either page or name
+ * @returns string/number val the value of the key requested
+ */
+StoryBook.fn.chapter = function(info){
+    var val;
+    var prev = {
+        page: 0,
+        name: 'intro'
+    };
+
+    // could get fancy with sorting, but we're assuming there
+    // aren't more than like 10 chapters, might as well just
+    // p through this one
+    for(var ch in this.bookmarks){
+        if(this.pointer === this.bookmarks[ch]['page']){
+            val = this.bookmarks[ch][info] || this.bookmarks[ch]['name'];
+            break;
+        } else if(this.pointer > ch.page){
+            val = prev[info] || prev['name'];
+            break;
+        } else {
+            prev = this.bookmarks.ch;
+        }
+    }
+    return val;
 }
 
 
@@ -168,20 +206,21 @@ StoryBook.fn.back = function(){
  */
 
 StoryBook.fn.next = function(){
-
     if( this.isBusy === true ) return this;
 
     this.isBusy = true;
 
     this.validatePointer();
 
-    if(this.pointer >= 2){
-        this.uiWrapper.show(0).children().show(0);
-    }
-    console.log(this.animations[this.pointer]);
-    this.animations[this.pointer]();
-    this.isBusy = false;
+    this.limbo();
+
+    this.UI.clean();
+
+    var $chapter = $('.slide__' + this.chapter('name'));
+    this.animations[this.pointer]($chapter);
     this.pointer++;
+
+    this.isBusy = false;
 
     return this;
 }
@@ -199,7 +238,9 @@ StoryBook.fn.next = function(){
     var storyBook = $(this.container);
     var intro = storyBook.find('.story_book__intro');
     storyBook.find('.slide').hide(0);
-    intro.fadeIn(500);
+    //we assume 0 in the animations is for handling the 'cover animations'
+    this.pointer = 0;
+    this.next();
 
 }
 
@@ -212,8 +253,9 @@ StoryBook.fn.next = function(){
  * @return this
  */
 StoryBook.fn.init = function(){
-    //because I freakin **CAN**
-    this.Render().UI().kickoff();
+    this.Render.init()
+    this.UI.init();
+    this.kickoff();
 
     return this;
 }

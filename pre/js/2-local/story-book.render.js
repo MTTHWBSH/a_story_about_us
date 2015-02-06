@@ -1,4 +1,12 @@
-StoryBook.fn.fbShareLink = function(){
+/**
+ * Render_fbShareLink()
+ * --
+ * generates the uri used to share the storybook to facebook
+ *
+ * @param null
+ * @return this
+ */
+StoryBook.fn.Render_fbShareLink = function(){
     var link = 'http://www.facebook.com/sharer.php?s=100';
 
     link += '&p[title]=' + encodeURIComponent(this.meta.title);
@@ -10,14 +18,14 @@ StoryBook.fn.fbShareLink = function(){
 }
 
 /**
-* renderTooltips()
+* Render_tooltips()
 * --
 * render tooltip markup based on data(tooltip-title)
 *
 * @param null
 * @return this
 */
-StoryBook.fn.renderTooltips = function(){
+StoryBook.fn.Render_tooltips = function(){
     //do tooltip stuff
     var tooltips = $('.tooltip');
     for(var tooltip in tooltips){
@@ -33,7 +41,7 @@ StoryBook.fn.renderTooltips = function(){
 }
 
 /**
- * registerPartials()
+ * Render_registerPartials()
  * --
  *
  * Register the partials for use in the app. Assumes all partials are stored in textareas (for teh speed gainz)
@@ -41,7 +49,7 @@ StoryBook.fn.renderTooltips = function(){
  * @param object partials {name: selector}
  * @return this
  */
-StoryBook.fn.registerPartials = function(partials){
+StoryBook.fn.Render_registerPartials = function(partials){
     for(var name in partials){
         Handlebars.registerPartial(name, $(partials[name]).val());
     }
@@ -65,12 +73,12 @@ StoryBook.fn.Render = function(){
         _pages : '#partial-pages',
         _afterword : '#partial-afterword'
     };
-    this.registerPartials(partials);
+    this.Render_registerPartials(partials);
 
     var storyView = Handlebars.compile($("#view-storybook").val());
 
     //@TODO could probs make these helpers or partials...or something
-    var fbLink = this.fbShareLink();
+    var fbLink = this.Render_fbShareLink();
     var tweet = encodeURIComponent(this.tweet);
     var data = {
         container: this.container.substr(1),//this.container is a selector
@@ -83,10 +91,12 @@ StoryBook.fn.Render = function(){
         pages: this.content,
     };
     var story = storyView(data);
+
     $('body').prepend(story);
 
+    this.$uiWrapper = $('ui-elements');
     //renderTooltips requires the presence of dom objects in the document so it has to happen after
-    this.renderTooltips();
+    this.Render_tooltips();
 
     return this;
 }
