@@ -1,15 +1,45 @@
 var LoveStoryPages = {
     bookmarks : {
-        cover: 0,
-        ch1 : 1,
-        ch2 : 3,
-        ch3 : 6,
-        ch4 : 9,
-        ch5 : 12,
-        ch6 : 14,
-        ch7 : 16,
-        ch8 : 18,
-        colophon : 20
+        cover: {
+            page: 0,
+            name: 'intro'
+        },
+        ch1 : {
+            page: 1,
+            name: 'classmates'
+        },
+        ch2 : {
+            page: 3,
+            name: 'partiers'
+        },
+        ch3 : {
+            page: 6,
+            name: 'roadies'
+        },
+        ch4 : {
+            page: 9,
+            name: 'the-talk'
+        },
+        ch5 : {
+            page: 12,
+            name: 'happiness-graph'
+        },
+        ch6 : {
+            page: 14,
+            name: 'happiness-graph'
+        },
+        ch7 : {
+            page: 16,
+            name: 'family-plus-plus'
+        },
+        ch8 : {
+            page: 18,
+            name: 'city-bound'
+        },
+        colophon : {
+            page: 20,
+            name: 'colophon'
+        }
     },
     content: loveStoryContent,
 

@@ -1,31 +1,14 @@
 var loveStoryAnimations = {
-    0: function(){
-        var enterButton = intro.find('.story_book__open');
-        //when the enter button is clicked, set the pointer to 1, and call limbo (start of chapter 1)
-        $(enterButton).click(function(){
-            this.pointer = 1;
-            this.limbo(this.pointer);
-        });
+    0: function($chapter){
+        var intro = $chapter
         intro.fadeIn(800);
     },
 
     //CHAPTER 1: CLASSMATES
     //bring in the title and the first paragraph
-    1: function(){
-
-        var slideTitle = slideOne.find('.slide__title');
-        var slideP1 = slideOne.find('.classmates__it-all-started');
-
-        this.limbo(this.pointer);
-
-        //Reset the styles for these bits so that the animations work correctly when the user clicks back
-        slideOne.children().removeAttr('style');
-
-        $uiWrapper.fadeIn(200).children().fadeIn(200);
-        $left.hide(0);
-        //hide everything, position the title, and show stuff
-        slideOne.children().hide(0);
-        slideOne.show(0);
+    1: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var slideP1 = $chapter.find('.classmates__it-all-started');
 
         //animate the title
         slideTitle.delay(100).show(0).animate({
@@ -36,11 +19,12 @@ var loveStoryAnimations = {
         });
     },
 
-    2: function(){
-        var classScene = slideOne.find('.classmates__class-scene');
-        var matt = slideOne.find('.classmates__matt-head');
-        var kate = slideOne.find('.classmates__kate-head');
-        var lastP = slideOne.find('.classmates__final-day');
+    2: function($chapter){
+
+        var classScene = $chapter.find('.classmates__class-scene');
+        var matt = $chapter.find('.classmates__matt-head');
+        var kate = $chapter.find('.classmates__kate-head');
+        var lastP = $chapter.find('.classmates__final-day');
 
         classScene.add(matt).add(kate).add(lastP).removeAttr('style');
 
@@ -60,14 +44,9 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 2: PARTIERS
-    3: function(){
-        var slideTitle = slideTwo.find('.slide__title');
-        var slideP1 = slideTwo.find('.partiers__drunkenly-biked');
-
-
-        this.limbo(this.pointer);
-        slideTwo.children().removeAttr('style');
-        slideTwo.show(0);
+    3: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var slideP1 = $chapter.find('.partiers__drunkenly-biked');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -78,13 +57,13 @@ var loveStoryAnimations = {
         });
     },
 
-    4: function(){
-        var flags = slideTwo.find('.partiers__little-flags');
-        var bar = slideTwo.find('.partiers__bar-bg');
-        var couch = slideTwo.find('.partiers__kate-couch');
-        var cantSlip = slideTwo.find('.partiers__cant-slip-away');
-        var matt = slideTwo.find('.partiers__drunk-matt');
-        var foreshadowing = slideTwo.find('.partiers__foreshadowing');
+    4: function($chapter){
+        var flags = $chapter.find('.partiers__little-flags');
+        var bar = $chapter.find('.partiers__bar-bg');
+        var couch = $chapter.find('.partiers__kate-couch');
+        var cantSlip = $chapter.find('.partiers__cant-slip-away');
+        var matt = $chapter.find('.partiers__drunk-matt');
+        var foreshadowing = $chapter.find('.partiers__foreshadowing');
 
         flags.add(bar).add(couch).add(cantSlip).add(matt).add(foreshadowing).removeAttr('style');
 
@@ -100,8 +79,8 @@ var loveStoryAnimations = {
         });
     },
 
-    5: function(){
-        var foreshadowing = slideTwo.find('.partiers__foreshadowing');
+    5: function($chapter){
+        var foreshadowing = $chapter.find('.partiers__foreshadowing');
 
         foreshadowing.removeAttr('style');
 
@@ -109,14 +88,10 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 3: ROADIES
-    6: function(){
-        var slideTitle = slideThree.find('.slide__title');
-        var roadiesTxt = slideThree.find('.roadies__moved-home');
-        var michigan = slideThree.find('.roadies__michigan');
-
-        this.limbo(this.pointer);
-        slideThree.children().removeAttr('style');
-        slideThree.show(0);
+    6: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var roadiesTxt = $chapter.find('.roadies__moved-home');
+        var michigan = $chapter.find('.roadies__michigan');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -129,19 +104,17 @@ var loveStoryAnimations = {
         }, 1000);
     },
 
-    7: function(){
-        var eastLansing = slideThree.find('.roadies__el');
-        var grandRapids = slideThree.find('.roadies__gr');
-        var beaumont = slideThree.find('.roadies__beaumont');
-        var caulder = slideThree.find('.roadies__caulder');
-        var foreshadowing = slideThree.find('.roadies__foreshadowing');
-
-
+    7: function($chapter){
+        var eastLansing = $chapter.find('.roadies__el');
+        var grandRapids = $chapter.find('.roadies__gr');
+        var beaumont = $chapter.find('.roadies__beaumont');
+        var caulder = $chapter.find('.roadies__caulder');
+        var foreshadowing = $chapter.find('.roadies__foreshadowing');
 
         var roadiesPrefix = '.roadies__path';
 
         foreshadowing.add(eastLansing).add(grandRapids).add(beaumont).add(caulder).removeAttr('style');
-        slideThree.find('img[class^="roadies__path"]').removeAttr('style');
+        $chapter.find('img[class^="roadies__path"]').removeAttr('style');
 
         eastLansing.show(0).animate({
             height: 135
@@ -184,24 +157,20 @@ var loveStoryAnimations = {
         });//grand rapids
     },
 
-    8: function(){
-        var foreshadowing = slideThree.find('.roadies__foreshadowing');
+    8: function($chapter){
+        var foreshadowing = $chapter.find('.roadies__foreshadowing');
         foreshadowing.removeAttr('style');
         foreshadowing.slideDown(300)
     },
 
     //CHAPTER 4: THE TALK
-    9: function(){
-        var slideTitle = slideFour.find('.slide__title');
-        var thunder1 = slideFour.find('.the-talk__stolen-thunder1');
-        var background = slideFour.find('.the-talk__background');
-        var brick = slideFour.find('.the-talk__brick');
-        var kate = slideFour.find('.the-talk__kate');
-        var matt = slideFour.find('.the-talk__matt');
-
-        this.limbo(this.pointer);
-        slideFour.children().removeAttr('style');
-        slideFour.show(0);
+    9: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var thunder1 = $chapter.find('.the-talk__stolen-thunder1');
+        var background = $chapter.find('.the-talk__background');
+        var brick = $chapter.find('.the-talk__brick');
+        var kate = $chapter.find('.the-talk__kate');
+        var matt = $chapter.find('.the-talk__matt');
 
         //animate the title
         slideTitle.delay(500).show(0).animate({
@@ -222,10 +191,10 @@ var loveStoryAnimations = {
         });
     },
 
-    10: function(){
-        var thunder2 = slideFour.find('.the-talk__stolen-thunder2');
-        var kate = slideFour.find('.the-talk__kate');
-        var foreshadowing = slideFour.find('.the-talk__foreshadowing');
+    10: function($chapter){
+        var thunder2 = $chapter.find('.the-talk__stolen-thunder2');
+        var kate = $chapter.find('.the-talk__kate');
+        var foreshadowing = $chapter.find('.the-talk__foreshadowing');
 
         foreshadowing.add(thunder2).removeAttr('style');
         kate.css({right: 90});
@@ -236,26 +205,22 @@ var loveStoryAnimations = {
         },800)
     },
 
-    11: function(){
-        var foreshadowing = slideFour.find('.the-talk__foreshadowing');
+    11: function($chapter){
+        var foreshadowing = $chapter.find('.the-talk__foreshadowing');
         foreshadowing.removeAttr('style');
         foreshadowing.slideDown(450);
     },
 
     //CHAPTER 5: HAPPINESS GRAPH
     12:function(){
-        var slideTitle = slideFive.find('.slide__title');
-        var plusPlus = slideFive.find('.happiness-graph__happiness-plus-plus');
-        var axes = slideFive.find('.happiness-graph__background');
-        var clockBG = slideFive.find('.happiness-graph__clock-bg');
-        var clockFace = slideFive.find('.happiness-graph__clock-face');
-        var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
-        var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
-        var happyFace = slideFive.find('.happiness-graph__happy-face');
-
-        this.limbo(this.pointer);
-        slideFive.children().css('');
-        slideFive.show(0);
+        var slideTitle = $chapter.find('.slide__title');
+        var plusPlus = $chapter.find('.happiness-graph__happiness-plus-plus');
+        var axes = $chapter.find('.happiness-graph__background');
+        var clockBG = $chapter.find('.happiness-graph__clock-bg');
+        var clockFace = $chapter.find('.happiness-graph__clock-face');
+        var clockHour = $chapter.find('.happiness-graph__clock-hand-hour');
+        var clockMin = $chapter.find('.happiness-graph__clock-hand-minute');
+        var happyFace = $chapter.find('.happiness-graph__happy-face');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -289,12 +254,12 @@ var loveStoryAnimations = {
         });//axes
     },
 
-    13: function(){
-        var clockBG = slideFive.find('.happiness-graph__clock-bg');
-        var clockFace = slideFive.find('.happiness-graph__clock-face');
-        var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
-        var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
-        var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
+    13: function($chapter){
+        var clockBG = $chapter.find('.happiness-graph__clock-bg');
+        var clockFace = $chapter.find('.happiness-graph__clock-face');
+        var clockHour = $chapter.find('.happiness-graph__clock-hand-hour');
+        var clockMin = $chapter.find('.happiness-graph__clock-hand-minute');
+        var foreshadowing = $chapter.find('.happiness-graph__foreshadowing');
 
         foreshadowing.removeAttr('style');
         $('img[class^="happiness-graph__dash"]').removeAttr('style');
@@ -345,16 +310,12 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 6: FAMILY++
-    14: function(){
-        var slideTitle = slideSix.find('.slide__title');
-        var plusPlus = slideSix.find('.family-plus-plus__along-came-margot');
+    14: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var plusPlus = $chapter.find('.family-plus-plus__along-came-margot');
 
-        var kate = slideSix.find('.family-plus-plus__kate-head');
-        var matt = slideSix.find('.family-plus-plus__matt-head');
-
-        this.limbo(this.pointer);
-        slideSix.children().removeAttr('style');
-        slideSix.show(0);
+        var kate = $chapter.find('.family-plus-plus__kate-head');
+        var matt = $chapter.find('.family-plus-plus__matt-head');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -376,12 +337,12 @@ var loveStoryAnimations = {
         });
     },
 
-    15: function(){
-        var margotHead = slideSix.find('.family-plus-plus__margot-head');
-        var margotPawR = slideSix.find('.family-plus-plus__margot-paw-right');
+    15: function($chapter){
+        var margotHead = $chapter.find('.family-plus-plus__margot-head');
+        var margotPawR = $chapter.find('.family-plus-plus__margot-paw-right');
 
-        var setup = slideSix.find('.family-plus-plus__setup');
-        var foreshadowing = slideSix.find('.family-plus-plus__foreshadowing');
+        var setup = $chapter.find('.family-plus-plus__setup');
+        var foreshadowing = $chapter.find('.family-plus-plus__foreshadowing');
 
         margotHead.add(margotPawR).add(setup).add(foreshadowing).removeAttr('style');
 
@@ -405,13 +366,9 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 7: CITY BOUND
-    16: function(){
-        var slideTitle = slideSeven.find('.slide__title');
-        var graduation = slideSeven.find('.city-bound__graduation');
-
-        this.limbo(this.pointer);
-        slideSeven.children().removeAttr('style');
-        slideSeven.show(0);
+    16: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var graduation = $chapter.find('.city-bound__graduation');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -421,14 +378,14 @@ var loveStoryAnimations = {
         });
     },
 
-    17: function(){
-        var foreshadowing = slideSeven.find('.city-bound__foreshadowing');
-        var road = slideSeven.find('.city-bound__road');
-        var skyScraper = slideSeven.find('.city-bound__skyscraper');
-        var willisTower = slideSeven.find('.city-bound__willis-tower');
-        var bean = slideSeven.find('.city-bound__bean');
-        var apartment = slideSeven.find('.city-bound__apartment');
-        var car = slideSeven.find('.city-bound__car');
+    17: function($chapter){
+        var foreshadowing = $chapter.find('.city-bound__foreshadowing');
+        var road = $chapter.find('.city-bound__road');
+        var skyScraper = $chapter.find('.city-bound__skyscraper');
+        var willisTower = $chapter.find('.city-bound__willis-tower');
+        var bean = $chapter.find('.city-bound__bean');
+        var apartment = $chapter.find('.city-bound__apartment');
+        var car = $chapter.find('.city-bound__car');
 
         foreshadowing.add(road).add(skyScraper).add(willisTower).add(bean).add(apartment).add(car).removeAttr('style');
 
@@ -492,15 +449,11 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 8: MEET UP
-    18: function(){
-        var slideTitle = slideEight.find('.slide__title');
-        var meetup = slideEight.find('.meet-up__message');
-        var map = slideEight.find('.meet-up__map-canvas');
-        var mapOverlay = slideEight.find('.meet-up__map-tooltip');
-
-        this.limbo(this.pointer);
-        slideEight.children().removeAttr('style');
-        slideEight.show(0);
+    18: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var meetup = $chapter.find('.meet-up__message');
+        var map = $chapter.find('.meet-up__map-canvas');
+        var mapOverlay = $chapter.find('.meet-up__map-tooltip');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -512,17 +465,17 @@ var loveStoryAnimations = {
         });
     },
 
-    19: function(){
-        var sheSaidYes = slideEight.find('.meet-up__she-said-yes');
-        sheSaidYes.removeAttr('style');
-        sheSaidYes.fadeIn(300);
+    19: function($chapter){
+        var sheSaidYes = $chapter.find('.meet-up__she-said-yes');
+        sheSaidYes.$chapter('style');
+        sheSaidYes.$chapter(300);
     },
 
-    20: function(){
-        var matt = colophon.find('.colophon__collab-list__li--matt');
-        var josh = colophon.find('.colophon__collab-list__li--josh');
-        var gabe = colophon.find('.colophon__collab-list__li--gabe');
-        this.limbo(this.pointer);
+    20: function($chapter){
+        var matt = $chapter.find('.colophon__collab-list__li--matt');
+        var josh = $chapter.find('.colophon__collab-list__li--josh');
+        var gabe = $chapter.find('.colophon__collab-list__li--gabe');
+
         rightArrow.hide();
         colophon.children().removeAttr('style');
         colophon.delay(1000).fadeIn(800);
