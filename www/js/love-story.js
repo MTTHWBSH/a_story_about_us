@@ -3396,7 +3396,12 @@ StoryBook.fn = StoryBook.prototype;
 StoryBook.fn.limbo = function(){
     //hide everything and call the index with the current animation
     if(this.pointer >= 0){
-        $(this.container).children().fadeOut(500);
+        this.UI.show();
+        $('.slide__' + this.chapter('name')).show(0)
+
+        // $(this.container).children().fadeOut(500);
+    } else {
+        this.UI.hide();
     }
 
     this.next();
@@ -3463,16 +3468,49 @@ StoryBook.fn.back = function(){
     this.validatePointer();
 
     if(this.pointer <= 2){
-        this.uiWrapper.hide(0).children().hide(0);
+        this.UI.hide();
         this.pointer = 0;
     }
     else{
         this.pointer = this.pointer - 2;
+        this.next();
     }
 
-    this.next();
-
     return this;
+}
+
+/**
+ * chapter()
+ * --
+ * Determines chapter by comparing this.pointer to this.bookmarks,
+ * then returns either the name or the page for that particular
+ * chapter, defaults to name
+ *
+ * @param string key either page or name
+ * @returns string/number val the value of the key requested
+ */
+StoryBook.fn.chapter = function(info){
+    var val;
+    var prev = {
+        page: 0,
+        name: 'intro'
+    };
+
+    // could get fancy with sorting, but we're assuming there
+    // aren't more than like 10 chapters, might as well just
+    // p through this one
+    for(var ch in this.bookmarks){
+        if(this.pointer === this.bookmarks[ch]['page']){
+            val = this.bookmarks[ch][info] || this.bookmarks[ch]['name'];
+            break;
+        } else if(this.pointer > ch.page){
+            val = prev[info] || prev['name'];
+            break;
+        } else {
+            prev = this.bookmarks.ch;
+        }
+    }
+    return val;
 }
 
 
@@ -3487,20 +3525,21 @@ StoryBook.fn.back = function(){
  */
 
 StoryBook.fn.next = function(){
-
     if( this.isBusy === true ) return this;
 
     this.isBusy = true;
 
     this.validatePointer();
 
-    if(this.pointer >= 2){
-        this.uiWrapper.show(0).children().show(0);
-    }
-    console.log(this.animations[this.pointer]);
-    this.animations[this.pointer]();
-    this.isBusy = false;
+    this.limbo();
+
+    this.UI.clean();
+
+    var $chapter = $('.slide__' + this.chapter('name'));
+    this.animations[this.pointer]($chapter);
     this.pointer++;
+
+    this.isBusy = false;
 
     return this;
 }
@@ -3518,7 +3557,9 @@ StoryBook.fn.next = function(){
     var storyBook = $(this.container);
     var intro = storyBook.find('.story_book__intro');
     storyBook.find('.slide').hide(0);
-    intro.fadeIn(500);
+    //we assume 0 in the animations is for handling the 'cover animations'
+    this.pointer = 0;
+    this.next();
 
 }
 
@@ -3531,8 +3572,9 @@ StoryBook.fn.next = function(){
  * @return this
  */
 StoryBook.fn.init = function(){
-    //because I freakin **CAN**
-    this.Render().UI().kickoff();
+    this.Render.init()
+    this.UI.init();
+    this.kickoff();
 
     return this;
 }
@@ -3541,7 +3583,15 @@ StoryBook.fn.init = function(){
 //--------------------------------------------------
 // Source: pre/js/2-local/story-book.render.js
 //--------------------------------------------------
-StoryBook.fn.fbShareLink = function(){
+/**
+ * Render_fbShareLink()
+ * --
+ * generates the uri used to share the storybook to facebook
+ *
+ * @param null
+ * @return this
+ */
+StoryBook.fn.Render_fbShareLink = function(){
     var link = 'http://www.facebook.com/sharer.php?s=100';
 
     link += '&p[title]=' + encodeURIComponent(this.meta.title);
@@ -3553,14 +3603,14 @@ StoryBook.fn.fbShareLink = function(){
 }
 
 /**
-* renderTooltips()
+* Render_tooltips()
 * --
 * render tooltip markup based on data(tooltip-title)
 *
 * @param null
 * @return this
 */
-StoryBook.fn.renderTooltips = function(){
+StoryBook.fn.Render_tooltips = function(){
     //do tooltip stuff
     var tooltips = $('.tooltip');
     for(var tooltip in tooltips){
@@ -3576,7 +3626,7 @@ StoryBook.fn.renderTooltips = function(){
 }
 
 /**
- * registerPartials()
+ * Render_registerPartials()
  * --
  *
  * Register the partials for use in the app. Assumes all partials are stored in textareas (for teh speed gainz)
@@ -3584,7 +3634,7 @@ StoryBook.fn.renderTooltips = function(){
  * @param object partials {name: selector}
  * @return this
  */
-StoryBook.fn.registerPartials = function(partials){
+StoryBook.fn.Render_registerPartials = function(partials){
     for(var name in partials){
         Handlebars.registerPartial(name, $(partials[name]).val());
     }
@@ -3608,12 +3658,12 @@ StoryBook.fn.Render = function(){
         _pages : '#partial-pages',
         _afterword : '#partial-afterword'
     };
-    this.registerPartials(partials);
+    this.Render_registerPartials(partials);
 
     var storyView = Handlebars.compile($("#view-storybook").val());
 
     //@TODO could probs make these helpers or partials...or something
-    var fbLink = this.fbShareLink();
+    var fbLink = this.Render_fbShareLink();
     var tweet = encodeURIComponent(this.tweet);
     var data = {
         container: this.container.substr(1),//this.container is a selector
@@ -3626,10 +3676,12 @@ StoryBook.fn.Render = function(){
         pages: this.content,
     };
     var story = storyView(data);
+
     $('body').prepend(story);
 
+    this.$uiWrapper = $('ui-elements');
     //renderTooltips requires the presence of dom objects in the document so it has to happen after
-    this.renderTooltips();
+    this.Render_tooltips();
 
     return this;
 }
@@ -3639,14 +3691,126 @@ StoryBook.fn.Render = function(){
 // Source: pre/js/2-local/story-book.ui.js
 //--------------------------------------------------
 /**
- * keyDownHandler()
+ * StoryBook.fn.UI
+ * ==
+ * Handles all user actions and fires events for consumption by StoryBook(),
+ * dependent on markup generated by StoryRender
+ *
+ * @param string container css selector used to scope all dom event listeners
+ */
+StoryBook.fn.UI = {};
+
+/**
+ * UI.init()
+ * --
+ * sets up event listeners for clicks and keypresses
+ *
+ * @param null
+ * @return this
+ */
+StoryBook.fn.UI.init = function(){
+    this.fn = this.prototype;
+    this.keyCode = {
+        up: 38,
+        left: 37,
+        down: 40,
+        right: 39,
+        space: 32
+    };
+
+    this.uiActions = {
+        back: $('.ui-do_back'),
+        next: $('.ui-do_next'),
+        skipTo: $('.ui-do_skip_to')
+    };
+
+    this.backButton = $('.ui__back-button');
+    this.nextButton = $('.ui__next-button');
+
+    var $uiKeysWrapper = $('.ui__keyboard');
+    this.uiKeys = {
+        up: $uiKeysWrapper.find('.ui__keyboard--top-key'),
+        left: $uiKeysWrapper.find('.ui__keyboard--left-key'),
+        down: $uiKeysWrapper.find('.ui__keyboard--down-key'),
+        right: $uiKeysWrapper.find('.ui__keyboard--right-key'),
+    };
+
+    //brought over from index, sort this later
+    var frame = $('.story_book');
+    //chapter selectors
+    var intro = frame.find('.story_book__intro'),
+    colophon = frame.find('.story_book__colophon');
+
+    //KEYDOWN/KEYUP
+
+    $(document).on('keydown', this.UI.keyDownHandler.bind(this));
+    $(document).on('keyup', $.proxy(this.UI.keyUpHandler, this));
+
+    //ARROW AND SLIDE NAV
+    this.uiActions.back.on('click', $.proxy(this.UI.back, this));
+    this.uiActions.next.on('click', $.proxy(this.UI.next, this));
+    this.uiActions.skipTo.on('click', $.proxy(this.UI.skipTo, this));
+
+    //FB and Twitter share links
+    $('.post_share_tweet').on('click', $.proxy(this.UI.tweetClicked, this));
+    $('.post_share_facebook').on('click', $.proxy(this.UI.fbClicked, this));
+
+    return this;
+}
+
+/**
+ * UI.show()
+ * --
+ * erm...shows the UI
+ *
+ * @param null
+ * @return this
+ */
+StoryBook.fn.UI.show = function(){
+    this.$uiWrapper.fadeIn(200).children().fadeIn(200);
+    return this;
+}
+
+/**
+ * UI.hide()
+ * --
+ * erm...hides the UI
+ *
+ * @param null
+ * @return this
+ */
+StoryBook.fn.UI.hide = function(){
+    this.$uiWrapper.fadeOut(200).children().fadeOut(200);
+    return this;
+}
+
+/**
+ * UI.cleanup
+ * --
+ * cleans up the UI
+ *
+ * @param null
+ * @return this
+ */
+StoryBook.fn.UI.clean = function(){
+    if(this.pointer >= 2){
+        this.UI.show();
+        this.backButton.hide();
+    }
+    if(this.pointer == this.bookmarks.colophon.page){
+        this.nextButton.hide();
+    }
+}
+
+/**
+ * UI.keyDownHandler()
  * --
  * any keydown is routed through here
  *
  * @param null
  * @return this
  */
-StoryBook.fn.keyDownHandler = function(e){
+StoryBook.fn.UI.keyDownHandler = function(e){
     var keycode = e.keyCode;// || e.keycode || e.which;
 
     switch(keycode){
@@ -3676,14 +3840,14 @@ StoryBook.fn.keyDownHandler = function(e){
 }
 
 /**
- * keyUpHandler()
+ * UI.keyUpHandler()
  * --
  * not much needs to happen on keyup atm so just keep things simple for the moment
  *
  * @param null
  * @return this
  */
-StoryBook.fn.keyUpHandler = function(){
+StoryBook.fn.UI.keyUpHandler = function(){
     $('.ui__keyboard').find('.ui__keyboard--key').removeClass('pressed');
     return this;
 }
@@ -3696,7 +3860,7 @@ StoryBook.fn.keyUpHandler = function(){
  * @param null
  * @return this
  */
-StoryBook.fn.uiBack = function(e){
+StoryBook.fn.UI.back = function(e){
     e.preventDefault();
     this.back();
     return this;
@@ -3710,7 +3874,7 @@ StoryBook.fn.uiBack = function(e){
  * @param null
  * @return this
  */
-StoryBook.fn.uiNext = function(e){
+StoryBook.fn.UI.next = function(e){
     e.preventDefault();
     this.next();
     return this;
@@ -3724,12 +3888,12 @@ StoryBook.fn.uiNext = function(e){
  * @param null
  * @return this
  */
-StoryBook.fn.uiSkipTo = function(e){
+StoryBook.fn.UI.skipTo = function(e){
     e.preventDefault();
     var bookmark = $(e.currentTarget).data('bookmark');
 
     //if the key doesn't exist, make sure this.pointer has a value
-    bookmark = this.bookmarks[bookmark] || this.pointer;
+    bookmark = this.bookmarks[bookmark].page || this.pointer;
 
     this.skipTo(bookmark);
     return this;
@@ -3743,7 +3907,7 @@ StoryBook.fn.uiSkipTo = function(e){
  * @param event e event object
  * @return this
  */
-StoryBook.fn.tweetClicked = function(e){
+StoryBook.fn.UI.tweetClicked = function(e){
 
     e.preventDefault();
 
@@ -3764,7 +3928,7 @@ StoryBook.fn.tweetClicked = function(e){
  * @param event e event object
  * @return this
  */
-StoryBook.fn.fbClicked = function(e){
+StoryBook.fn.UI.fbClicked = function(e){
     e.preventDefault();
 
     var fb_link = $(this).attr('href');
@@ -3774,93 +3938,21 @@ StoryBook.fn.fbClicked = function(e){
 
 }
 
-/**
- * StoryBook.UI
- * ==
- * Handles all user actions and fires events for consumption by StoryBook(),
- * dependent on markup generated by StoryRender
- *
- * @param string container css selector used to scope all dom event listeners
- */
-StoryBook.fn.UI = function(){
-    this.fn = this.prototype;
-    this.keyCode = {
-        up: 38,
-        left: 37,
-        down: 40,
-        right: 39,
-        space: 32
-    };
-
-    this.uiActions = {
-        back: $('.ui-do_back'),
-        next: $('.ui-do_next'),
-        skipTo: $('.ui-do_skip_to')
-    };
-
-    var $uiKeysWrapper = $('.ui__keyboard');
-    this.uiKeys = {
-        up: $uiKeysWrapper.find('.ui__keyboard--top-key'),
-        left: $uiKeysWrapper.find('.ui__keyboard--left-key'),
-        down: $uiKeysWrapper.find('.ui__keyboard--down-key'),
-        right: $uiKeysWrapper.find('.ui__keyboard--right-key'),
-    };
-
-    //brought over from index, sort this later
-    var frame = $('.story_book');
-    //chapter selectors
-    var intro = frame.find('.story_book__intro'),
-    colophon = frame.find('.story_book__colophon');
-
-    //KEYDOWN/KEYUP
-
-    $(document).on('keydown', this.keyDownHandler.bind(this));
-    $(document).on('keyup', $.proxy(this.keyUpHandler, this));
-
-    //ARROW AND SLIDE NAV
-    this.uiActions.back.on('click', $.proxy(this.uiBack, this));
-    this.uiActions.next.on('click', $.proxy(this.uiNext, this));
-    this.uiActions.skipTo.on('click', $.proxy(this.uiSkipTo, this));
-
-    //FB and Twitter share links
-    $('.post_share_tweet').on('click', $.proxy(this.tweetClicked, this));
-    $('.post_share_facebook').on('click', $.proxy(this.fbClicked, this));
-
-    return this;
-}
-
 
 //--------------------------------------------------
 // Source: pre/js/2-local/story-book.z.love-story-config-animations.js
 //--------------------------------------------------
 var loveStoryAnimations = {
-    0: function(){
-        var enterButton = intro.find('.story_book__open');
-        //when the enter button is clicked, set the pointer to 1, and call limbo (start of chapter 1)
-        $(enterButton).click(function(){
-            this.pointer = 1;
-            this.limbo(this.pointer);
-        });
+    0: function($chapter){
+        var intro = $chapter
         intro.fadeIn(800);
     },
 
     //CHAPTER 1: CLASSMATES
     //bring in the title and the first paragraph
-    1: function(){
-
-        var slideTitle = slideOne.find('.slide__title');
-        var slideP1 = slideOne.find('.classmates__it-all-started');
-
-        this.limbo(this.pointer);
-
-        //Reset the styles for these bits so that the animations work correctly when the user clicks back
-        slideOne.children().removeAttr('style');
-
-        $uiWrapper.fadeIn(200).children().fadeIn(200);
-        $left.hide(0);
-        //hide everything, position the title, and show stuff
-        slideOne.children().hide(0);
-        slideOne.show(0);
+    1: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var slideP1 = $chapter.find('.classmates__it-all-started');
 
         //animate the title
         slideTitle.delay(100).show(0).animate({
@@ -3871,11 +3963,12 @@ var loveStoryAnimations = {
         });
     },
 
-    2: function(){
-        var classScene = slideOne.find('.classmates__class-scene');
-        var matt = slideOne.find('.classmates__matt-head');
-        var kate = slideOne.find('.classmates__kate-head');
-        var lastP = slideOne.find('.classmates__final-day');
+    2: function($chapter){
+
+        var classScene = $chapter.find('.classmates__class-scene');
+        var matt = $chapter.find('.classmates__matt-head');
+        var kate = $chapter.find('.classmates__kate-head');
+        var lastP = $chapter.find('.classmates__final-day');
 
         classScene.add(matt).add(kate).add(lastP).removeAttr('style');
 
@@ -3895,14 +3988,9 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 2: PARTIERS
-    3: function(){
-        var slideTitle = slideTwo.find('.slide__title');
-        var slideP1 = slideTwo.find('.partiers__drunkenly-biked');
-
-
-        this.limbo(this.pointer);
-        slideTwo.children().removeAttr('style');
-        slideTwo.show(0);
+    3: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var slideP1 = $chapter.find('.partiers__drunkenly-biked');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -3913,13 +4001,13 @@ var loveStoryAnimations = {
         });
     },
 
-    4: function(){
-        var flags = slideTwo.find('.partiers__little-flags');
-        var bar = slideTwo.find('.partiers__bar-bg');
-        var couch = slideTwo.find('.partiers__kate-couch');
-        var cantSlip = slideTwo.find('.partiers__cant-slip-away');
-        var matt = slideTwo.find('.partiers__drunk-matt');
-        var foreshadowing = slideTwo.find('.partiers__foreshadowing');
+    4: function($chapter){
+        var flags = $chapter.find('.partiers__little-flags');
+        var bar = $chapter.find('.partiers__bar-bg');
+        var couch = $chapter.find('.partiers__kate-couch');
+        var cantSlip = $chapter.find('.partiers__cant-slip-away');
+        var matt = $chapter.find('.partiers__drunk-matt');
+        var foreshadowing = $chapter.find('.partiers__foreshadowing');
 
         flags.add(bar).add(couch).add(cantSlip).add(matt).add(foreshadowing).removeAttr('style');
 
@@ -3935,8 +4023,8 @@ var loveStoryAnimations = {
         });
     },
 
-    5: function(){
-        var foreshadowing = slideTwo.find('.partiers__foreshadowing');
+    5: function($chapter){
+        var foreshadowing = $chapter.find('.partiers__foreshadowing');
 
         foreshadowing.removeAttr('style');
 
@@ -3944,14 +4032,10 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 3: ROADIES
-    6: function(){
-        var slideTitle = slideThree.find('.slide__title');
-        var roadiesTxt = slideThree.find('.roadies__moved-home');
-        var michigan = slideThree.find('.roadies__michigan');
-
-        this.limbo(this.pointer);
-        slideThree.children().removeAttr('style');
-        slideThree.show(0);
+    6: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var roadiesTxt = $chapter.find('.roadies__moved-home');
+        var michigan = $chapter.find('.roadies__michigan');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -3964,19 +4048,17 @@ var loveStoryAnimations = {
         }, 1000);
     },
 
-    7: function(){
-        var eastLansing = slideThree.find('.roadies__el');
-        var grandRapids = slideThree.find('.roadies__gr');
-        var beaumont = slideThree.find('.roadies__beaumont');
-        var caulder = slideThree.find('.roadies__caulder');
-        var foreshadowing = slideThree.find('.roadies__foreshadowing');
-
-
+    7: function($chapter){
+        var eastLansing = $chapter.find('.roadies__el');
+        var grandRapids = $chapter.find('.roadies__gr');
+        var beaumont = $chapter.find('.roadies__beaumont');
+        var caulder = $chapter.find('.roadies__caulder');
+        var foreshadowing = $chapter.find('.roadies__foreshadowing');
 
         var roadiesPrefix = '.roadies__path';
 
         foreshadowing.add(eastLansing).add(grandRapids).add(beaumont).add(caulder).removeAttr('style');
-        slideThree.find('img[class^="roadies__path"]').removeAttr('style');
+        $chapter.find('img[class^="roadies__path"]').removeAttr('style');
 
         eastLansing.show(0).animate({
             height: 135
@@ -4019,24 +4101,20 @@ var loveStoryAnimations = {
         });//grand rapids
     },
 
-    8: function(){
-        var foreshadowing = slideThree.find('.roadies__foreshadowing');
+    8: function($chapter){
+        var foreshadowing = $chapter.find('.roadies__foreshadowing');
         foreshadowing.removeAttr('style');
         foreshadowing.slideDown(300)
     },
 
     //CHAPTER 4: THE TALK
-    9: function(){
-        var slideTitle = slideFour.find('.slide__title');
-        var thunder1 = slideFour.find('.the-talk__stolen-thunder1');
-        var background = slideFour.find('.the-talk__background');
-        var brick = slideFour.find('.the-talk__brick');
-        var kate = slideFour.find('.the-talk__kate');
-        var matt = slideFour.find('.the-talk__matt');
-
-        this.limbo(this.pointer);
-        slideFour.children().removeAttr('style');
-        slideFour.show(0);
+    9: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var thunder1 = $chapter.find('.the-talk__stolen-thunder1');
+        var background = $chapter.find('.the-talk__background');
+        var brick = $chapter.find('.the-talk__brick');
+        var kate = $chapter.find('.the-talk__kate');
+        var matt = $chapter.find('.the-talk__matt');
 
         //animate the title
         slideTitle.delay(500).show(0).animate({
@@ -4057,10 +4135,10 @@ var loveStoryAnimations = {
         });
     },
 
-    10: function(){
-        var thunder2 = slideFour.find('.the-talk__stolen-thunder2');
-        var kate = slideFour.find('.the-talk__kate');
-        var foreshadowing = slideFour.find('.the-talk__foreshadowing');
+    10: function($chapter){
+        var thunder2 = $chapter.find('.the-talk__stolen-thunder2');
+        var kate = $chapter.find('.the-talk__kate');
+        var foreshadowing = $chapter.find('.the-talk__foreshadowing');
 
         foreshadowing.add(thunder2).removeAttr('style');
         kate.css({right: 90});
@@ -4071,26 +4149,22 @@ var loveStoryAnimations = {
         },800)
     },
 
-    11: function(){
-        var foreshadowing = slideFour.find('.the-talk__foreshadowing');
+    11: function($chapter){
+        var foreshadowing = $chapter.find('.the-talk__foreshadowing');
         foreshadowing.removeAttr('style');
         foreshadowing.slideDown(450);
     },
 
     //CHAPTER 5: HAPPINESS GRAPH
     12:function(){
-        var slideTitle = slideFive.find('.slide__title');
-        var plusPlus = slideFive.find('.happiness-graph__happiness-plus-plus');
-        var axes = slideFive.find('.happiness-graph__background');
-        var clockBG = slideFive.find('.happiness-graph__clock-bg');
-        var clockFace = slideFive.find('.happiness-graph__clock-face');
-        var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
-        var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
-        var happyFace = slideFive.find('.happiness-graph__happy-face');
-
-        this.limbo(this.pointer);
-        slideFive.children().css('');
-        slideFive.show(0);
+        var slideTitle = $chapter.find('.slide__title');
+        var plusPlus = $chapter.find('.happiness-graph__happiness-plus-plus');
+        var axes = $chapter.find('.happiness-graph__background');
+        var clockBG = $chapter.find('.happiness-graph__clock-bg');
+        var clockFace = $chapter.find('.happiness-graph__clock-face');
+        var clockHour = $chapter.find('.happiness-graph__clock-hand-hour');
+        var clockMin = $chapter.find('.happiness-graph__clock-hand-minute');
+        var happyFace = $chapter.find('.happiness-graph__happy-face');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -4124,12 +4198,12 @@ var loveStoryAnimations = {
         });//axes
     },
 
-    13: function(){
-        var clockBG = slideFive.find('.happiness-graph__clock-bg');
-        var clockFace = slideFive.find('.happiness-graph__clock-face');
-        var clockHour = slideFive.find('.happiness-graph__clock-hand-hour');
-        var clockMin = slideFive.find('.happiness-graph__clock-hand-minute');
-        var foreshadowing = slideFive.find('.happiness-graph__foreshadowing');
+    13: function($chapter){
+        var clockBG = $chapter.find('.happiness-graph__clock-bg');
+        var clockFace = $chapter.find('.happiness-graph__clock-face');
+        var clockHour = $chapter.find('.happiness-graph__clock-hand-hour');
+        var clockMin = $chapter.find('.happiness-graph__clock-hand-minute');
+        var foreshadowing = $chapter.find('.happiness-graph__foreshadowing');
 
         foreshadowing.removeAttr('style');
         $('img[class^="happiness-graph__dash"]').removeAttr('style');
@@ -4180,16 +4254,12 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 6: FAMILY++
-    14: function(){
-        var slideTitle = slideSix.find('.slide__title');
-        var plusPlus = slideSix.find('.family-plus-plus__along-came-margot');
+    14: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var plusPlus = $chapter.find('.family-plus-plus__along-came-margot');
 
-        var kate = slideSix.find('.family-plus-plus__kate-head');
-        var matt = slideSix.find('.family-plus-plus__matt-head');
-
-        this.limbo(this.pointer);
-        slideSix.children().removeAttr('style');
-        slideSix.show(0);
+        var kate = $chapter.find('.family-plus-plus__kate-head');
+        var matt = $chapter.find('.family-plus-plus__matt-head');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -4211,12 +4281,12 @@ var loveStoryAnimations = {
         });
     },
 
-    15: function(){
-        var margotHead = slideSix.find('.family-plus-plus__margot-head');
-        var margotPawR = slideSix.find('.family-plus-plus__margot-paw-right');
+    15: function($chapter){
+        var margotHead = $chapter.find('.family-plus-plus__margot-head');
+        var margotPawR = $chapter.find('.family-plus-plus__margot-paw-right');
 
-        var setup = slideSix.find('.family-plus-plus__setup');
-        var foreshadowing = slideSix.find('.family-plus-plus__foreshadowing');
+        var setup = $chapter.find('.family-plus-plus__setup');
+        var foreshadowing = $chapter.find('.family-plus-plus__foreshadowing');
 
         margotHead.add(margotPawR).add(setup).add(foreshadowing).removeAttr('style');
 
@@ -4240,13 +4310,9 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 7: CITY BOUND
-    16: function(){
-        var slideTitle = slideSeven.find('.slide__title');
-        var graduation = slideSeven.find('.city-bound__graduation');
-
-        this.limbo(this.pointer);
-        slideSeven.children().removeAttr('style');
-        slideSeven.show(0);
+    16: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var graduation = $chapter.find('.city-bound__graduation');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -4256,14 +4322,14 @@ var loveStoryAnimations = {
         });
     },
 
-    17: function(){
-        var foreshadowing = slideSeven.find('.city-bound__foreshadowing');
-        var road = slideSeven.find('.city-bound__road');
-        var skyScraper = slideSeven.find('.city-bound__skyscraper');
-        var willisTower = slideSeven.find('.city-bound__willis-tower');
-        var bean = slideSeven.find('.city-bound__bean');
-        var apartment = slideSeven.find('.city-bound__apartment');
-        var car = slideSeven.find('.city-bound__car');
+    17: function($chapter){
+        var foreshadowing = $chapter.find('.city-bound__foreshadowing');
+        var road = $chapter.find('.city-bound__road');
+        var skyScraper = $chapter.find('.city-bound__skyscraper');
+        var willisTower = $chapter.find('.city-bound__willis-tower');
+        var bean = $chapter.find('.city-bound__bean');
+        var apartment = $chapter.find('.city-bound__apartment');
+        var car = $chapter.find('.city-bound__car');
 
         foreshadowing.add(road).add(skyScraper).add(willisTower).add(bean).add(apartment).add(car).removeAttr('style');
 
@@ -4327,15 +4393,11 @@ var loveStoryAnimations = {
     },
 
     //CHAPTER 8: MEET UP
-    18: function(){
-        var slideTitle = slideEight.find('.slide__title');
-        var meetup = slideEight.find('.meet-up__message');
-        var map = slideEight.find('.meet-up__map-canvas');
-        var mapOverlay = slideEight.find('.meet-up__map-tooltip');
-
-        this.limbo(this.pointer);
-        slideEight.children().removeAttr('style');
-        slideEight.show(0);
+    18: function($chapter){
+        var slideTitle = $chapter.find('.slide__title');
+        var meetup = $chapter.find('.meet-up__message');
+        var map = $chapter.find('.meet-up__map-canvas');
+        var mapOverlay = $chapter.find('.meet-up__map-tooltip');
 
         //animate the title
         slideTitle.delay(400).show(0).animate({
@@ -4347,17 +4409,17 @@ var loveStoryAnimations = {
         });
     },
 
-    19: function(){
-        var sheSaidYes = slideEight.find('.meet-up__she-said-yes');
-        sheSaidYes.removeAttr('style');
-        sheSaidYes.fadeIn(300);
+    19: function($chapter){
+        var sheSaidYes = $chapter.find('.meet-up__she-said-yes');
+        sheSaidYes.$chapter('style');
+        sheSaidYes.$chapter(300);
     },
 
-    20: function(){
-        var matt = colophon.find('.colophon__collab-list__li--matt');
-        var josh = colophon.find('.colophon__collab-list__li--josh');
-        var gabe = colophon.find('.colophon__collab-list__li--gabe');
-        this.limbo(this.pointer);
+    20: function($chapter){
+        var matt = $chapter.find('.colophon__collab-list__li--matt');
+        var josh = $chapter.find('.colophon__collab-list__li--josh');
+        var gabe = $chapter.find('.colophon__collab-list__li--gabe');
+
         rightArrow.hide();
         colophon.children().removeAttr('style');
         colophon.delay(1000).fadeIn(800);
@@ -4765,16 +4827,46 @@ var loveStoryContent = [
 //--------------------------------------------------
 var LoveStoryPages = {
     bookmarks : {
-        cover: 0,
-        ch1 : 1,
-        ch2 : 3,
-        ch3 : 6,
-        ch4 : 9,
-        ch5 : 12,
-        ch6 : 14,
-        ch7 : 16,
-        ch8 : 18,
-        colophon : 20
+        cover: {
+            page: 0,
+            name: 'intro'
+        },
+        ch1 : {
+            page: 1,
+            name: 'classmates'
+        },
+        ch2 : {
+            page: 3,
+            name: 'partiers'
+        },
+        ch3 : {
+            page: 6,
+            name: 'roadies'
+        },
+        ch4 : {
+            page: 9,
+            name: 'the-talk'
+        },
+        ch5 : {
+            page: 12,
+            name: 'happiness-graph'
+        },
+        ch6 : {
+            page: 14,
+            name: 'happiness-graph'
+        },
+        ch7 : {
+            page: 16,
+            name: 'family-plus-plus'
+        },
+        ch8 : {
+            page: 18,
+            name: 'city-bound'
+        },
+        colophon : {
+            page: 20,
+            name: 'colophon'
+        }
     },
     content: loveStoryContent,
 

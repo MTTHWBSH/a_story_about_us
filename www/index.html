@@ -93,8 +93,8 @@
                 <ul class="ui__nav">
                     {{#ui.bookmarks}}
                         <li
-                            class="ui__nav__slide ui__nav__{{@key}} ui-do_skip_to"
-                            data-bookmark="{{@key}}"
+                            class="ui__nav__slide ui__nav__{{name}} ui-do_skip_to"
+                            data-bookmark="{{name}}"
                         ></li>
                     {{/ui.bookmarks}}
                         {{!<li class="ui__nav__slide ui__nav__colophon ui-do_skip_to" data-bookmark="colophon"></li>}}
@@ -103,7 +103,7 @@
         </textarea>
 
         <textarea id="partial-cover">
-            <header class="story_book__intro">
+            <header class="story_book__intro slide slide__intro">
 
 
                 <h1 class="story_book__intro__header">
@@ -124,7 +124,7 @@
 
         <textarea id="partial-pages">
             {{#pages}}
-                <section class="slide {{bem}}">
+                <section class="slide slide__{{bem}} {{bem}}">
                     {{#if isMap}}
                         <h1 class="slide__title">Continue?</h1>
                         <p class="{{bem}}__message">"That brings us to July 16, 2013. Matt didn't think the story should end with a cliffhanger, so he told Kate to meet him at 635 W. Arlington Pl in Lincoln park, and asked a simple question…"</p>
@@ -148,7 +148,7 @@
         </textarea>
 
         <textarea id="partial-afterword">
-            <footer class="story_book__colophon">
+            <footer class="story_book__colophon slide__colophon colophon">
                 <h1 class="colophon__title">src=</h1>
 
                 <section class="colphon__credits--names">
