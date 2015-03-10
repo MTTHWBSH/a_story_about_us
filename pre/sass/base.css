@@ -40,7 +40,7 @@ img, object, embed {
 html {
   overflow-y: scroll; }
 
-/* we use a lot of ULs that aren't bulleted. 
+/* we use a lot of ULs that aren't bulleted.
 	don't forget to restore the bullets within content. */
 ul {
   list-style: none; }
@@ -492,4 +492,4 @@ li p {
 /* Slide 5 */
 /* Slide 6 */
 /* Slide 7 */
-@improt "slides/8-roommates";
+@import "slides/8-roommates";

@@ -1,0 +1,21 @@
+{
+  "name": "storybook",
+  "description": "Animated storybook framework",
+  "version": "0.1.1",
+  "author": "Josh :D Compton <josh@joshdcompton.com>",
+  "homepage": "http://joshdcompton.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshdcomp/a_story_about_us"
+  },
+  "dependencies": {
+    "grunt" : "*",
+    "grunt-contrib-watch" : "*",
+    "grunt-contrib-concat" : "*",
+    "grunt-contrib-sass" : "*",
+    "grunt-contrib-uglify" : "*",
+    "grunt-contrib-clean" : "*",
+    "grunt-contrib-compress": "*"
+  },
+  "engine": "node ~0.8.x"
+}
